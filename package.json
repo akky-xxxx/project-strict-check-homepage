@@ -1,0 +1,10 @@
+{
+  "name": "project-strict-check-homepage",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akky-xxxx",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@9.4.0"
+}
