@@ -6,5 +6,10 @@
   },
   "author": "akky-xxxx",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "20.15.0",
+    "npm": "pnpmを使用してください",
+    "yarn": "pnpmを使用してください"
+  },
   "packageManager": "pnpm@9.4.0"
 }
