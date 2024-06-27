@@ -10,7 +10,8 @@
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
     "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
-    "log": "wrangler pages deployment tail --project-name strict-check-series --environment preview"
+    "log": "wrangler pages deployment tail --project-name strict-check-series --environment preview",
+    "prepare": "husky"
   },
   "author": "akky-xxxx",
   "license": "UNLICENSED",
