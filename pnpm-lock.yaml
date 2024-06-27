@@ -33,6 +33,12 @@ importers:
       '@commitlint/config-conventional':
         specifier: 19.2.2
         version: 19.2.2
+      '@tsconfig/next':
+        specifier: 2.0.3
+        version: 2.0.3
+      '@tsconfig/strictest':
+        specifier: 2.0.5
+        version: 2.0.5
       '@types/node':
         specifier: 20.14.9
         version: 20.14.9
@@ -508,6 +514,9 @@ packages:
   '@ts-morph/common@0.11.1':
     resolution: {integrity: sha512-7hWZS0NRpEsNV8vWJzg7FEz6V8MaLNeJOmwmghqUXTpzk16V1LLZhdo+4QvE/+zv4cVci0OviuJFnqhEfoV3+g==}
 
+  '@tsconfig/next@2.0.3':
+    resolution: {integrity: sha512-b4aKvmdWnv9aUy+NStUFlefirk3SItW20OJtbi5/ue9oMRaQtUYbN5zsr7OmV3rlx6Gp6h7A82gPoCXhrNGVPQ==}
+
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
 
@@ -519,6 +528,9 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+
+  '@tsconfig/strictest@2.0.5':
+    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
 
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
@@ -2842,6 +2854,8 @@ snapshots:
       mkdirp: 1.0.4
       path-browserify: 1.0.1
 
+  '@tsconfig/next@2.0.3': {}
+
   '@tsconfig/node10@1.0.11': {}
 
   '@tsconfig/node12@1.0.11': {}
@@ -2849,6 +2863,8 @@ snapshots:
   '@tsconfig/node14@1.0.3': {}
 
   '@tsconfig/node16@1.0.4': {}
+
+  '@tsconfig/strictest@2.0.5': {}
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
