@@ -4,7 +4,7 @@
 Thumbs.db
 
 # ide 関連
-.idea
+.idea/
 .vscode
 
 # develop 関連
@@ -12,6 +12,19 @@ Thumbs.db
 coverage
 node_modules
 yarn-error.log*
+next-env.d.ts
 
-# build 関連
-**/dist
+# next.js
+/.next/
+/out/
+.vercel/
+
+# production
+/build
+
+# local env files
+.env*.local
+
+# wrangler files
+../.next/.wrangler
+.dev.vars
