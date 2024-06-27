@@ -2,6 +2,7 @@
   "name": "project-strict-check-homepage",
   "version": "0.0.1",
   "scripts": {
+    "check-code": "npm-run-all -p type-check",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,6 +12,7 @@
     "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "log": "wrangler pages deployment tail --project-name strict-check-series --environment preview",
+    "type-check": "tsc",
     "prepare": "husky"
   },
   "author": "akky-xxxx",
