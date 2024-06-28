@@ -47,6 +47,7 @@
     "@types/node": "20.14.9",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "cspell": "8.9.1",
     "eslint": "8.57.0",
     "eslint-config-sc-all": "0.0.1",
     "eslint-config-sc-jest": "0.0.3",
