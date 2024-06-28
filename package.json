@@ -1,11 +1,18 @@
 {
   "name": "project-strict-check-homepage",
-  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "author": "akky-xxxx",
+  "engines": {
+    "node": "20.15.0",
+    "npm": "pnpmを使用してください",
+    "yarn": "pnpmを使用してください"
+  },
   "scripts": {
-    "check-code": "npm-run-all -p lint type-check",
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
+    "check-code": "npm-run-all -p lint type-check",
+    "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
+    "dev": "next dev",
     "fix": "run-p -c \"fix:*\"",
     "fix:config": "eslint -c eslint.config.js.mjs \"./\" --max-warnings 0 --fix",
     "fix:pack": "fixpack",
@@ -14,22 +21,13 @@
     "lint:config": "eslint -c eslint.config.js.mjs \"./\" --max-warnings 0",
     "lint:pack": "fixpack --dryRun",
     "lint:product-code": "eslint \"src/*/*.ts{,x}\" \"src/**/*.ts{,x}\" --max-warnings 0",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "$npm_execpath run pages:build && wrangler pages dev",
-    "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "log": "wrangler pages deployment tail --project-name strict-check-series --environment preview",
-    "type-check": "tsc",
-    "prepare": "husky"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "prepare": "husky",
+    "preview": "$npm_execpath run pages:build && wrangler pages dev",
+    "start": "next start",
+    "type-check": "tsc"
   },
-  "author": "akky-xxxx",
-  "license": "UNLICENSED",
-  "engines": {
-    "node": "20.15.0",
-    "npm": "pnpmを使用してください",
-    "yarn": "pnpmを使用してください"
-  },
-  "packageManager": "pnpm@9.4.0",
   "dependencies": {
     "next": "14.2.4",
     "preact": "10.22.0",
@@ -65,5 +63,7 @@
     "typescript-eslint": "7.14.1",
     "vercel": "34.2.8",
     "wrangler": "3.62.0"
-  }
+  },
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.4.0"
 }
