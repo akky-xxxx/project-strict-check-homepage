@@ -5,7 +5,8 @@
       "@panda/*": ["./styled-system/*"]
     },
     "types": [
-        "@cloudflare/workers-types/2023-07-01"
+        "@cloudflare/workers-types/2023-07-01",
+      "@types/jest"
     ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "styled-system"],
