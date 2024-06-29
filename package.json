@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "next build",
+    "build-storybook": "storybook build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "check-code": "npm-run-all -p lint spell-check type-check",
     "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
@@ -31,6 +32,7 @@
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs}\" \"./*.{js,mjs}\"",
     "start": "next start",
+    "storybook": "storybook dev -p 6006",
     "type-check": "tsc"
   },
   "dependencies": {
