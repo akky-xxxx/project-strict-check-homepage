@@ -28,3 +28,7 @@ next-env.d.ts
 # wrangler files
 ../.next/.wrangler
 .dev.vars
+
+## Panda
+styled-system
+styled-system-studio

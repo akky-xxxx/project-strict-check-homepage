@@ -105,3 +105,6 @@ a {
     color-scheme: dark;
   }
 }
+
+/* for panda css */
+@layer reset, base, tokens, recipes, utilities;
