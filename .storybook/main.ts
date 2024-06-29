@@ -1,3 +1,5 @@
+import path from "node:path"
+
 import type { StorybookConfig } from "@storybook/nextjs"
 
 const config: StorybookConfig = {
@@ -15,5 +17,14 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ["../public"],
+  webpackFinal: (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@panda": path.resolve(__dirname, "../styled-system"),
+      }
+    }
+    return config
+  },
 }
 export default config
