@@ -1,0 +1,61 @@
+name: CI
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - feature/**
+    paths-ignore:
+      - .gitignore
+      - .npmrc
+      - .wrangler
+      - README.md
+      - commitlint.config.js
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup
+        uses: ./.github/actions/setup-node-version
+
+      - name: Run lint
+        run: pnpm lint
+
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup
+        uses: ./.github/actions/setup-node-version
+
+      - name: Run spell-check
+        run: pnpm spell-check
+
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup
+        uses: ./.github/actions/setup-node-version
+
+      - name: Run type-check
+        run: pnpm type-check
+
+  test-jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup
+        uses: ./.github/actions/setup-node-version
+
+      - name: Run test-jest
+        run: pnpm test-jest
