@@ -1,3 +1,5 @@
+"use client"
+
 import { useCounter } from "../../../shared/utils/useCounter"
 
 export const Counter = () => {
