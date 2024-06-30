@@ -4,6 +4,7 @@ import eslintPluginJsdoc from "eslint-plugin-jsdoc"
 import pluginNextOnPages from "eslint-plugin-next-on-pages"
 import eslintPluginSCJs from "eslint-plugin-sc-js"
 import eslintPluginSonarjs from "eslint-plugin-sonarjs"
+import globals from "globals"
 
 import { PLUGIN_SC_JS } from "./config/eslint/PLUGIN_SC_JS/index.mjs"
 import { TYPESCRIPT_ESLINT } from "./config/eslint/TYPESCRIPT_ESLINT/index.mjs"
@@ -24,6 +25,13 @@ const config = [
   {
     plugins: {
       "sc-js": eslintPluginSCJs,
+    },
+  },
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
     },
   },
   {
