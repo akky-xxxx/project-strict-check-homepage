@@ -1,5 +1,7 @@
 import { defineConfig } from "@pandacss/dev"
 
+import { THEME } from "./src/config/panda/THEME"
+
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
@@ -11,10 +13,15 @@ export default defineConfig({
   exclude: [],
 
   // Useful for theme customization
-  theme: {
-    extend: {},
-  },
+  theme: THEME,
+
+  minify: process.env.NODE_ENV === "production",
 
   // The output directory for your css system
   outdir: "styled-system",
+
+  conditions: {
+    dark: "[data-theme=dark] &",
+    light: "[data-theme=light] &",
+  },
 })
