@@ -39,10 +39,12 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "js-cookie": "3.0.5",
     "next": "14.2.4",
     "preact": "10.22.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "valibot": "0.35.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.0",
@@ -68,6 +70,7 @@
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/jest": "29.5.12",
+    "@types/js-cookie": "3.0.6",
     "@types/node": "20.14.9",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
