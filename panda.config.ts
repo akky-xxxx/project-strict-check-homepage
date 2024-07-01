@@ -23,5 +23,9 @@ export default defineConfig({
   conditions: {
     dark: "[data-theme=dark] &",
     light: "[data-theme=light] &",
+
+    extend: {
+      hasFocus: ":has(:focus) &",
+    },
   },
 })

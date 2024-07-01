@@ -9,13 +9,13 @@ export const SEMANTIC_TOKEN_COLORS = {
       },
     },
 
-    CASE2: {
+    case2: {
       value: {
         _dark: "{colors.BLACK.200}",
         _light: "{colors.WHITE.200}",
       },
     },
-    CASE3: {
+    case3: {
       value: {
         _dark: "{colors.BLACK.300}",
         _light: "{colors.WHITE.300}",

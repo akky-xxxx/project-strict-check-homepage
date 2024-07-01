@@ -20,11 +20,11 @@ export const TOKEN_COLORS = {
 
   ACCENT: {
     100: { value: "#afa" },
-    200: { value: "#1b1" },
+    200: { value: "#191" },
   },
   HIGHLIGHT: {
-    100: { value: "#040" },
-    200: { value: "#efe" },
+    100: { value: "#030" },
+    200: { value: "#dfd" },
   },
   /* eslint-enable @typescript-eslint/naming-convention */
 } as const satisfies Tokens["colors"]
