@@ -6,6 +6,7 @@ export const nextCookiesSchemas = {
       [
         object({ value: literal("dark") }),
         object({ value: literal("light") }),
+        object({ value: literal("system") }),
       ],
     ),
     transform((input) => input.value),
