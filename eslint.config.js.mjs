@@ -1,16 +1,10 @@
 import eslintConfigSCAll from "eslint-config-sc-all"
 import eslintPluginSCJs from "eslint-plugin-sc-js"
 
+import { IGNORES } from "./config/eslint/IGNORES/index.mjs"
+
 const config = [
-  {
-    ignores: [
-      ".next",
-      ".vercel",
-      "coverage",
-      "env.d.ts",
-      "styled-system",
-    ],
-  },
+  IGNORES,
   {
     files: [
       "panda.config.ts",

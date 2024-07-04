@@ -6,6 +6,7 @@ import eslintPluginSCJs from "eslint-plugin-sc-js"
 import eslintPluginSonarjs from "eslint-plugin-sonarjs"
 import globals from "globals"
 
+import { IGNORES } from "./config/eslint/IGNORES/index.mjs"
 import { PLUGIN_SC_JS } from "./config/eslint/PLUGIN_SC_JS/index.mjs"
 import { TYPESCRIPT_ESLINT } from "./config/eslint/TYPESCRIPT_ESLINT/index.mjs"
 
@@ -13,15 +14,7 @@ const compat = new FlatCompat()
 
 /** @type {import("typescript-eslint").Config} */
 const config = [
-  {
-    ignores: [
-      ".next",
-      ".vercel",
-      "coverage",
-      "env.d.ts",
-      "styled-system",
-    ],
-  },
+  IGNORES,
   {
     plugins: {
       "sc-js": eslintPluginSCJs,
@@ -77,6 +70,8 @@ const config = [
   // TODO: eslint-config-sc-storybook@0.0.5 をリリースしたら不要になるので消す
   {
     rules: {
+      "max-statements": [2, 30],
+
       "import/no-extraneous-dependencies": 0,
     },
   },
