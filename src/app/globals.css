@@ -1,2 +1,33 @@
 /* for panda css */
 @layer reset, base, tokens, recipes, utilities;
+
+@layer tokens {
+  :where(:root,:host) {
+    /* cookie の値がない時の初期表示用 */
+    @media (prefers-color-scheme: dark) {
+      --colors-background-color: var(--colors--b-l-a-c-k-100);
+      --colors-background-color-case2: var(--colors--b-l-a-c-k-200);
+      --colors-background-color-case3: var(--colors--b-l-a-c-k-300);
+      --colors-color: var(--colors--w-h-i-t-e-100);
+      --colors-color-accent: var(--colors--a-c-c-e-n-t-100);
+      --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-100);
+      --colors-color-link: var(--colors--b-l-u-e-100);
+    }
+
+    /* cookie の値がない時の初期表示用 */
+    @media (prefers-color-scheme: light) {
+      --colors-background-color: var(--colors--w-h-i-t-e-100);
+      --colors-background-color-case2: var(--colors--w-h-i-t-e-200);
+      --colors-background-color-case3: var(--colors--w-h-i-t-e-300);
+      --colors-color: var(--colors--b-l-a-c-k-100);
+      --colors-color-accent: var(--colors--a-c-c-e-n-t-200);
+      --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-200);
+      --colors-color-link: var(--colors--b-l-u-e-200);
+    }
+
+    .ThemeSwitch {
+      --icon-size: 20px;
+      --switch-size: 30px;
+    }
+  }
+}
