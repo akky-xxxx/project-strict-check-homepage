@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
-import { css, cx } from "@panda/css"
-
 import { getTheme } from "./modules/getTheme"
 import { ThemeSwitch } from "../components/organisms/ThemeSwitch"
 import { COOKIE_KEY_THEME } from "../shared/constants/COOKIE_KEYS"
@@ -26,7 +24,7 @@ const RootLayout: FCWithChildren = (props) => {
 
   return (
     <html data-theme={theme} lang="en">
-      <body className={cx(bodyStyle, inter.className)}>
+      <body className={inter.className}>
         <ThemeSwitch themeFromServerCookie={theme} />
         <div>
           {children}
@@ -37,9 +35,3 @@ const RootLayout: FCWithChildren = (props) => {
 }
 
 export default RootLayout
-
-const bodyStyle = css({
-  backgroundColor: "backgroundColor",
-  color: "color",
-  transition: "background-color 0.1s ease-in-out, color 0.1s ease-in-out",
-})

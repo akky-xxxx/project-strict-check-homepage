@@ -30,4 +30,10 @@
       --switch-size: 30px;
     }
   }
+
+  body {
+    background-color: var(--colors-background-color);
+    color: var(--colors-color);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  }
 }
