@@ -29,6 +29,25 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    viewport: {
+      viewports: [
+        {
+          name: "sp",
+          styles: { height: "500px", width: "640px" },
+          type: "mobile"
+        },
+        {
+          name: "tb",
+          styles: { height: "500px", width: "768px" },
+          type: "tablet"
+        },
+        {
+          name: "pc",
+          styles: { height: "700px", width: "1024px" },
+          type: "desktop"
+        },
+      ],
+    },
   },
 }
 
