@@ -24,6 +24,12 @@ export const SystemTheme: Story = {
       .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "system theme")
     await expect(systemThemeButton).toBeChecked()
   },
+
+  parameters: {
+    backgrounds: {
+      default: "system",
+    },
+  },
 }
 
 export const DarkTheme: Story = {
@@ -36,6 +42,12 @@ export const DarkTheme: Story = {
       .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "dark theme")
     await expect(darkThemeButton).toBeChecked()
   },
+
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+  },
 }
 
 export const LightTheme: Story = {
@@ -47,6 +59,12 @@ export const LightTheme: Story = {
     const lightThemeButton = [...canvas.getAllByRole("radio")]
       .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "light theme")
     await expect(lightThemeButton).toBeChecked()
+  },
+
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
   },
 }
 
