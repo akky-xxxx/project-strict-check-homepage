@@ -3,6 +3,8 @@
 
 @layer tokens {
   :where(:root,:host) {
+    --root-font-size: 16;
+
     /* cookie の値がない時の初期表示用 */
     @media (prefers-color-scheme: dark) {
       --colors-background-color: var(--colors--b-l-a-c-k-100);
