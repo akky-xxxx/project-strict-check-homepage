@@ -33,7 +33,7 @@ const preview: Preview = {
       viewports: [
         {
           name: "sp",
-          styles: { height: "500px", width: "640px" },
+          styles: { height: "500px", width: "380px" },
           type: "mobile"
         },
         {
