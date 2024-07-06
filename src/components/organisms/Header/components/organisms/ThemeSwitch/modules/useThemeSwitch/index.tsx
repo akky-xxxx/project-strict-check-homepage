@@ -7,7 +7,7 @@ import { HalfIcon } from "../../components/atoms/HalfIcon"
 import { MoonIcon } from "../../components/atoms/MoonIcon"
 import { SunIcon } from "../../components/atoms/SunIcon"
 
-import type { Theme } from "../../../../../shared/types/Theme"
+import type { Theme } from "../../../../../../../../shared/types/Theme"
 import type { ChangeEventHandler, ReactNode } from "react"
 
 type UseThemeSwitchInput = {

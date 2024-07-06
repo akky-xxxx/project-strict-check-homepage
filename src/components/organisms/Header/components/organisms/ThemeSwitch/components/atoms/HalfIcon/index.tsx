@@ -1,6 +1,6 @@
-import { SVG_DEFAULT_SIZE } from "../../../../../../shared/constants/SVG_DEFAULT_SIZE"
+import { SVG_DEFAULT_SIZE } from "../../../../../../../../../shared/constants/SVG_DEFAULT_SIZE"
 
-import type { SvgProps } from "../../../../../../shared/types/SvgProps"
+import type { SvgProps } from "../../../../../../../../../shared/types/SvgProps"
 import type { FC } from "react"
 
 export const HalfIcon: FC<SvgProps> = (props) => {

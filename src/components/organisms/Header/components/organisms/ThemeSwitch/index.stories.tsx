@@ -1,7 +1,7 @@
 import { userEvent, within, expect } from "@storybook/test"
 
 import { ThemeSwitch } from "."
-import { sleep } from "../../../shared/utils/sleep"
+import { sleep } from "../../../../../../shared/utils/sleep"
 
 import type { Meta, StoryObj } from "@storybook/react"
 
