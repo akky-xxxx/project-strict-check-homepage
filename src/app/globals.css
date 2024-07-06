@@ -40,6 +40,7 @@
   body {
     background-color: var(--colors-background-color);
     color: var(--colors-color);
+    font-size: calc(16 / var(--root-font-size) * 1rem);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
   }
 }
