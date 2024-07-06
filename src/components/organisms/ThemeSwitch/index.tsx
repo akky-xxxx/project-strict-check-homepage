@@ -22,7 +22,7 @@ export const ThemeSwitch: FC<Props> = (props) => {
   } = useThemeSwitch({ themeFromServerCookie })
 
   return (
-    <div className={cx(styles.frame, "ThemeSwitch")}>
+    <div className={cx(styles.frame, "ThemeSwitch", "group")}>
       <div className={styles.root}>
         {master.map((record) => {
           const { icon, theme } = record

@@ -21,6 +21,9 @@ const root = css({
   transition: "outline 0.2s ease-in-out",
   width: `calc(${SWITCH_SIZE} * 3)`,
 
+  _groupHover: {
+    outlineColor: "color.accent",
+  },
   _hasFocus: {
     outlineColor: "color.accent",
   },
