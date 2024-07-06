@@ -14,7 +14,7 @@ type Story = StoryObj<typeof ThemeSwitch>
 
 const ARIA_LABEL = "aria-label"
 
-export const SystemTheme: Story = {
+export const SystemButtonActive: Story = {
   args: {
     themeFromServerCookie: "system",
   },
@@ -32,7 +32,7 @@ export const SystemTheme: Story = {
   },
 }
 
-export const DarkTheme: Story = {
+export const DarkButtonActive: Story = {
   args: {
     themeFromServerCookie: "dark",
   },
@@ -50,7 +50,7 @@ export const DarkTheme: Story = {
   },
 }
 
-export const LightTheme: Story = {
+export const LightButtonActive: Story = {
   args: {
     themeFromServerCookie: "light",
   },
@@ -69,7 +69,7 @@ export const LightTheme: Story = {
 }
 
 export const ChangeTheme: Story = {
-  ...SystemTheme,
+  ...SystemButtonActive,
   tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
