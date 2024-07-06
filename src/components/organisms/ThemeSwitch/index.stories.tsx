@@ -70,6 +70,7 @@ export const LightTheme: Story = {
 
 export const ChangeTheme: Story = {
   ...SystemTheme,
+  tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 

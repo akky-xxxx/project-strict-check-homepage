@@ -22,6 +22,7 @@ export const Default: Story = {
 }
 
 export const Decrement: Story = {
+  tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
@@ -36,6 +37,7 @@ export const Decrement: Story = {
 }
 
 export const Increment: Story = {
+  tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
