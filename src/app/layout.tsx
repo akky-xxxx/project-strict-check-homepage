@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
 import { getTheme } from "./modules/getTheme"
-import { ThemeSwitch } from "../components/organisms/Header/components/organisms/ThemeSwitch"
+import { Header } from "../components/organisms/Header"
 import { COOKIE_KEY_THEME } from "../shared/constants/COOKIE_KEYS"
 
 import type { FCWithChildren } from "../shared/types/FCWithChildren"
@@ -25,7 +25,7 @@ const RootLayout: FCWithChildren = (props) => {
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        <ThemeSwitch themeFromServerCookie={theme} />
+        <Header themeFromServerCookie={theme} />
         <div>
           {children}
         </div>
