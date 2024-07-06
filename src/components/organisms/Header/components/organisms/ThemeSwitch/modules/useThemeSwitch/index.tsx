@@ -41,17 +41,17 @@ export const useThemeSwitch = (input: UseThemeSwitchInput) => {
 
   const master = [
     {
-      icon: <SunIcon />,
+      icon: <SunIcon height={20} width={20} />,
       iconWrapperStyles: lightIconStyles,
       theme: "light",
     },
     {
-      icon: <MoonIcon />,
+      icon: <MoonIcon height={20} width={20} />,
       iconWrapperStyles: darkIconStyles,
       theme: "dark",
     },
     {
-      icon: <HalfIcon />,
+      icon: <HalfIcon height={20} width={20} />,
       iconWrapperStyles: systemIconStyles,
       theme: "system",
     },

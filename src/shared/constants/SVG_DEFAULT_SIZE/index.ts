@@ -1,1 +1,1 @@
-export const SVG_DEFAULT_SIZE = 20
+export const SVG_DEFAULT_SIZE = 30
