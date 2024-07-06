@@ -1,6 +1,6 @@
-import { css } from "../../../../../../../../styled-system/css"
+import { css } from "@panda/css"
 
-const SWITCH_SIZE = "var(--switch-size)"
+const SWITCH_SIZE = "var(--switch-size-large)"
 
 const frame = css({
   display: "inline-block",
@@ -36,7 +36,7 @@ const label = css({
 const labelIcon = css({
   bottom: 0,
   color: "color",
-  height: "var(--icon-size)",
+  height: "var(--icon-size-large)",
   left: 0,
   margin: "auto",
   opacity: 0.5,
@@ -44,7 +44,7 @@ const labelIcon = css({
   position: "absolute",
   right: 0,
   top: 0,
-  width: "var(--icon-size)",
+  width: "var(--icon-size-large)",
 })
 
 const input = css({

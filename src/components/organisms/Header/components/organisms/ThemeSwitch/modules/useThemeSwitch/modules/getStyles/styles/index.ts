@@ -3,11 +3,11 @@ import { css } from "@panda/css"
 const activeButtons = css({
   backgroundColor: "backgroundColor",
   borderRadius: 9999,
-  height: "var(--switch-size)",
+  height: "var(--switch-size-large)",
   pointerEvents: "none",
   position: "absolute",
   transition: "transform 0.2s ease-in-out, backgroundColor 0.2s ease-in-out",
-  width: "var(--switch-size)",
+  width: "var(--switch-size-large)",
 })
 
 const activeButtonAtLight = css({
@@ -15,17 +15,17 @@ const activeButtonAtLight = css({
 })
 
 const activeButtonAtDark = css({
-  transform: "translateX(var(--switch-size))",
+  transform: "translateX(var(--switch-size-large))",
 })
 
 const activeButtonAtSystem = css({
-  transform: "translateX(calc(var(--switch-size) * 2))",
+  transform: "translateX(calc(var(--switch-size-large) * 2))",
 })
 
 const icon = css({
   bottom: 0,
   color: "color",
-  height: "var(--icon-size)",
+  height: "var(--icon-size-large)",
   left: 0,
   lineHeight: 1,
   margin: "auto",
@@ -35,7 +35,7 @@ const icon = css({
   textAlign: "center",
   top: 0,
   transition: "color 0.2s ease-in-out, opacity 0.2s ease-in-out",
-  width: "var(--icon-size)",
+  width: "var(--icon-size-large)",
 })
 
 const shownIcon = css({

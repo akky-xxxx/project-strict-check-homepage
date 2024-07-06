@@ -28,8 +28,8 @@
     }
 
     .ThemeSwitch {
-      --icon-size: 20px;
-      --switch-size: 30px;
+      --icon-size-large: 20px;
+      --switch-size-large: 30px;
     }
   }
 
