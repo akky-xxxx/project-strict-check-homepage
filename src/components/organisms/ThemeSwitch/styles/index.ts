@@ -14,19 +14,17 @@ const root = css({
   borderRadius: 9999,
   display: "inline-flex",
   justifyContent: "space-between",
-  outlineColor: "backgroundColor.case2",
+  outlineColor: {
+    base: "backgroundColor.case2",
+
+    _groupHover: "color.accent",
+    _hasFocus: "color.accent",
+  },
   outlineStyle: "solid",
   outlineWidth: 2,
   position: "relative",
   transition: "outline 0.2s ease-in-out",
   width: `calc(${SWITCH_SIZE} * 3)`,
-
-  _groupHover: {
-    outlineColor: "color.accent",
-  },
-  _hasFocus: {
-    outlineColor: "color.accent",
-  },
 })
 
 const label = css({
