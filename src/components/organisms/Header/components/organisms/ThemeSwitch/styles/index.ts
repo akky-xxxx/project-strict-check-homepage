@@ -22,7 +22,6 @@ const root = css({
     base: "backgroundColor.case2",
 
     _groupHover: "color.accent",
-    _hasFocus: "color.accent",
   },
   outlineStyle: "solid",
   outlineWidth: 2,
