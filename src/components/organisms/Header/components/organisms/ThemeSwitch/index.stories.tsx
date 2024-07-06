@@ -1,6 +1,7 @@
 import { userEvent, within, expect } from "@storybook/test"
 
 import { ThemeSwitch } from "."
+import { STORY_PARAMETERS } from "../../../../../../shared/constants/STORY_PARAMETERS"
 import { sleep } from "../../../../../../shared/utils/sleep"
 
 import type { Meta, StoryObj } from "@storybook/react"
@@ -44,9 +45,7 @@ export const DarkButtonActive: Story = {
   },
 
   parameters: {
-    backgrounds: {
-      default: "dark",
-    },
+    ...STORY_PARAMETERS.THEME.DARK,
   },
 }
 
@@ -62,9 +61,7 @@ export const LightButtonActive: Story = {
   },
 
   parameters: {
-    backgrounds: {
-      default: "light",
-    },
+    ...STORY_PARAMETERS.THEME.LIGHT,
   },
 }
 
