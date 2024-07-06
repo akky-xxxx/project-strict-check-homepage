@@ -1,6 +1,5 @@
 import type { SemanticTokens } from "@pandacss/dev"
 
-/* eslint-disable sonarjs/no-duplicate-string */
 export const SEMANTIC_TOKEN_COLORS = {
   backgroundColor: {
     DEFAULT: {
@@ -24,7 +23,7 @@ export const SEMANTIC_TOKEN_COLORS = {
     },
 
     backdrop: {
-      value: "{colors.BLACK.100}",
+      value: "#000",
     },
   },
   color: {

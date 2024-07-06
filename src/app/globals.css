@@ -27,7 +27,7 @@
       --colors-color-link: var(--colors--b-l-u-e-200);
     }
 
-    --colors-background-color-backdrop: var(--colors--w-h-i-t-e-100);
+    --colors-background-color-backdrop: #000;
 
     .ThemeSwitch {
       --icon-size-small: 20px;
