@@ -1,3 +1,4 @@
+import { KEYFRAMES } from "./constants/KEYFRAMES"
 import { SEMANTIC_TOKEN_COLORS } from "./constants/SEMANTIC_TOKEN_COLORS"
 import { SEMANTIC_TOKEN_FONT_SIZES } from "./constants/SEMANTIC_TOKEN_FONT_SIZES"
 import { SEMANTIC_TOKEN_FONT_WEIGHTS } from "./constants/SEMANTIC_TOKEN_FONT_WEIGHTS"
@@ -18,5 +19,9 @@ export const THEME = {
     colors: SEMANTIC_TOKEN_COLORS,
     fontSizes: SEMANTIC_TOKEN_FONT_SIZES,
     fontWeights: SEMANTIC_TOKEN_FONT_WEIGHTS,
+  },
+
+  extend: {
+    keyframes: KEYFRAMES,
   },
 } as const satisfies Config["theme"]
