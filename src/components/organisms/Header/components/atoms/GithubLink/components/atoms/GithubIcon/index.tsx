@@ -1,16 +1,14 @@
-import { SVG_DEFAULT_SIZE } from "../../../../../../../../shared/constants/SVG_DEFAULT_SIZE"
+import { css } from "@panda/css"
 
-import type { SvgProps } from "../../../../../../../../shared/types/SvgProps"
+import type { SvgProps } from "../../../../../../../../../shared/types/SvgProps"
 import type { FC } from "react"
 
 export const GithubIcon: FC<SvgProps> = (props) => {
   const {
-    height = SVG_DEFAULT_SIZE,
-    width = SVG_DEFAULT_SIZE,
     color = "currentColor",
   } = props
   return (
-    <svg height={height} viewBox="0 0 24 24" width={width}>
+    <svg className={root} viewBox="0 0 24 24">
       <g>
         <path d="M0 0h24v24H0z" fill="none" />
         <path
@@ -21,3 +19,8 @@ export const GithubIcon: FC<SvgProps> = (props) => {
     </svg>
   )
 }
+
+const root = css({
+  height: "100%",
+  width: "100%",
+})
