@@ -1,10 +1,14 @@
 import { css } from "@panda/css"
 
-const SWITCH_SIZE = "var(--switch-size-large)"
+const SMALL_SWITCH_SIZE = "var(--switch-size-small)"
+const LARGE_SWITCH_SIZE = "var(--switch-size-large)"
 
 const frame = css({
   display: "inline-block",
-  height: 34,
+  height: {
+    base: `calc(${LARGE_SWITCH_SIZE} + 4px)`,
+    md: `calc(${SMALL_SWITCH_SIZE} + 4px)`,
+  },
   padding: 2,
   verticalAlign: "bottom",
 })
@@ -24,19 +28,31 @@ const root = css({
   outlineWidth: 2,
   position: "relative",
   transition: "outline 0.2s ease-in-out",
-  width: `calc(${SWITCH_SIZE} * 3)`,
+  width: {
+    base: `calc(${LARGE_SWITCH_SIZE} * 3)`,
+    md: `calc(${SMALL_SWITCH_SIZE} * 3)`,
+  },
 })
 
 const label = css({
-  height: SWITCH_SIZE,
+  height: {
+    base: LARGE_SWITCH_SIZE,
+    md: SMALL_SWITCH_SIZE,
+  },
   position: "relative",
-  width: SWITCH_SIZE,
+  width: {
+    base: LARGE_SWITCH_SIZE,
+    md: SMALL_SWITCH_SIZE,
+  },
 })
 
 const labelIcon = css({
   bottom: 0,
   color: "color",
-  height: "var(--icon-size-large)",
+  height: {
+    base: "var(--icon-size-large)",
+    md: "var(--icon-size-small)",
+  },
   left: 0,
   margin: "auto",
   opacity: 0.5,
@@ -44,7 +60,10 @@ const labelIcon = css({
   position: "absolute",
   right: 0,
   top: 0,
-  width: "var(--icon-size-large)",
+  width: {
+    base: "var(--icon-size-large)",
+    md: "var(--icon-size-small)",
+  },
 })
 
 const input = css({
@@ -52,8 +71,14 @@ const input = css({
   backgroundColor: "backgroundColor.case2",
   borderRadius: 9999,
   cursor: "pointer",
-  height: SWITCH_SIZE,
-  width: SWITCH_SIZE,
+  height: {
+    base: LARGE_SWITCH_SIZE,
+    md: SMALL_SWITCH_SIZE,
+  },
+  width: {
+    base: LARGE_SWITCH_SIZE,
+    md: SMALL_SWITCH_SIZE,
+  },
 })
 
 const checkedInput = css({

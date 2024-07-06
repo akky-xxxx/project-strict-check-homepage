@@ -1,4 +1,4 @@
-import { SVG_DEFAULT_SIZE } from "../../../../../../../../../shared/constants/SVG_DEFAULT_SIZE"
+import { css } from "@panda/css"
 
 import type { SvgProps } from "../../../../../../../../../shared/types/SvgProps"
 import type { FC } from "react"
@@ -6,11 +6,9 @@ import type { FC } from "react"
 export const SunIcon: FC<SvgProps> = (props) => {
   const {
     color = "currentColor",
-    height = SVG_DEFAULT_SIZE,
-    width = SVG_DEFAULT_SIZE,
   } = props
   return (
-    <svg height={height} viewBox="0 0 32 32" width={width}>
+    <svg className={root} viewBox="0 0 32 32">
       <g>
         <circle cx="16" cy="16" fill={color} r="9" />
         <path d="M17.5,4.13867V2c0-0.82813-0.67139-1.5-1.5-1.5S14.5,1.17188,14.5,2v2.13867c0,0.82813,0.67139,1.5,1.5,1.5   S17.5,4.9668,17.5,4.13867z" fill={color} />
@@ -25,3 +23,8 @@ export const SunIcon: FC<SvgProps> = (props) => {
     </svg>
   )
 }
+
+const root = css({
+  height: "100%",
+  width: "100%",
+})

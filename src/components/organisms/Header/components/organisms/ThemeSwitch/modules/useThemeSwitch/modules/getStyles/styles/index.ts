@@ -3,11 +3,17 @@ import { css } from "@panda/css"
 const activeButtons = css({
   backgroundColor: "backgroundColor",
   borderRadius: 9999,
-  height: "var(--switch-size-large)",
+  height: {
+    base: "var(--switch-size-large)",
+    md: "var(--switch-size-small)",
+  },
   pointerEvents: "none",
   position: "absolute",
   transition: "transform 0.2s ease-in-out, backgroundColor 0.2s ease-in-out",
-  width: "var(--switch-size-large)",
+  width: {
+    base: "var(--switch-size-large)",
+    md: "var(--switch-size-small)",
+  },
 })
 
 const activeButtonAtLight = css({
@@ -15,17 +21,26 @@ const activeButtonAtLight = css({
 })
 
 const activeButtonAtDark = css({
-  transform: "translateX(var(--switch-size-large))",
+  transform: {
+    base: "translateX(var(--switch-size-large))",
+    md: "translateX(var(--switch-size-small))",
+  },
 })
 
 const activeButtonAtSystem = css({
-  transform: "translateX(calc(var(--switch-size-large) * 2))",
+  transform: {
+    base: "translateX(calc(var(--switch-size-large) * 2))",
+    md: "translateX(calc(var(--switch-size-small) * 2))",
+  },
 })
 
 const icon = css({
   bottom: 0,
   color: "color",
-  height: "var(--icon-size-large)",
+  height: {
+    base: "var(--icon-size-large)",
+    md: "var(--icon-size-small)",
+  },
   left: 0,
   lineHeight: 1,
   margin: "auto",
@@ -35,7 +50,10 @@ const icon = css({
   textAlign: "center",
   top: 0,
   transition: "color 0.2s ease-in-out, opacity 0.2s ease-in-out",
-  width: "var(--icon-size-large)",
+  width: {
+    base: "var(--icon-size-large)",
+    md: "var(--icon-size-small)",
+  },
 })
 
 const shownIcon = css({
