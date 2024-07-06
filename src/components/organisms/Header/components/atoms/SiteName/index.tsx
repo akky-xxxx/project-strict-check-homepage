@@ -10,8 +10,8 @@ export const SiteName: FC = () => (
 
 const rootStyle = css({
   fontSize: {
-    base: "fontSize.lg",
-    md: "fontSize.xl",
+    base: "fontSize.xl",
+    md: "fontSize.lg",
   },
   fontWeight: "fontWeight.bold",
 })
