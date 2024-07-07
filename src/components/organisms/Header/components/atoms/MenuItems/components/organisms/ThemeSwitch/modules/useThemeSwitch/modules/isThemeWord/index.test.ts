@@ -1,6 +1,6 @@
 import { isThemeWord } from "."
 
-import type { Theme } from "../../../../../../../../../../../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 
 describe("isThemeWord", () => {
   describe("success pattern", () => {

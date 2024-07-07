@@ -1,4 +1,4 @@
-import { css } from "../../../../../../../../../../../styled-system/css"
+import { css } from "@panda/css"
 
 const SMALL_SWITCH_SIZE = "var(--switch-size-small)"
 const LARGE_SWITCH_SIZE = "var(--switch-size-large)"

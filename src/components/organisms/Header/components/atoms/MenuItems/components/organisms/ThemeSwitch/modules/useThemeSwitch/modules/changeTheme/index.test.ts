@@ -2,7 +2,7 @@ import Cookies from "js-cookie"
 
 import { changeTheme } from "."
 
-import type { Theme } from "../../../../../../../../../../../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 
 type TestCaseByTheme = Record<"theme", Theme>
 

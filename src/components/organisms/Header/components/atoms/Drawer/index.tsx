@@ -1,6 +1,6 @@
 import { css, cx } from "@panda/css"
 
-import type { FCWithChildren } from "../../../../../../shared/types/FCWithChildren"
+import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
 type Props = {
   isOpened: boolean

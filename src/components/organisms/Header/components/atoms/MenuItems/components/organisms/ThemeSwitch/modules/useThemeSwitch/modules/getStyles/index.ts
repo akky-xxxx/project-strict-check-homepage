@@ -1,6 +1,6 @@
 import { styles } from "./styles"
 
-import type { Theme } from "../../../../../../../../../../../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 
 // eslint-disable-next-line complexity
 export const getStyles = (selectedTheme: Theme) => {

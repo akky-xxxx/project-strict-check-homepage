@@ -3,9 +3,9 @@ import { cookies } from "next/headers"
 
 import { getTheme } from "./modules/getTheme"
 import { Header } from "../components/organisms/Header"
-import { COOKIE_KEY_THEME } from "../shared/constants/COOKIE_KEYS"
+import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 
-import type { FCWithChildren } from "../shared/types/FCWithChildren"
+import type { FCWithChildren } from "@shared/types/FCWithChildren"
 import type { Metadata } from "next"
 
 import "./globals.css"

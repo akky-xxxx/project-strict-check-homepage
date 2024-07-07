@@ -1,6 +1,6 @@
 import { css } from "@panda/css"
 
-import type { SvgProps } from "../../../../../../../../../../../../shared/types/SvgProps"
+import type { SvgProps } from "@shared/types/SvgProps"
 import type { FC } from "react"
 
 export const SunIcon: FC<SvgProps> = (props) => {

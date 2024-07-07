@@ -1,5 +1,5 @@
 import { GithubLink } from "./index"
-import { STORY_PARAMETERS } from "../../../../../../../../../shared/constants/STORY_PARAMETERS"
+import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import type { Meta, StoryObj } from "@storybook/react"
 

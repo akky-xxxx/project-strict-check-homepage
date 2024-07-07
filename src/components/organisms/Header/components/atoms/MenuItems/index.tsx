@@ -4,7 +4,7 @@ import { GithubLink } from "./components/atoms/GithubLink"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
 import { styles } from "./styles"
 
-import type { Theme } from "../../../../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type ItemsProps = {

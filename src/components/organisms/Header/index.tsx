@@ -10,7 +10,7 @@ import { MenuItems } from "./components/atoms/MenuItems"
 import { SiteName } from "./components/atoms/SiteName"
 import { ScrollLock } from "../../atoms/ScrollLock"
 
-import type { Theme } from "../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type Props = {

@@ -5,7 +5,7 @@ import { cx } from "@panda/css"
 import { useThemeSwitch } from "./modules/useThemeSwitch"
 import { styles } from "./styles"
 
-import type { Theme } from "../../../../../../../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type Props = {

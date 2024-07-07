@@ -1,8 +1,8 @@
 import { parse } from "valibot"
 
-import { nextCookiesSchemas } from "../../../shared/schemas/nextCookiesSchemas"
+import { nextCookiesSchemas } from "@shared/schemas/nextCookiesSchemas"
 
-import type { Theme } from "../../../shared/types/Theme"
+import type { Theme } from "@shared/types/Theme"
 import type { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies"
 
 type GetThemeInput = Pick<RequestCookie, "value"> | undefined
