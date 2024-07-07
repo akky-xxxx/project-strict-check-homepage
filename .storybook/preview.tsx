@@ -2,7 +2,9 @@ import "../src/app/globals.css"
 
 import { getRouter, usePathname } from "@storybook/nextjs/navigation.mock"
 import mockRouter from "next-router-mock"
-import { Fragment, useEffect } from "react"
+import { useEffect } from "react"
+
+import { ThemeProvider } from "../src/shared/storeProviders/theme"
 
 import type { Preview } from "@storybook/react"
 
@@ -25,9 +27,9 @@ const preview: Preview = {
         document.querySelector("html")?.setAttribute("data-theme", backgrounds.default)
       }, [backgrounds.default])
       return (
-        <Fragment>
+        <ThemeProvider theme={backgrounds.default}>
           <Story />
-        </Fragment>
+        </ThemeProvider>
       )
     },
   ],
