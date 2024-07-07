@@ -10,21 +10,17 @@ import { MenuItems } from "./components/atoms/MenuItems"
 import { SiteName } from "./components/atoms/SiteName"
 import { ScrollLock } from "../../atoms/ScrollLock"
 
-import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type Props = {
   hasPackageSelector?: boolean
-  themeFromServerCookie: Theme
 }
 
 export const Header: FC<Props> = (props) => {
   const {
     hasPackageSelector,
-    themeFromServerCookie,
   } = props
 
-  const [selectedTheme, setSelectedTheme] = useState<Theme>(themeFromServerCookie)
   const [isOpenedMenu, setIsOpenedMenu] = useState(false)
   const handleToggleMenu = () => {
     setIsOpenedMenu((current) => !current)
@@ -42,16 +38,12 @@ export const Header: FC<Props> = (props) => {
         <div className={rightItems}>
           <MenuItems
             hasPackageSelector={hasPackageSelector}
-            selectedTheme={selectedTheme}
-            setSelectedTheme={setSelectedTheme}
           />
         </div>
       </header>
       <Drawer isOpened={isOpenedMenu}>
         <MenuItems
           hasPackageSelector={hasPackageSelector}
-          selectedTheme={selectedTheme}
-          setSelectedTheme={setSelectedTheme}
         />
       </Drawer>
     </Fragment>

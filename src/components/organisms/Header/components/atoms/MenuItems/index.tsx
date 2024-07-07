@@ -4,13 +4,10 @@ import { GithubLink } from "./components/atoms/GithubLink"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
 import { styles } from "./styles"
 
-import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type ItemsProps = {
   hasPackageSelector: boolean | undefined
-  selectedTheme: Theme
-  setSelectedTheme: (newTheme: Theme) => void
 }
 
 const {
@@ -23,7 +20,7 @@ const {
 } = styles
 
 export const MenuItems: FC<ItemsProps> = (props) => {
-  const { hasPackageSelector, selectedTheme, setSelectedTheme } = props
+  const { hasPackageSelector } = props
   return (
     <div className={root}>
       <div className={packageLinkWrapper}>
@@ -37,7 +34,7 @@ export const MenuItems: FC<ItemsProps> = (props) => {
         </div>
       )}
       <div className={themeSwitchWrapper}>
-        <ThemeSwitch selectedTheme={selectedTheme} setSelectedTheme={setSelectedTheme} />
+        <ThemeSwitch />
       </div>
       <div className={githubLinkWrapper}>
         <GithubLink />

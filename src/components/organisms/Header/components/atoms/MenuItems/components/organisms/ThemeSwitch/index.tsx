@@ -5,21 +5,15 @@ import { cx } from "@panda/css"
 import { useThemeSwitch } from "./modules/useThemeSwitch"
 import { styles } from "./styles"
 
-import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
-type Props = {
-  selectedTheme: Theme
-  setSelectedTheme: (newTheme: Theme) => void
-}
-
-export const ThemeSwitch: FC<Props> = (props) => {
-  const { selectedTheme, setSelectedTheme } = props
+export const ThemeSwitch: FC = () => {
   const {
     activeButtons,
     handleSelectTheme,
     master,
-  } = useThemeSwitch({ selectedTheme, setSelectedTheme })
+    selectedTheme,
+  } = useThemeSwitch()
 
   return (
     <div className={cx(styles.frame, "ThemeSwitch", "group")}>

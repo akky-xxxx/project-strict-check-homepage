@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
 import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
+import { ThemeProvider } from "@shared/storeProviders/theme"
 
 import { getTheme } from "./modules/getTheme"
 import { Header } from "../components/organisms/Header"
@@ -26,7 +27,7 @@ const RootLayout: FCWithChildren = (props) => {
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        <Header themeFromServerCookie={theme} />
+        <Header />
         <div>
           {children}
         </div>
