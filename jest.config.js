@@ -2,6 +2,7 @@ module.exports = {
   coveragePathIgnorePatterns: ["/styled-system/"],
   moduleNameMapper: {
     "^@panda/(.+)": "<rootDir>/styled-system/$1",
+    "^@shared/(.+)": "<rootDir>/src/shared/$1",
   },
   roots: ["<rootDir>/src"],
   setupFilesAfterEnv: ["@testing-library/jest-dom"],

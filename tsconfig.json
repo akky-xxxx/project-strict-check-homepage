@@ -2,7 +2,8 @@
   "extends": ["@tsconfig/strictest", "@tsconfig/next"],
   "compilerOptions": {
     "paths": {
-      "@panda/*": ["./styled-system/*"]
+      "@panda/*": ["./styled-system/*"],
+      "@shared/*": ["./src/shared/*"]
     },
     "types": ["@cloudflare/workers-types/2023-07-01", "@types/jest"]
   },

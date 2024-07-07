@@ -21,6 +21,7 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         "@panda": path.resolve(__dirname, "../styled-system"),
+        "@shared": path.resolve(__dirname, "../src/shared"),
       }
     }
     return config
