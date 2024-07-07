@@ -1,5 +1,6 @@
-import { Header } from "."
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
+
+import { Header } from "."
 
 import type { Meta, StoryObj } from "@storybook/react"
 

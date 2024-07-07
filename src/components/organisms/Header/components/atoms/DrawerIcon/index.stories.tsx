@@ -1,5 +1,6 @@
-import { DrawerIcon } from "."
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
+
+import { DrawerIcon } from "."
 
 import type { Meta, StoryObj } from "@storybook/react"
 
