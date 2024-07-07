@@ -14,6 +14,7 @@ const page = new RegExp(`app(?:/[^/]+)*/(?:${nextRouting}).tsx`)
 const pages = [page]
 
 const shared = [
+  /shared\/storeProviders\/[a-z][\dA-Za-z]+\/(?:store\/)?index.ts/,
   /shared\/utils\/[a-z][\dA-Za-z]+\/index.ts/,
   /shared\/schemas\/[a-z][\dA-Za-z]+Schemas?\/index.ts/,
   /shared\/types\/[A-Z][\dA-Za-z]+\/index.ts/,
