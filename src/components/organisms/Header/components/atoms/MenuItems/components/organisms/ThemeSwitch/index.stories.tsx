@@ -1,7 +1,6 @@
-import { userEvent, within, expect } from "@storybook/test"
+import { within, expect } from "@storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
-import { sleep } from "@shared/utils/sleep"
 
 import { ThemeSwitch } from "."
 
@@ -9,6 +8,12 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 const meta: Meta<typeof ThemeSwitch> = {
   component: ThemeSwitch,
+
+  args: {
+    setSelectedTheme: (newTheme) => {
+      console.log(newTheme)
+    },
+  },
 }
 
 export default meta
@@ -18,7 +23,7 @@ const ARIA_LABEL = "aria-label"
 
 export const TbSystemButtonActive: Story = {
   args: {
-    themeFromServerCookie: "system",
+    selectedTheme: "system",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -45,7 +50,7 @@ export const SpSystemButtonActive: Story = {
 
 export const TbDarkButtonActive: Story = {
   args: {
-    themeFromServerCookie: "dark",
+    selectedTheme: "dark",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -70,7 +75,7 @@ export const SpDarkButtonActive: Story = {
 
 export const TbLightButtonActive: Story = {
   args: {
-    themeFromServerCookie: "light",
+    selectedTheme: "light",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -89,49 +94,6 @@ export const SpLightButtonActive: Story = {
   ...TbLightButtonActive,
   parameters: {
     ...TbLightButtonActive.parameters,
-    ...STORY_PARAMETERS.VIEWPORTS.SP,
-  },
-}
-
-export const TbChangeTheme: Story = {
-  ...TbSystemButtonActive,
-  tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    await sleep()
-
-    const darkThemeButton = [...canvas.getAllByRole("radio")]
-      .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "dark theme")
-    if (!darkThemeButton) return
-    await userEvent.click(darkThemeButton)
-    await expect(darkThemeButton).toBeChecked()
-
-    await sleep()
-
-    const lightThemeButton = [...canvas.getAllByRole("radio")]
-      .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "light theme")
-    if (!lightThemeButton) return
-    await userEvent.click(lightThemeButton)
-    await expect(lightThemeButton).toBeChecked()
-
-    await sleep()
-
-    const systemThemeButton = [...canvas.getAllByRole("radio")]
-      .find((radioButton) => radioButton.getAttribute(ARIA_LABEL) === "system theme")
-    if (!systemThemeButton) return
-    await userEvent.click(systemThemeButton)
-    await expect(systemThemeButton).toBeChecked()
-  },
-
-  parameters: {
-    ...STORY_PARAMETERS.VIEWPORTS.TB,
-  },
-}
-
-export const SpChangeTheme: Story = {
-  ...TbChangeTheme,
-  parameters: {
     ...STORY_PARAMETERS.VIEWPORTS.SP,
   },
 }

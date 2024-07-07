@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import { changeTheme } from "./modules/changeTheme"
 import { getStyles } from "./modules/getStyles"
 import { isThemeWord } from "./modules/isThemeWord"
@@ -11,7 +9,8 @@ import type { Theme } from "@shared/types/Theme"
 import type { ChangeEventHandler, ReactNode } from "react"
 
 type UseThemeSwitchInput = {
-  themeFromServerCookie: Theme
+  selectedTheme: Theme
+  setSelectedTheme: (newTheme: Theme) => void
 }
 
 type MasterRecord = {
@@ -21,8 +20,7 @@ type MasterRecord = {
 }
 
 export const useThemeSwitch = (input: UseThemeSwitchInput) => {
-  const { themeFromServerCookie } = input
-  const [selectedTheme, setSelectedTheme] = useState<Theme>(themeFromServerCookie)
+  const { selectedTheme, setSelectedTheme } = input
   const handleSelectTheme: ChangeEventHandler<HTMLInputElement> = (event) => {
     const {
       currentTarget: { value },

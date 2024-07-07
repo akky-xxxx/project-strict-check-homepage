@@ -9,17 +9,17 @@ import type { Theme } from "@shared/types/Theme"
 import type { FC } from "react"
 
 type Props = {
-  themeFromServerCookie: Theme
+  selectedTheme: Theme
+  setSelectedTheme: (newTheme: Theme) => void
 }
 
 export const ThemeSwitch: FC<Props> = (props) => {
-  const { themeFromServerCookie } = props
+  const { selectedTheme, setSelectedTheme } = props
   const {
     activeButtons,
     handleSelectTheme,
     master,
-    selectedTheme,
-  } = useThemeSwitch({ themeFromServerCookie })
+  } = useThemeSwitch({ selectedTheme, setSelectedTheme })
 
   return (
     <div className={cx(styles.frame, "ThemeSwitch", "group")}>
