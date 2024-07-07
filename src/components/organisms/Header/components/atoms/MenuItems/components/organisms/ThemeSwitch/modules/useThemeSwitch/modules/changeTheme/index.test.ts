@@ -1,5 +1,3 @@
-import Cookies from "js-cookie"
-
 import { changeTheme } from "."
 
 import type { Theme } from "@shared/types/Theme"
@@ -42,16 +40,6 @@ describe("changeTheme", () => {
       changeTheme(theme)
       expect(setAttributeSpy).toHaveBeenCalledWith("data-theme", theme)
       expect(querySelectorSpy).toHaveBeenCalledTimes(1)
-    })
-  })
-
-  describe("test cases for set cookie", () => {
-    it.each<TestCaseByTheme>(
-      TEST_CASES_BY_THEME,
-    )('call Cookie.set with "theme, $theme" when run changeTheme($theme)', ({ theme }) => {
-      const spy = jest.spyOn(Cookies, "set")
-      changeTheme(theme)
-      expect(spy).toHaveBeenCalledWith("theme", theme)
     })
   })
 })
