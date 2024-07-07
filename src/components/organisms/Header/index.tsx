@@ -24,6 +24,7 @@ export const Header: FC<Props> = (props) => {
     themeFromServerCookie,
   } = props
 
+  const [selectedTheme, setSelectedTheme] = useState<Theme>(themeFromServerCookie)
   const [isOpenedMenu, setIsOpenedMenu] = useState(false)
   const handleToggleMenu = () => {
     setIsOpenedMenu((current) => !current)
@@ -41,14 +42,16 @@ export const Header: FC<Props> = (props) => {
         <div className={rightItems}>
           <MenuItems
             hasPackageSelector={hasPackageSelector}
-            themeFromServerCookie={themeFromServerCookie}
+            selectedTheme={selectedTheme}
+            setSelectedTheme={setSelectedTheme}
           />
         </div>
       </header>
       <Drawer isOpened={isOpenedMenu}>
         <MenuItems
           hasPackageSelector={hasPackageSelector}
-          themeFromServerCookie={themeFromServerCookie}
+          selectedTheme={selectedTheme}
+          setSelectedTheme={setSelectedTheme}
         />
       </Drawer>
     </Fragment>

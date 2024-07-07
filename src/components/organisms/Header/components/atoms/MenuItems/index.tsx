@@ -9,7 +9,8 @@ import type { FC } from "react"
 
 type ItemsProps = {
   hasPackageSelector: boolean | undefined
-  themeFromServerCookie: Theme
+  selectedTheme: Theme
+  setSelectedTheme: (newTheme: Theme) => void
 }
 
 const {
@@ -22,7 +23,7 @@ const {
 } = styles
 
 export const MenuItems: FC<ItemsProps> = (props) => {
-  const { hasPackageSelector, themeFromServerCookie } = props
+  const { hasPackageSelector, selectedTheme, setSelectedTheme } = props
   return (
     <div className={root}>
       <div className={packageLinkWrapper}>
@@ -36,7 +37,7 @@ export const MenuItems: FC<ItemsProps> = (props) => {
         </div>
       )}
       <div className={themeSwitchWrapper}>
-        <ThemeSwitch themeFromServerCookie={themeFromServerCookie} />
+        <ThemeSwitch selectedTheme={selectedTheme} setSelectedTheme={setSelectedTheme} />
       </div>
       <div className={githubLinkWrapper}>
         <GithubLink />
