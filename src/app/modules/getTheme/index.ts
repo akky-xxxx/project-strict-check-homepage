@@ -13,7 +13,7 @@ const { theme: themeSchema } = nextCookiesSchemas
 
 export const getTheme: GetTheme = (input) => {
   try {
-    return parse(themeSchema, input)
+    return parse(themeSchema, JSON.parse(input?.value ?? ""))
   } catch {
     return "system"
   }
