@@ -5,7 +5,7 @@ import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 import { ThemeProvider } from "@shared/storeProviders/theme"
 
 import { getTheme } from "./modules/getTheme"
-import { Header } from "../components/organisms/Header"
+import { Header } from "../components/molecules/Header"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 import type { Metadata } from "next"
