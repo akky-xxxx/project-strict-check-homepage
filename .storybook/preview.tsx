@@ -1,9 +1,21 @@
 import "../src/app/globals.css"
 
+import { getRouter, usePathname } from "@storybook/nextjs/navigation.mock"
+import mockRouter from "next-router-mock"
+import { Fragment, useEffect } from "react"
+
 import type { Preview } from "@storybook/react"
-import {Fragment, useEffect} from "react"
 
 const preview: Preview = {
+  beforeEach: () => {
+    getRouter().push.mockImplementation(
+      (...args: Parameters<typeof mockRouter.push>) => mockRouter.push(...args)
+    )
+    getRouter().replace.mockImplementation(
+      (...args: Parameters<typeof mockRouter.replace>) => mockRouter.replace(...args)
+    )
+    usePathname.mockImplementation(() => mockRouter.pathname)
+  },
   decorators: [
     (Story, context) => {
       const {
@@ -30,6 +42,9 @@ const preview: Preview = {
       },
     },
     layout: "fullscreen",
+    nextjs: {
+      appDirectory: true,
+    },
     viewport: {
       viewports: [
         {
