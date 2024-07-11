@@ -1,3 +1,6 @@
+import { userEvent, within, expect } from "@storybook/test"
+import mockRouter from "next-router-mock"
+
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { SiteName } from "./index"
@@ -42,5 +45,16 @@ export const DarkSp: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORTS.SP,
+  },
+}
+
+export const ClickLinkTest: Story = {
+  tags: ["!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await userEvent.click(canvas.getByText("Strict Check"))
+
+    await expect(mockRouter).toMatchObject({ pathname: "/" })
   },
 }
