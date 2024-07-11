@@ -1,13 +1,14 @@
 import Link from "next/link"
 
 import { css } from "@panda/css"
+import { EXTERNAL_LINK_ATTRIBUTES } from "@shared/constants/EXTERNAL_LINK_ATTRIBUTES"
 
 import { GithubIcon } from "./components/atoms/GithubIcon"
 
 import type { FC } from "react"
 
 export const GithubLink: FC = () => (
-  <Link aria-label="Github" className={githubLinkStyle} href="https://github.com/akky-xxxx/strict-check" target="_blank">
+  <Link {...EXTERNAL_LINK_ATTRIBUTES} aria-label="Github" className={githubLinkStyle} href="https://github.com/akky-xxxx/strict-check">
     <GithubIcon />
   </Link>
 )
