@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import { FlatCompat } from "@eslint/eslintrc"
 import eslintConfigSCAll from "eslint-config-sc-all"
 import eslintPluginJsdoc from "eslint-plugin-jsdoc"
@@ -51,6 +52,14 @@ const config = [
   {
     rules: {
       "@stylistic/arrow-parens": [2, "always"],
+      "quote-props": 0,
+    },
+  },
+  // TODO: eslint-config-sc-ts@0.0.5 をリリースしたら不要になるので消す
+  {
+    rules: {
+      "dot-notation": 0,
+      "no-unused-expressions": 0,
     },
   },
   // TODO: eslint-config-sc-react@0.0.4 をリリースしたら不要になるので消す
