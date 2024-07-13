@@ -6,6 +6,7 @@ import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 import { getPackageName } from "@shared/utils/getPackageName"
 
 import { getTheme } from "./modules/getTheme"
+import { Main } from "../components/atoms/Main"
 import { Layout } from "../components/organisms/Layout"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
@@ -20,9 +21,9 @@ const RootLayout: FCWithChildren = (props) => {
   return (
     <Fragment>
       <Layout packageName={packageName} theme={theme} />
-      <div>
+      <Main>
         {children}
-      </div>
+      </Main>
     </Fragment>
   )
 }
