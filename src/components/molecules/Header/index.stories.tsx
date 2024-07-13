@@ -9,101 +9,55 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 const meta: Meta<typeof Header> = {
   component: Header,
-
-  args: {
-    hasPackageSelector: true,
-  },
 }
 
 export default meta
 type Story = StoryObj<typeof Header>
 
-export const LightPcHasPackageSelector: Story = {
+export const LightPc: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.LIGHT,
     ...STORY_PARAMETERS.VIEWPORTS.PC,
   },
 }
 
-export const LightTbHasPackageSelector: Story = {
+export const LightTb: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.LIGHT,
     ...STORY_PARAMETERS.VIEWPORTS.TB,
   },
 }
 
-export const LightSpHasPackageSelector: Story = {
+export const LightSp: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.LIGHT,
     ...STORY_PARAMETERS.VIEWPORTS.SP,
   },
 }
 
-export const DarkPcHasPackageSelector: Story = {
+export const DarkPc: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORTS.PC,
   },
 }
 
-export const DarkTbHasPackageSelector: Story = {
+export const DarkTb: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORTS.TB,
   },
 }
 
-export const DarkSpHasPackageSelector: Story = {
+export const DarkSp: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORTS.SP,
-  },
-}
-
-export const LightPcNotHasPackageSelector: Story = {
-  ...LightPcHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
-  },
-}
-
-export const LightTbNotHasPackageSelector: Story = {
-  ...LightTbHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
-  },
-}
-
-export const LightSpNotHasPackageSelector: Story = {
-  ...LightSpHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
-  },
-}
-
-export const DarkPcNotHasPackageSelector: Story = {
-  ...DarkPcHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
-  },
-}
-
-export const DarkTbNotHasPackageSelector: Story = {
-  ...DarkTbHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
-  },
-}
-
-export const DarkSpNotHasPackageSelector: Story = {
-  ...DarkSpHasPackageSelector,
-  args: {
-    hasPackageSelector: false,
   },
 }
 
 export const OpenCloseMenuTest: Story = {
-  ...DarkSpHasPackageSelector,
+  ...DarkSp,
   tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
