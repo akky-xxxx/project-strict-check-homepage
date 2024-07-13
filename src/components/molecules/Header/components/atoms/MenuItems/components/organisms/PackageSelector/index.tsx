@@ -14,13 +14,17 @@ export const PackageSelector: FC = () => {
   } = usePackageSelector()
   return (
     <div className={cx(root, "PackageSelector")}>
-      <select disabled className={select} value="eslint">
+      <select disabled className={cx(select, linter)} value="eslint">
         <option>eslint</option>
       </select>
 
       <span>-</span>
 
-      <select className={select} value={packageName.category} onChange={handleChangeCategoryName}>
+      <select
+        className={cx(select, category)}
+        value={packageName.category}
+        onChange={handleChangeCategoryName}
+      >
         {categoryItems.map((categoryItem) => (
           <option key={categoryItem} value={categoryItem}>
             {categoryItem}
@@ -30,7 +34,11 @@ export const PackageSelector: FC = () => {
 
       <span>-</span>
 
-      <select className={select} value={packageName.target} onChange={handleChangeTargetName}>
+      <select
+        className={cx(select, target)}
+        value={packageName.target}
+        onChange={handleChangeTargetName}
+      >
         {targetItems.map((targetItem) => (
           <option key={targetItem} value={targetItem}>
             {targetItem}
@@ -43,7 +51,10 @@ export const PackageSelector: FC = () => {
 
 const root = css({
   alignItems: "center",
-  columnGap: 8,
+  columnGap: {
+    base: 4,
+    lg: 8,
+  },
   display: "flex",
   height: {
     base: 48,
@@ -59,5 +70,19 @@ const select = css({
     base: 48,
     md: 30,
   },
-  width: 100,
+  paddingInline: {
+    md: 8,
+  },
+})
+
+const linter = css({
+  width: 95,
+})
+
+const category = css({
+  width: 90,
+})
+
+const target = css({
+  width: 112,
 })
