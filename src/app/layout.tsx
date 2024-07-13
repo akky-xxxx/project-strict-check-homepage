@@ -25,9 +25,7 @@ const RootLayout: FCWithChildren = (props) => {
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        <div>
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
