@@ -3,11 +3,12 @@ import { css, cx } from "@panda/css"
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
 type Props = {
+  handleCloseMenu: () => void
   isOpened: boolean
 }
 
 export const Drawer: FCWithChildren<Props> = (props) => {
-  const { children, isOpened } = props
+  const { children, handleCloseMenu, isOpened } = props
 
   const menuStyles = [
     menu,
@@ -20,7 +21,7 @@ export const Drawer: FCWithChildren<Props> = (props) => {
 
   return (
     <div className={root}>
-      <div className={cx(...backdropStyles)} />
+      <button aria-label="Close the menu" className={cx(...backdropStyles)} type="button" onClick={handleCloseMenu} />
       <div className={cx(...menuStyles)}>{children}</div>
     </div>
   )

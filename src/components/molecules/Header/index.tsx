@@ -23,6 +23,9 @@ export const Header: FC<Props> = (props) => {
   } = props
 
   const [isOpenedMenu, setIsOpenedMenu] = useState(false)
+  const handleCloseMenu = () => {
+    setIsOpenedMenu(false)
+  }
   const handleToggleMenu = () => {
     setIsOpenedMenu((current) => !current)
   }
@@ -44,7 +47,7 @@ export const Header: FC<Props> = (props) => {
           </div>
         </div>
       </header>
-      <Drawer isOpened={isOpenedMenu}>
+      <Drawer handleCloseMenu={handleCloseMenu} isOpened={isOpenedMenu}>
         <MenuItems
           hasPackageSelector={hasPackageSelector}
         />
