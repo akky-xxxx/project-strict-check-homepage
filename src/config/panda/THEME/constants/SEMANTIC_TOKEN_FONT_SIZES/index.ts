@@ -8,4 +8,9 @@ export const SEMANTIC_TOKEN_FONT_SIZES = {
     sm: { value: "{fontSizes.SIZE_14}" },
     xl: { value: "{fontSizes.SIZE_22}" },
   },
+
+  siteName: {
+    DEFAULT: { value: "{fontSizes.SIZE_22}" },
+    md: { value: "{fontSizes.SIZE_20}" },
+  },
 } as const satisfies SemanticTokens["fontSizes"]
