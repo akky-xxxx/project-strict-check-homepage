@@ -2,7 +2,8 @@
 
 import { Fragment, useState } from "react"
 
-import { css } from "@panda/css"
+import { css, cx } from "@panda/css"
+import { maxContentsWidth } from "@shared/styles/maxContentsWidth"
 
 import { Drawer } from "./components/atoms/Drawer"
 import { DrawerIcon } from "./components/atoms/DrawerIcon"
@@ -30,15 +31,17 @@ export const Header: FC<Props> = (props) => {
     <Fragment>
       <ScrollLock isLock={isOpenedMenu} />
       <header className={root}>
-        <SiteName />
+        <div className={cx(inner, maxContentsWidth)}>
+          <SiteName />
 
-        <div className={drawerIconWrapper}>
-          <DrawerIcon handleClick={handleToggleMenu} isOpened={isOpenedMenu} />
-        </div>
-        <div className={rightItems}>
-          <MenuItems
-            hasPackageSelector={hasPackageSelector}
-          />
+          <div className={drawerIconWrapper}>
+            <DrawerIcon handleClick={handleToggleMenu} isOpened={isOpenedMenu} />
+          </div>
+          <div className={rightItems}>
+            <MenuItems
+              hasPackageSelector={hasPackageSelector}
+            />
+          </div>
         </div>
       </header>
       <Drawer isOpened={isOpenedMenu}>
@@ -51,13 +54,16 @@ export const Header: FC<Props> = (props) => {
 }
 
 const root = css({
-  alignItems: "center",
   borderBottomColor: "backgroundColor.case2",
   borderBottomStyle: "solid",
   borderBottomWidth: 2,
+  paddingInline: 12,
+})
+
+const inner = css({
+  alignItems: "center",
   display: "flex",
   height: "var(--header-height)",
-  paddingInline: 12,
 })
 
 const drawerIconWrapper = css({
