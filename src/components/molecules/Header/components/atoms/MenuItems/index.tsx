@@ -16,21 +16,19 @@ const {
   themeSwitchWrapper,
 } = styles
 
-export const MenuItems: FC = () => {
-  return (
-    <div className={root}>
-      <div className={packageLinkWrapper}>
-        <Link className={packageLink} href="/packages">Packages</Link>
-      </div>
-      <div className={packageSelectWrapper}>
-        <PackageSelector/>
-      </div>
-      <div className={themeSwitchWrapper}>
-        <ThemeSwitch/>
-      </div>
-      <div className={githubLinkWrapper}>
-        <GithubLink/>
-      </div>
+export const MenuItems: FC = () => (
+  <div className={root}>
+    <div className={packageLinkWrapper}>
+      <Link className={packageLink} href="/packages">Packages</Link>
     </div>
-  )
-}
+    <div className={packageSelectWrapper}>
+      <PackageSelector />
+    </div>
+    <div className={themeSwitchWrapper}>
+      <ThemeSwitch />
+    </div>
+    <div className={githubLinkWrapper}>
+      <GithubLink />
+    </div>
+  </div>
+)
