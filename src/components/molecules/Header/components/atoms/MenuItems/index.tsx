@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { GithubLink } from "./components/atoms/GithubLink"
+import { PackageSelector } from "./components/organisms/PackageSelector"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
 import { styles } from "./styles"
 
@@ -28,9 +29,7 @@ export const MenuItems: FC<ItemsProps> = (props) => {
       </div>
       {Boolean(hasPackageSelector) && (
         <div className={packageSelectWrapper}>
-          <div>eslint</div>
-          <div>config-sc</div>
-          <div>-js</div>
+          <PackageSelector />
         </div>
       )}
       <div className={themeSwitchWrapper}>
