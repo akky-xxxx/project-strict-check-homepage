@@ -1,4 +1,7 @@
+import { userEvent, within } from "@storybook/test"
+
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
+import { sleep } from "@shared/utils/sleep"
 
 import { Header } from "."
 
@@ -96,5 +99,17 @@ export const DarkSpNotHasPackageSelector: Story = {
   ...DarkSpHasPackageSelector,
   args: {
     hasPackageSelector: false,
+  },
+}
+
+export const OpenCloseMenuTest: Story = {
+  ...DarkSpHasPackageSelector,
+  tags: ["!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    await sleep()
+    await userEvent.click(canvas.getByLabelText("menu button"))
+    await sleep()
+    await userEvent.click(canvas.getByLabelText("Close the menu"))
   },
 }
