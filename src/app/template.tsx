@@ -3,13 +3,10 @@ import { pathname } from "next-extra/pathname"
 import { Fragment } from "react"
 
 import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
-import { PackageNameProvider } from "@shared/storeProviders/packageName"
-import { ThemeProvider } from "@shared/storeProviders/theme"
 import { getPackageName } from "@shared/utils/getPackageName"
 
 import { getTheme } from "./modules/getTheme"
-import { Header } from "../components/molecules/Header"
-import { SetPackageName } from "../components/organisms/SetPackageName"
+import { Layout } from "../components/organisms/Layout"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
@@ -22,12 +19,7 @@ const RootLayout: FCWithChildren = (props) => {
 
   return (
     <Fragment>
-      <ThemeProvider theme={theme}>
-        <PackageNameProvider packageName={packageName}>
-          <SetPackageName />
-          <Header />
-        </PackageNameProvider>
-      </ThemeProvider>
+      <Layout packageName={packageName} theme={theme} />
       <div>
         {children}
       </div>
