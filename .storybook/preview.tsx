@@ -4,6 +4,8 @@ import { getRouter, usePathname } from "@storybook/nextjs/navigation.mock"
 import mockRouter from "next-router-mock"
 import { useEffect } from "react"
 
+import { DEFAULT_PACKAGE_NAME } from "../src/shared/constants/DEFAULT_PACKAGE_NAME"
+import { PackageNameProvider } from "../src/shared/storeProviders/packageName"
 import { ThemeProvider } from "../src/shared/storeProviders/theme"
 
 import type { Preview } from "@storybook/react"
@@ -28,7 +30,9 @@ const preview: Preview = {
       }, [backgrounds.default])
       return (
         <ThemeProvider theme={backgrounds.default}>
-          <Story />
+          <PackageNameProvider packageName={DEFAULT_PACKAGE_NAME}>
+            <Story />
+          </PackageNameProvider>
         </ThemeProvider>
       )
     },
