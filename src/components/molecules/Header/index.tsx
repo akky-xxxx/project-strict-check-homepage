@@ -13,15 +13,7 @@ import { ScrollLock } from "../../atoms/ScrollLock"
 
 import type { FC } from "react"
 
-type Props = {
-  hasPackageSelector?: boolean
-}
-
-export const Header: FC<Props> = (props) => {
-  const {
-    hasPackageSelector,
-  } = props
-
+export const Header: FC = () => {
   const [isOpenedMenu, setIsOpenedMenu] = useState(false)
   const handleCloseMenu = () => {
     setIsOpenedMenu(false)
@@ -41,16 +33,12 @@ export const Header: FC<Props> = (props) => {
             <DrawerIcon handleClick={handleToggleMenu} isOpened={isOpenedMenu} />
           </div>
           <div className={rightItems}>
-            <MenuItems
-              hasPackageSelector={hasPackageSelector}
-            />
+            <MenuItems />
           </div>
         </div>
       </header>
       <Drawer handleCloseMenu={handleCloseMenu} isOpened={isOpenedMenu}>
-        <MenuItems
-          hasPackageSelector={hasPackageSelector}
-        />
+        <MenuItems />
       </Drawer>
     </Fragment>
   )

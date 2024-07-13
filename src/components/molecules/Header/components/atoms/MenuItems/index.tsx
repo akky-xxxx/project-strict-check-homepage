@@ -7,10 +7,6 @@ import { styles } from "./styles"
 
 import type { FC } from "react"
 
-type ItemsProps = {
-  hasPackageSelector: boolean | undefined
-}
-
 const {
   githubLinkWrapper,
   packageLink,
@@ -20,23 +16,20 @@ const {
   themeSwitchWrapper,
 } = styles
 
-export const MenuItems: FC<ItemsProps> = (props) => {
-  const { hasPackageSelector } = props
+export const MenuItems: FC = () => {
   return (
     <div className={root}>
       <div className={packageLinkWrapper}>
         <Link className={packageLink} href="/packages">Packages</Link>
       </div>
-      {Boolean(hasPackageSelector) && (
-        <div className={packageSelectWrapper}>
-          <PackageSelector />
-        </div>
-      )}
+      <div className={packageSelectWrapper}>
+        <PackageSelector/>
+      </div>
       <div className={themeSwitchWrapper}>
-        <ThemeSwitch />
+        <ThemeSwitch/>
       </div>
       <div className={githubLinkWrapper}>
-        <GithubLink />
+        <GithubLink/>
       </div>
     </div>
   )

@@ -25,7 +25,7 @@ const RootLayout: FCWithChildren = (props) => {
       <ThemeProvider theme={theme}>
         <PackageNameProvider packageName={packageName}>
           <SetPackageName />
-          <Header hasPackageSelector />
+          <Header />
         </PackageNameProvider>
       </ThemeProvider>
       <div>
