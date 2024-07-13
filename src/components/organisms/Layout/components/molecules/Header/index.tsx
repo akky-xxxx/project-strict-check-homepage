@@ -9,7 +9,7 @@ import { Drawer } from "./components/atoms/Drawer"
 import { DrawerIcon } from "./components/atoms/DrawerIcon"
 import { MenuItems } from "./components/atoms/MenuItems"
 import { SiteName } from "./components/atoms/SiteName"
-import { ScrollLock } from "../../atoms/ScrollLock"
+import { ScrollLock } from "../../../../../atoms/ScrollLock"
 
 import type { FC } from "react"
 

@@ -1,8 +1,8 @@
 import { PackageNameProvider } from "@shared/storeProviders/packageName"
 import { ThemeProvider } from "@shared/storeProviders/theme"
 
-import { Header } from "../../molecules/Header"
-import { SetPackageName } from "../SetPackageName"
+import { Header } from "./components/molecules/Header"
+import { SetPackageName } from "./components/organisms/SetPackageName"
 
 import type { PackageName } from "@shared/types/PackageName"
 import type { Theme } from "@shared/types/Theme"
