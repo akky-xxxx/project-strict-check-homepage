@@ -1,6 +1,5 @@
 import { expect, within } from "@storybook/test"
 
-
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { GithubLink } from "./index"
