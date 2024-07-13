@@ -8,12 +8,6 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 const meta: Meta<typeof ThemeSwitch> = {
   component: ThemeSwitch,
-
-  args: {
-    setSelectedTheme: (newTheme) => {
-      console.log(newTheme)
-    },
-  },
 }
 
 export default meta
