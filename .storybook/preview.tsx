@@ -32,7 +32,7 @@ const preview: Preview = {
       return (
         <ThemeProvider theme={backgrounds.default}>
           <PackageNameProvider packageName={DEFAULT_PACKAGE_NAME}>
-            <MainContentProviders eslintConfig="flat">
+            <MainContentProviders eslintConfig="flat" packageManager="npm">
               <Story />
             </MainContentProviders>
           </PackageNameProvider>
