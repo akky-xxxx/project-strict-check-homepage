@@ -3,7 +3,7 @@
   "license": "UNLICENSED",
   "author": "akky-xxxx",
   "engines": {
-    "node": "20.15.0",
+    "node": "20.15.1",
     "npm": "pnpmを使用してください",
     "yarn": "pnpmを使用してください"
   },
