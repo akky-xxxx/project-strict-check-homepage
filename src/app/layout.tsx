@@ -1,11 +1,13 @@
 import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
+import { css } from "@panda/css"
 import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_PACKAGE_MANAGER, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 
 import { getEslintConfig } from "./modules/getEslintConfig"
 import { getPackageManager } from "./modules/getPackageManager"
 import { getTheme } from "./modules/getTheme"
+import { Footer } from "../components/atoms/Footer"
 import { MainContentProviders } from "../components/organisms/MainContentProviders"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
@@ -31,12 +33,27 @@ const RootLayout: FCWithChildren = (props) => {
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        <MainContentProviders eslintConfig={eslintConfig} packageManager={packageManager}>
-          {children}
-        </MainContentProviders>
+        <div className={bodyInner}>
+          <div className={mainContentsWrapper}>
+            <MainContentProviders eslintConfig={eslintConfig} packageManager={packageManager}>
+              {children}
+            </MainContentProviders>
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   )
 }
 
 export default RootLayout
+
+const bodyInner = css({
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "100dvh",
+})
+
+const mainContentsWrapper = css({
+  marginBottom: "auto",
+})
