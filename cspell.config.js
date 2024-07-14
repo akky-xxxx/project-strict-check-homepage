@@ -1,8 +1,12 @@
 module.exports = {
   version: "0.2",
 
-  dictionaries: ["packages"],
+  dictionaries: ["domain", "packages"],
   dictionaryDefinitions: [
+    {
+      name: "domain",
+      path: "./config/cspell/domain.txt",
+    },
     {
       name: "packages",
       path: "./config/cspell/packages.txt",
