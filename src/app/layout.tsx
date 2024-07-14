@@ -23,9 +23,10 @@ export const metadata: Metadata = {
 
 const RootLayout: FCWithChildren = (props) => {
   const { children } = props
-  const theme = getTheme(cookies().get(COOKIE_KEY_THEME))
-  const eslintConfig = getEslintConfig(cookies().get(COOKIE_KEY_ESLINT_CONFIG))
-  const packageManager = getPackageManager(cookies().get(COOKIE_KEY_PACKAGE_MANAGER))
+  const cookieObject = cookies()
+  const theme = getTheme(cookieObject.get(COOKIE_KEY_THEME))
+  const eslintConfig = getEslintConfig(cookieObject.get(COOKIE_KEY_ESLINT_CONFIG))
+  const packageManager = getPackageManager(cookieObject.get(COOKIE_KEY_PACKAGE_MANAGER))
 
   return (
     <html data-theme={theme} lang="en">
