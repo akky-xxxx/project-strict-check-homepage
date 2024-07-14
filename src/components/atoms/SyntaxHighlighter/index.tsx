@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-restricted-imports
 import SyntaxHighlighterOrigin from "react-syntax-highlighter"
 
 import { HLJS_THEME } from "./constants/HLJS_THEME"
