@@ -1,2 +1,8 @@
+autodocs
+doctag
+outdir
+pandacss
 preact
 sonarjs
+valibot
+zustand
