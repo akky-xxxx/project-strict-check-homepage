@@ -89,7 +89,9 @@ const config = [
   {
     files: ["**/*.stories.tsx"],
     rules: {
+      "@typescript-eslint/naming-convention": 0,
       "sc-js/forbidden-multiple-named-exports": 0,
+      "sonarjs/no-duplicate-string": 0,
     },
   },
   {
