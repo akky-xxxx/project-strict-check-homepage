@@ -2,11 +2,15 @@ import { css } from "@panda/css"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
-export const Heading2: FCWithChildren = (props) => {
-  const { children } = props
+type Props = {
+  id?: string
+}
+
+export const Heading2: FCWithChildren<Props> = (props) => {
+  const { children, id } = props
 
   return (
-    <h2 className={root}>
+    <h2 className={root} id={id}>
       {children}
     </h2>
   )
