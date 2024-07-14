@@ -31,7 +31,7 @@
     "prepare:panda": "panda codegen",
     "prepare:playwright": "pnpm exec playwright install",
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
-    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs}\" \"./*.{js,mjs}\"",
+    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,ts,tsx}\" \"./*.{js,mjs}\"",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
     "test-jest": "jest --coverage",
