@@ -40,13 +40,13 @@
   },
   "dependencies": {
     "js-cookie": "3.0.5",
-    "next": "14.2.4",
+    "next": "14.2.5",
     "next-extra": "0.4.1",
     "preact": "10.22.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-syntax-highlighter": "15.5.0",
-    "valibot": "0.35.0",
+    "valibot": "0.36.0",
     "zustand": "4.5.4"
   },
   "devDependencies": {
