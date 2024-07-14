@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
-import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
+import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 
+import { getEslintConfig } from "./modules/getEslintConfig"
 import { getTheme } from "./modules/getTheme"
+import { MainContentProviders } from "../components/organisms/MainContentProviders"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 import type { Metadata } from "next"
@@ -21,11 +23,14 @@ export const metadata: Metadata = {
 const RootLayout: FCWithChildren = (props) => {
   const { children } = props
   const theme = getTheme(cookies().get(COOKIE_KEY_THEME))
+  const eslintConfig = getEslintConfig(cookies().get(COOKIE_KEY_ESLINT_CONFIG))
 
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        {children}
+        <MainContentProviders eslintConfig={eslintConfig}>
+          {children}
+        </MainContentProviders>
       </body>
     </html>
   )
