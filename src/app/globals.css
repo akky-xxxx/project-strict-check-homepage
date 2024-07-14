@@ -14,6 +14,12 @@
       --colors-color-accent: var(--colors--a-c-c-e-n-t-100);
       --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-100);
       --colors-color-link: var(--colors--b-l-u-e-100);
+
+      --colors-syntax-highlight-background-color: var(--colors--b-l-a-c-k-200);
+      --colors-syntax-highlight-color: #f8f8f8;
+      --colors-syntax-highlight-comment: #969896;
+      --colors-syntax-highlight-highlight1: #96cbfe;
+      --colors-syntax-highlight-highlight2: #a8ff60
     }
 
     /* cookie の値がない時の初期表示用 */
@@ -25,6 +31,12 @@
       --colors-color-accent: var(--colors--a-c-c-e-n-t-200);
       --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-200);
       --colors-color-link: var(--colors--b-l-u-e-200);
+
+      --colors-syntax-highlight-background-color: var(--colors--w-h-i-t-e-200);
+      --colors-syntax-highlight-color: #000;
+      --colors-syntax-highlight-comment: #494949;
+      --colors-syntax-highlight-highlight1: #4286f4;
+      --colors-syntax-highlight-highlight2: #a626a4
     }
 
     --colors-background-color-backdrop: #000;

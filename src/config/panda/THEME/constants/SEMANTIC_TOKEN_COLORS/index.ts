@@ -52,4 +52,37 @@ export const SEMANTIC_TOKEN_COLORS = {
       },
     },
   },
+
+  syntaxHighlight: {
+    backgroundColor: {
+      value: {
+        _dark: "{colors.BLACK.200}",
+        _light: "{colors.WHITE.200}",
+      },
+    },
+    color: {
+      value: {
+        _dark: "#f8f8f8",
+        _light: "#000",
+      },
+    },
+    comment: {
+      value: {
+        _dark: "#969896",
+        _light: "#494949",
+      },
+    },
+    highlight1: {
+      value: {
+        _dark: "#96cbfe",
+        _light: "#4286f4",
+      },
+    },
+    highlight2: {
+      value: {
+        _dark: "#a8ff60",
+        _light: "#a626a4",
+      },
+    },
+  },
 } as const satisfies SemanticTokens["colors"]
