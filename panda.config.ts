@@ -25,6 +25,7 @@ export default defineConfig({
     light: "[data-theme=light] &",
 
     extend: {
+      hasChecked: "&:has(:checked)",
       hasFocus: ":has(:focus) &",
     },
   },
