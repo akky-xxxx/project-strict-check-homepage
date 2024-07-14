@@ -1,20 +1,9 @@
-import { css } from "@panda/css"
+import { Home } from "../components/templates/Home"
 
-import { Counter } from "../components/molecules/Counter"
-
-import type { FunctionalComponent } from "preact"
+import type { FC } from "react"
 
 export const runtime = "edge"
 
-const HomePage: FunctionalComponent = () => (
-  <div>
-    <div className={rootStyle}>Home</div>
-    <Counter />
-  </div>
-)
+const HomePage: FC = () => <Home />
 
 export default HomePage
-
-const rootStyle = css({
-  backgroundColor: "#faa",
-})
