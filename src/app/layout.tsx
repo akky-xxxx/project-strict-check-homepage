@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 
-import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
+import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_PACKAGE_MANAGER, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 
 import { getEslintConfig } from "./modules/getEslintConfig"
+import { getPackageManager } from "./modules/getPackageManager"
 import { getTheme } from "./modules/getTheme"
 import { MainContentProviders } from "../components/organisms/MainContentProviders"
 
@@ -24,11 +25,12 @@ const RootLayout: FCWithChildren = (props) => {
   const { children } = props
   const theme = getTheme(cookies().get(COOKIE_KEY_THEME))
   const eslintConfig = getEslintConfig(cookies().get(COOKIE_KEY_ESLINT_CONFIG))
+  const packageManager = getPackageManager(cookies().get(COOKIE_KEY_PACKAGE_MANAGER))
 
   return (
     <html data-theme={theme} lang="en">
       <body className={inter.className}>
-        <MainContentProviders eslintConfig={eslintConfig}>
+        <MainContentProviders eslintConfig={eslintConfig} packageManager={packageManager}>
           {children}
         </MainContentProviders>
       </body>
