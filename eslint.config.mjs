@@ -7,6 +7,7 @@ import eslintPluginSCJs from "eslint-plugin-sc-js"
 import eslintPluginSonarjs from "eslint-plugin-sonarjs"
 import globals from "globals"
 
+import { ESLINT } from "./config/eslint/ESLINT/index.mjs"
 import { IGNORES } from "./config/eslint/IGNORES/index.mjs"
 import { PLUGIN_SC_JS } from "./config/eslint/PLUGIN_SC_JS/index.mjs"
 import { TYPESCRIPT_ESLINT } from "./config/eslint/TYPESCRIPT_ESLINT/index.mjs"
@@ -46,6 +47,7 @@ const config = [
   eslintPluginSonarjs.configs.recommended,
   eslintConfigSCAll.getConfigs("typescript", ["next", "jest", "storybook"]),
 
+  ESLINT,
   PLUGIN_SC_JS,
   TYPESCRIPT_ESLINT,
   // TODO: eslint-config-sc-js@0.0.8 をリリースしたら不要になるので消す
