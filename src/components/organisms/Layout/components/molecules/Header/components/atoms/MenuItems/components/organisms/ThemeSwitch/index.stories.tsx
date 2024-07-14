@@ -30,7 +30,7 @@ export const TbSystemButtonActive: Story = {
     backgrounds: {
       default: "system",
     },
-    ...STORY_PARAMETERS.VIEWPORTS.TB,
+    ...STORY_PARAMETERS.VIEWPORT.TB,
   },
 }
 
@@ -38,7 +38,7 @@ export const SpSystemButtonActive: Story = {
   ...TbSystemButtonActive,
   parameters: {
     ...TbSystemButtonActive.parameters,
-    ...STORY_PARAMETERS.VIEWPORTS.SP,
+    ...STORY_PARAMETERS.VIEWPORT.SP,
   },
 }
 
@@ -55,7 +55,7 @@ export const TbDarkButtonActive: Story = {
 
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
-    ...STORY_PARAMETERS.VIEWPORTS.TB,
+    ...STORY_PARAMETERS.VIEWPORT.TB,
   },
 }
 
@@ -63,7 +63,7 @@ export const SpDarkButtonActive: Story = {
   ...TbDarkButtonActive,
   parameters: {
     ...TbDarkButtonActive.parameters,
-    ...STORY_PARAMETERS.VIEWPORTS.SP,
+    ...STORY_PARAMETERS.VIEWPORT.SP,
   },
 }
 
@@ -80,7 +80,7 @@ export const TbLightButtonActive: Story = {
 
   parameters: {
     ...STORY_PARAMETERS.THEME.LIGHT,
-    ...STORY_PARAMETERS.VIEWPORTS.TB,
+    ...STORY_PARAMETERS.VIEWPORT.TB,
   },
 }
 
@@ -88,6 +88,6 @@ export const SpLightButtonActive: Story = {
   ...TbLightButtonActive,
   parameters: {
     ...TbLightButtonActive.parameters,
-    ...STORY_PARAMETERS.VIEWPORTS.SP,
+    ...STORY_PARAMETERS.VIEWPORT.SP,
   },
 }

@@ -3,7 +3,7 @@ export const STORY_PARAMETERS = {
     DARK: { backgrounds: { default: "dark" } },
     LIGHT: { backgrounds: { default: "light" } },
   },
-  VIEWPORTS: {
+  VIEWPORT: {
     PC: { viewport: { defaultViewport: "2" } },
     SP: { viewport: { defaultViewport: "0" } },
     TB: { viewport: { defaultViewport: "1" } },

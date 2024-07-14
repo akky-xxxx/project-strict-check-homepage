@@ -17,12 +17,12 @@ type Story = StoryObj<typeof Main>
 
 export const Tb: Story = {
   parameters: {
-    ...STORY_PARAMETERS.VIEWPORTS.TB,
+    ...STORY_PARAMETERS.VIEWPORT.TB,
   },
 }
 
 export const Sp: Story = {
   parameters: {
-    ...STORY_PARAMETERS.VIEWPORTS.SP,
+    ...STORY_PARAMETERS.VIEWPORT.SP,
   },
 }
