@@ -7,6 +7,7 @@ import { useEffect } from "react"
 import { DEFAULT_PACKAGE_NAME } from "../src/shared/constants/DEFAULT_PACKAGE_NAME"
 import { PackageNameProvider } from "../src/shared/storeProviders/packageName"
 import { ThemeProvider } from "../src/shared/storeProviders/theme"
+import { MainContentProviders } from "../src/components/organisms/MainContentProviders"
 
 import type { Preview } from "@storybook/react"
 
@@ -31,7 +32,9 @@ const preview: Preview = {
       return (
         <ThemeProvider theme={backgrounds.default}>
           <PackageNameProvider packageName={DEFAULT_PACKAGE_NAME}>
-            <Story />
+            <MainContentProviders eslintConfig="flat">
+              <Story />
+            </MainContentProviders>
           </PackageNameProvider>
         </ThemeProvider>
       )
