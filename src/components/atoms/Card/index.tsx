@@ -35,6 +35,7 @@ const link = css({
   borderStyle: "solid",
   borderWidth: 1,
   display: "block",
+  height: "100%",
   padding: 12,
   transition: "background-color 0.15s ease-in-out, border-color 0.15s ease-in-out",
 
