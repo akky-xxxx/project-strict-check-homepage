@@ -28,9 +28,9 @@ const CARD_DATA = [
     title: "eslint-config-jest",
   },
   {
-    description: "eslint config for Storybook.",
-    href: "/eslint-config-storybook",
-    title: "eslint-config-storybook",
+    description: "eslint config for React.js.",
+    href: "/eslint-config-react",
+    title: "eslint-config-react",
   },
   {
     description: "eslint config for Next.js.",
@@ -38,9 +38,9 @@ const CARD_DATA = [
     title: "eslint-config-next",
   },
   {
-    description: "eslint config for React.js.",
-    href: "/eslint-config-react",
-    title: "eslint-config-react",
+    description: "eslint config for Storybook.",
+    href: "/eslint-config-storybook",
+    title: "eslint-config-storybook",
   },
   {
     description: "eslint plugin for javascript.",
