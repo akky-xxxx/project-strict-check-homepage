@@ -14,13 +14,13 @@ export const Home: FC = () => (
 
     <Section hasBorder>
       <Heading2>Next page</Heading2>
-      <div className={cardWrapper}>
+      <nav className={cardWrapper}>
         <Card
           description="SC series package list and each outline descriptions."
           href="/packages"
           title="Packages"
         />
-      </div>
+      </nav>
     </Section>
 
     <Packages />

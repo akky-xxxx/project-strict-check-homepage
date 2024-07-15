@@ -16,7 +16,7 @@ export const Card: FC<Props> = (props) => {
   const { description, href, title } = props
 
   return (
-    <aside>
+    <div>
       <Link className={link} href={href}>
         <p className={titleStyle}>{title}</p>
         {Boolean(description) && (
@@ -25,7 +25,7 @@ export const Card: FC<Props> = (props) => {
           </Paragraph>
         )}
       </Link>
-    </aside>
+    </div>
   )
 }
 

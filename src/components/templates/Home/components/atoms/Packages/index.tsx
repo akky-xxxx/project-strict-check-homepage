@@ -52,9 +52,15 @@ const CARD_DATA = [
 export const Packages: FC = () => (
   <Section>
     <Heading2>Packages</Heading2>
-    <div className={packagesCardWrapper}>
-      {CARD_DATA.map((card) => <Card key={card.title} {...card} />)}
-    </div>
+    <nav>
+      <ul className={packagesCardWrapper}>
+        {CARD_DATA.map((card) => (
+          <li key={card.title}>
+            <Card {...card} />
+          </li>
+        ))}
+      </ul>
+    </nav>
   </Section>
 )
 
