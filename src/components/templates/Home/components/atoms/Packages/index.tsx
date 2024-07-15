@@ -56,9 +56,10 @@ export const Packages: FC = () => (
 
 const packagesCardWrapper = css({
   display: "grid",
-  gap: 12,
+  gap: 16,
   gridTemplateColumns: {
-    md: "repeat(2, calc(50% - 6px))",
+    lg: "repeat(3, minmax(0, 1fr))",
+    md: "repeat(2, minmax(0, 1fr))",
   },
   marginTop: 16,
 })
