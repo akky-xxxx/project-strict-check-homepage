@@ -80,7 +80,7 @@
     "@types/react-syntax-highlighter": "15.5.13",
     "cspell": "8.10.4",
     "eslint": "8.57.0",
-    "eslint-config-sc-all": "0.0.3",
+    "eslint-config-sc-all": "0.0.4",
     "eslint-config-sc-jest": "0.0.4",
     "eslint-config-sc-next": "0.0.2",
     "eslint-config-sc-storybook": "0.0.4",
