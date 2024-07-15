@@ -26,12 +26,12 @@ export const Packages: FC = () => (
         title="eslint-config-ts"
       />
       <Card
-        description="eslint config for Jest"
+        description="eslint config for Jest."
         href="/eslint-config-jest"
         title="eslint-config-jest"
       />
       <Card
-        description="eslint config for Storybook"
+        description="eslint config for Storybook."
         href="/eslint-config-storybook"
         title="eslint-config-storybook"
       />
