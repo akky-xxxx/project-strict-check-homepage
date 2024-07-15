@@ -1,3 +1,6 @@
+import { expect, userEvent, within } from "@storybook/test"
+import mockRouter from "next-router-mock"
+
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { Packages } from "."
@@ -50,5 +53,72 @@ export const DarkSp: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORT.SP,
+  },
+}
+
+export const OrderAndAttributesTest: Story = {
+  tags: ["!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const linkElements = canvas.getAllByRole("link")
+
+    await expect(linkElements.at(0)?.querySelector("p")?.textContent).toBe("eslint-config-all")
+    await expect(linkElements.at(1)?.querySelector("p")?.textContent).toBe("eslint-config-js")
+    await expect(linkElements.at(2)?.querySelector("p")?.textContent).toBe("eslint-config-ts")
+    await expect(linkElements.at(3)?.querySelector("p")?.textContent).toBe("eslint-config-jest")
+    await expect(linkElements.at(4)?.querySelector("p")?.textContent).toBe("eslint-config-storybook")
+    await expect(linkElements.at(5)?.querySelector("p")?.textContent).toBe("eslint-config-next")
+    await expect(linkElements.at(6)?.querySelector("p")?.textContent).toBe("eslint-config-react")
+    await expect(linkElements.at(7)?.querySelector("p")?.textContent).toBe("eslint-plugin-js")
+
+    await expect(linkElements.at(0)?.querySelectorAll("p")[1]?.textContent).toBe("All in one package that eslint config sc series.")
+    await expect(linkElements.at(1)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for javascript.")
+    await expect(linkElements.at(2)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for typescript.")
+    await expect(linkElements.at(3)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for Jest.")
+    await expect(linkElements.at(4)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for Storybook.")
+    await expect(linkElements.at(5)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for Next.js.")
+    await expect(linkElements.at(6)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for React.js.")
+    await expect(linkElements.at(7)?.querySelectorAll("p")[1]?.textContent).toBe("eslint plugin for javascript.")
+
+    await expect(linkElements.at(0)?.getAttribute("href")).toBe("/eslint-config-all")
+    await expect(linkElements.at(1)?.getAttribute("href")).toBe("/eslint-config-js")
+    await expect(linkElements.at(2)?.getAttribute("href")).toBe("/eslint-config-ts")
+    await expect(linkElements.at(3)?.getAttribute("href")).toBe("/eslint-config-jest")
+    await expect(linkElements.at(4)?.getAttribute("href")).toBe("/eslint-config-storybook")
+    await expect(linkElements.at(5)?.getAttribute("href")).toBe("/eslint-config-next")
+    await expect(linkElements.at(6)?.getAttribute("href")).toBe("/eslint-config-react")
+    await expect(linkElements.at(7)?.getAttribute("href")).toBe("/eslint-plugin-js")
+  },
+}
+
+export const LinkDestinationTest: Story = {
+  tags: ["!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await userEvent.click(canvas.getByText("eslint-config-all"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-all" })
+
+    await userEvent.click(canvas.getByText("eslint-config-js"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-js" })
+
+    await userEvent.click(canvas.getByText("eslint-config-ts"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-ts" })
+
+    await userEvent.click(canvas.getByText("eslint-config-jest"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-jest" })
+
+    await userEvent.click(canvas.getByText("eslint-config-react"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-react" })
+
+    await userEvent.click(canvas.getByText("eslint-config-next"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-next" })
+
+    await userEvent.click(canvas.getByText("eslint-config-storybook"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-storybook" })
+
+    await userEvent.click(canvas.getByText("eslint-plugin-js"))
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-plugin-js" })
   },
 }
