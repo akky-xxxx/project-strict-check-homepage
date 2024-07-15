@@ -28,14 +28,6 @@ const config = [
       },
     },
   },
-  {
-    // TODO: eslint-config-sc-ts@0.0.5 をリリースしたら不要になるので消す
-    settings: {
-      "import/resolver": {
-        typescript: {},
-      },
-    },
-  },
   eslintPluginJsdoc.configs["flat/recommended-typescript"],
   compat.config(pluginNextOnPages.configs.recommended),
   eslintPluginSonarjs.configs.recommended,
@@ -44,13 +36,6 @@ const config = [
   ESLINT,
   PLUGIN_SC_JS,
   TYPESCRIPT_ESLINT,
-  // TODO: eslint-config-sc-react@0.0.4 をリリースしたら不要になるので消す
-  {
-    rules: {
-      "react/jsx-uses-react": 0,
-      "react/react-in-jsx-scope": 0,
-    },
-  },
   {
     files: ["src/config/panda/**/*.ts"],
     rules: {
