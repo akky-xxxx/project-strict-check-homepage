@@ -162,9 +162,6 @@ importers:
       fixpack:
         specifier: 4.0.0
         version: 4.0.0
-      globals:
-        specifier: 15.8.0
-        version: 15.8.0
       husky:
         specifier: 9.0.11
         version: 9.0.11
