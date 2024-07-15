@@ -49,7 +49,7 @@ export const TabContents = <L extends string = string>(props: Props<L>): ReactNo
           const { label, contentInner } = content
 
           return (
-            <div className={contentStyle}>
+            <div key={label} className={contentStyle}>
               {contentInner}
               <input checked={label === selectedLabel} className={hiddenRadio} id={`${label}-${id}`} name="tab" type="radio" />
             </div>
