@@ -127,8 +127,8 @@ importers:
         specifier: 8.57.0
         version: 8.57.0
       eslint-config-sc-all:
-        specifier: 0.0.2
-        version: 0.0.2
+        specifier: 0.0.3
+        version: 0.0.3
       eslint-config-sc-jest:
         specifier: 0.0.4
         version: 0.0.4(@typescript-eslint/eslint-plugin@7.16.0(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(jest@29.7.0(@types/node@20.14.10)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.7.0-nightly-20240713.1(@swc/helpers@0.5.12))(@types/node@20.14.10)(typescript@5.5.3)))(typescript@5.5.3)
@@ -139,8 +139,8 @@ importers:
         specifier: 0.0.4
         version: 0.0.4(eslint@8.57.0)(typescript@5.5.3)
       eslint-config-sc-ts:
-        specifier: 0.0.4
-        version: 0.0.4(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.3)
+        specifier: 0.0.5
+        version: 0.0.5(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.3)
       eslint-import-resolver-typescript:
         specifier: 3.6.1
         version: 3.6.1(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0)
@@ -4767,8 +4767,8 @@ packages:
       eslint-plugin-react: ^7.28.0
       eslint-plugin-react-hooks: ^4.3.0
 
-  eslint-config-sc-all@0.0.2:
-    resolution: {integrity: sha512-xfNXMdwJMVjS8vcjeWK9Kum1ha1+aAo5UW7E3Z0wJ2zJtCsft8KUt/ggYdnE6FJZvfpG7gnW3osaUi4aGB/q0A==}
+  eslint-config-sc-all@0.0.3:
+    resolution: {integrity: sha512-dwacRUk2FCo/mOMKSLrDI7aiBi63O21xWn8ANojfId77hxqsf6Nh1AACDaNdJhdlK3VDH0+n9h5gWrLAZvlovw==}
 
   eslint-config-sc-jest@0.0.4:
     resolution: {integrity: sha512-fImS7sIpqo6W7KCIFjq/hqe6cWS6SR7oFhWkq5j72wbPscsMG0iz24Dm42P9TYKb/z84uWJuS8G+lmAxC0lSEg==}
@@ -4785,8 +4785,8 @@ packages:
   eslint-config-sc-storybook@0.0.4:
     resolution: {integrity: sha512-e9pmQtx2JLb/emshuhOmCJq83nNvVeI76hL0aXFHfujJf2XByXp5GyUt2vpMaAaK/ilJ4CZkZUKeGoIsW58UtA==}
 
-  eslint-config-sc-ts@0.0.4:
-    resolution: {integrity: sha512-rcX+Bt/JnVxoLS6UMXyVHcH3PCWqwgNm2Ms9lwXEwY2HrL7Bh3+FOkGheG64JB7hi4pAToFsOZxRvoRPLGqpDA==}
+  eslint-config-sc-ts@0.0.5:
+    resolution: {integrity: sha512-rQL0USZ7mi+V0v+OfsY4s3KdH6z/Z9jEJOasr33npaziU6oZn5Jt1CFgoWgrp+K2u1/rQxAcT455RZ5kUhy5Sg==}
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -14340,7 +14340,7 @@ snapshots:
       object.assign: 4.1.5
       object.entries: 1.1.8
 
-  eslint-config-sc-all@0.0.2: {}
+  eslint-config-sc-all@0.0.3: {}
 
   eslint-config-sc-jest@0.0.4(@typescript-eslint/eslint-plugin@7.16.0(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(jest@29.7.0(@types/node@20.14.10)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.7.0-nightly-20240713.1(@swc/helpers@0.5.12))(@types/node@20.14.10)(typescript@5.5.3)))(typescript@5.5.3):
     dependencies:
@@ -14400,7 +14400,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-config-sc-ts@0.0.4(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.3):
+  eslint-config-sc-ts@0.0.5(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.16.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.3):
     dependencies:
       '@eslint/eslintrc': 3.1.0
       '@eslint/js': 9.7.0
