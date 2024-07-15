@@ -23,4 +23,5 @@ export const SEMANTIC_TOKEN_FONT_SIZES = {
     DEFAULT: { value: "{fontSizes.SIZE_18}" },
     md: { value: "{fontSizes.SIZE_20}" },
   },
+  heading4: { value: "{fontSizes.SIZE_18}" },
 } as const satisfies SemanticTokens["fontSizes"]
