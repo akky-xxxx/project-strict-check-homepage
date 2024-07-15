@@ -11,7 +11,7 @@ export const Packages: FC = () => (
     <Heading2>Packages</Heading2>
     <div className={packagesCardWrapper}>
       <Card
-        description="All in one the eslint config sc series."
+        description="All in one package that eslint config sc series."
         href="/eslint-config-all"
         title="eslint-config-all"
       />
