@@ -14,9 +14,16 @@ const root = css({
   gridTemplateColumns: "50% 50%",
 })
 
-const packageLinkWrapper = css({
-  gridColumn: "1/3",
-  gridRow: "1/2",
+const navStyle = css({
+  alignItems: {
+    md: "center",
+  },
+  columnGap: {
+    md: 12,
+  },
+  display: {
+    md: "flex",
+  },
 })
 
 const packageLink = css({
@@ -75,8 +82,8 @@ const githubLinkWrapper = css({
 
 export const styles = {
   githubLinkWrapper,
+  navStyle,
   packageLink,
-  packageLinkWrapper,
   packageSelectWrapper,
   root,
   themeSwitchWrapper,

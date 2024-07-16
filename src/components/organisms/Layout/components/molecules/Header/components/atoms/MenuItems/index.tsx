@@ -9,8 +9,8 @@ import type { FC } from "react"
 
 const {
   githubLinkWrapper,
+  navStyle,
   packageLink,
-  packageLinkWrapper,
   packageSelectWrapper,
   root,
   themeSwitchWrapper,
@@ -18,12 +18,12 @@ const {
 
 export const MenuItems: FC = () => (
   <div className={root}>
-    <div className={packageLinkWrapper}>
+    <nav className={navStyle}>
       <Link className={packageLink} href="/packages">Packages</Link>
-    </div>
-    <div className={packageSelectWrapper}>
-      <PackageSelector />
-    </div>
+      <div className={packageSelectWrapper}>
+        <PackageSelector />
+      </div>
+    </nav>
     <div className={themeSwitchWrapper}>
       <ThemeSwitch />
     </div>
