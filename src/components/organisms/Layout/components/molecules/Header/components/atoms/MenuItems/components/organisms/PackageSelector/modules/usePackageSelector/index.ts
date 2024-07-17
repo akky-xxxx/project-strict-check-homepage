@@ -65,11 +65,11 @@ export const usePackageSelector = () => {
     const {
       currentTarget: { value },
     } = event
-    const [maybeLinterName, maybeCategoryName, mabyTargetName] = value.split("-")
+    const [maybeLinterName, maybeCategoryName, maybeTargetName] = value.split("-")
     const parseTarget = {
       category: maybeCategoryName,
       linter: maybeLinterName,
-      target: mabyTargetName,
+      target: maybeTargetName,
     }
     const result = safeParse(packageNameSchema, parseTarget)
     const newData = result.success
