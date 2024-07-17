@@ -1,5 +1,6 @@
 import { cx } from "@panda/css"
 
+import { Select } from "./components/atoms/Select"
 import { usePackageSelector } from "./modules/usePackageSelector"
 import { styles } from "./styles"
 
@@ -34,45 +35,30 @@ export const PackageSelector: FC = () => {
 
         <span>-</span>
 
-        <select
+        <Select
           className={cx(select, category)}
+          handleChange={handleChangeCategoryName}
+          items={categoryItems}
           value={packageName.category}
-          onChange={handleChangeCategoryName}
-        >
-          {categoryItems.map((categoryItem) => (
-            <option key={categoryItem} value={categoryItem}>
-              {categoryItem}
-            </option>
-          ))}
-        </select>
+        />
 
         <span>-</span>
 
-        <select
+        <Select
           className={cx(select, target)}
+          handleChange={handleChangeTargetName}
+          items={targetItems}
           value={packageName.target}
-          onChange={handleChangeTargetName}
-        >
-          {targetItems.map((targetItem) => (
-            <option key={targetItem} value={targetItem}>
-              {targetItem}
-            </option>
-          ))}
-        </select>
+        />
       </div>
 
       <div className={onlySp}>
-        <select
+        <Select
           className={cx(select, packageNameStyle)}
+          handleChange={handleChangePackageName}
+          items={packageNameItems}
           value={`${packageName.linter}-${packageName.category}-${packageName.target}`}
-          onChange={handleChangePackageName}
-        >
-          {packageNameItems.map((record) => (
-            <option key={record} value={record}>
-              {record}
-            </option>
-          ))}
-        </select>
+        />
       </div>
     </div>
   )
