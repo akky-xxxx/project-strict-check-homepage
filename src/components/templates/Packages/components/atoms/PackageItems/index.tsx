@@ -1,12 +1,8 @@
 import { Heading4 } from "../../../../../atoms/Heading4"
 import { Section } from "../../../../../atoms/Section"
 
-import type { FC, ReactNode } from "react"
-
-type PackageItem = {
-  contents: ReactNode
-  title: string
-}
+import type { PackageItem } from "../../../types/PackageItem"
+import type { FC } from "react"
 
 type Props = {
   items: PackageItem[]
