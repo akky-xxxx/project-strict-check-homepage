@@ -3,13 +3,13 @@ import { Section } from "../../../../../atoms/Section"
 
 import type { FC, ReactNode } from "react"
 
-type Item = {
+type PackageItem = {
   contents: ReactNode
   title: string
 }
 
 type Props = {
-  items: Item[]
+  items: PackageItem[]
 }
 
 export const PackageItems: FC<Props> = (props) => {
