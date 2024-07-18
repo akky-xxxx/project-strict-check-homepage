@@ -6,6 +6,8 @@ import { EslintConfigReact } from "../../components/atoms/EslintConfigReact"
 import { EslintConfigStorybook } from "../../components/atoms/EslintConfigStorybook"
 import { EslintConfigTs } from "../../components/atoms/EslintConfigTs"
 
+import type { PackageItem } from "../../types/PackageItem"
+
 export const ESLINT_CONFIG_ITEMS = [
   {
     title: "eslint-config-sc-all",
@@ -42,4 +44,4 @@ export const ESLINT_CONFIG_ITEMS = [
 
     contents: <EslintConfigStorybook />,
   },
-]
+] as const satisfies PackageItem[]
