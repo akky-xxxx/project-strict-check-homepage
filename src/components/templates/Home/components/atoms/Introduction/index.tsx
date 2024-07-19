@@ -1,11 +1,9 @@
-import Link from "next/link"
-
 import { css } from "@panda/css"
 import { accent } from "@shared/styles/accent"
 import { bold } from "@shared/styles/bold"
-import { link } from "@shared/styles/link"
 
 import { Heading1 } from "../../../../../atoms/Heading1"
+import { Link } from "../../../../../atoms/Link"
 import { Paragraph } from "../../../../../atoms/Paragraph"
 
 import type { FC } from "react"
@@ -61,7 +59,7 @@ export const Introduction: FC = () => (
     <Paragraph>
       About packages, please refer the
       {" "}
-      <Link className={link} href="/packages">this</Link>
+      <Link href="/packages">this</Link>
       .
     </Paragraph>
   </div>

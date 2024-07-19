@@ -1,7 +1,7 @@
 import { css } from "@panda/css"
-import { EXTERNAL_LINK_ATTRIBUTES } from "@shared/constants/EXTERNAL_LINK_ATTRIBUTES"
-import { link } from "@shared/styles/link"
 import { maxContentsWidth } from "@shared/styles/maxContentsWidth"
+
+import { Link } from "../Link"
 
 import type { FC } from "react"
 
@@ -12,7 +12,7 @@ export const Footer: FC = () => (
       <p>
         Copyright &copy;
         {" "}
-        <a {...EXTERNAL_LINK_ATTRIBUTES} className={link} href="https://github.com/akky-xxxx">akky-xxxx</a>
+        <Link isExternal href="https://github.com/akky-xxxx">akky-xxxx</Link>
       </p>
     </div>
   </footer>
