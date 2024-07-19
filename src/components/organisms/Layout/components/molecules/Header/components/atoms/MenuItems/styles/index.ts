@@ -28,36 +28,24 @@ const navStyle = css({
 
 const packageLink = css({
   alignItems: "center",
-  borderBottomColor: "backgroundColor.case2",
-  borderBottomStyle: "solid",
-  borderBottomWidth: 1,
   display: "flex",
-  height: {
-    base: 48,
-    md: "initial",
-  },
-  paddingInline: {
-    base: 12,
-    md: "initial",
-  },
   textDecoration: "underline",
+
+  base: {
+    height: 48,
+    paddingInline: 12,
+  },
 })
 
 const packageSelectWrapper = css({
   alignItems: "center",
-  borderBottomColor: "backgroundColor.case2",
-  borderBottomStyle: "solid",
-  borderBottomWidth: 1,
   display: "flex",
   gridColumn: "1/3",
   gridRow: "2/3",
-  height: {
-    base: 48,
-    md: "initial",
-  },
-  paddingInline: {
-    base: 12,
-    md: "initial",
+
+  base: {
+    height: 48,
+    paddingInline: 12,
   },
 })
 
