@@ -46,7 +46,7 @@ export const useGetHandlers = (input: Input) => {
     const newData = result.success ? result.output : DEFAULT_PACKAGE_NAME
     setPackageTargetName(newData.target)
     if (newData.target === DEFAULT_PACKAGE_NAME.target) return
-    router.push(`/eslint-${newData.category}-${newData.target}`)
+    router.push(`/packages/eslint-${newData.category}-${newData.target}`)
   }
 
   const handleChangePackageName: ChangeEventHandler<HTMLSelectElement> = (event) => {
@@ -56,7 +56,7 @@ export const useGetHandlers = (input: Input) => {
     const result = safeParse(packageNameSchema, parseTarget)
     const newData = result.success ? result.output : DEFAULT_PACKAGE_NAME
     setPackageName(newData)
-    router.push(`/${newData.linter}-${newData.category}-${newData.target}`)
+    router.push(`/packages/${newData.linter}-${newData.category}-${newData.target}`)
   }
 
   return { handleChangeCategoryName, handleChangePackageName, handleChangeTargetName }

@@ -124,7 +124,7 @@ export const ClickTargetTest1: Story = {
     await userEvent.selectOptions(categorySelect.parentElement, "config")
     await sleep()
     await userEvent.selectOptions(targetSelect.parentElement, "sc-all")
-    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-sc-all" })
+    await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-config-sc-all" })
   },
 }
 
@@ -145,6 +145,6 @@ export const ClickTargetTest2: Story = {
     await userEvent.selectOptions(categorySelect.parentElement, "plugin")
     await sleep()
     await userEvent.selectOptions(targetSelect.parentElement, "sc-js")
-    await expect(mockRouter).toMatchObject({ pathname: "/eslint-plugin-sc-js" })
+    await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-plugin-sc-js" })
   },
 }
