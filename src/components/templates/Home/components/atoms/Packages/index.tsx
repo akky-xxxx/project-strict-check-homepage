@@ -9,43 +9,43 @@ import type { ComponentProps, FC } from "react"
 const CARD_DATA = [
   {
     description: "All in one package that eslint config sc series.",
-    href: "/eslint-config-all",
-    title: "eslint-config-all",
+    href: "/eslint-config-sc-all",
+    title: "eslint-config-sc-all",
   },
   {
     description: "eslint config for javascript.",
-    href: "/eslint-config-js",
-    title: "eslint-config-js",
+    href: "/eslint-config-sc-js",
+    title: "eslint-config-sc-js",
   },
   {
     description: "eslint config for typescript.",
-    href: "/eslint-config-ts",
-    title: "eslint-config-ts",
+    href: "/eslint-config-sc-ts",
+    title: "eslint-config-sc-ts",
   },
   {
     description: "eslint config for Jest.",
-    href: "/eslint-config-jest",
-    title: "eslint-config-jest",
+    href: "/eslint-config-sc-jest",
+    title: "eslint-config-sc-jest",
   },
   {
     description: "eslint config for React.js.",
-    href: "/eslint-config-react",
-    title: "eslint-config-react",
+    href: "/eslint-config-sc-react",
+    title: "eslint-config-sc-react",
   },
   {
     description: "eslint config for Next.js.",
-    href: "/eslint-config-next",
-    title: "eslint-config-next",
+    href: "/eslint-config-sc-next",
+    title: "eslint-config-sc-next",
   },
   {
     description: "eslint config for Storybook.",
-    href: "/eslint-config-storybook",
-    title: "eslint-config-storybook",
+    href: "/eslint-config-sc-storybook",
+    title: "eslint-config-sc-storybook",
   },
   {
     description: "eslint plugin for javascript.",
-    href: "/eslint-plugin-js",
-    title: "eslint-plugin-js",
+    href: "/eslint-plugin-sc-js",
+    title: "eslint-plugin-sc-js",
   },
 ] as const satisfies Array<ComponentProps<typeof Card>>
 

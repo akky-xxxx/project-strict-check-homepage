@@ -51,8 +51,8 @@ export const useGetHandlers = (input: Input) => {
 
   const handleChangePackageName: ChangeEventHandler<HTMLSelectElement> = (event) => {
     const { currentTarget: { value } } = event
-    const [linter, category, target] = value.split("-")
-    const parseTarget = { category, linter, target }
+    const [linter, category, prefix, target] = value.split("-")
+    const parseTarget = { category, linter, target: `${prefix ?? ""}-${target ?? ""}` }
     const result = safeParse(packageNameSchema, parseTarget)
     const newData = result.success ? result.output : DEFAULT_PACKAGE_NAME
     setPackageName(newData)

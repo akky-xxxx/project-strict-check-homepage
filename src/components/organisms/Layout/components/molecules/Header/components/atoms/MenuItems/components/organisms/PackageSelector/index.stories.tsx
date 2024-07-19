@@ -77,13 +77,13 @@ export const ChangeCategoryToConfigTest: Story = {
     await userEvent.selectOptions(categorySelect.parentElement, "config")
     await expect(targetSelect.parentElement.childElementCount).toBe(8)
     await expect(targetSelect.parentElement.children.item(0)?.textContent).toBe("------")
-    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("all")
-    await expect(targetSelect.parentElement.children.item(2)?.textContent).toBe("jest")
-    await expect(targetSelect.parentElement.children.item(3)?.textContent).toBe("js")
-    await expect(targetSelect.parentElement.children.item(4)?.textContent).toBe("next")
-    await expect(targetSelect.parentElement.children.item(5)?.textContent).toBe("react")
-    await expect(targetSelect.parentElement.children.item(6)?.textContent).toBe("storybook")
-    await expect(targetSelect.parentElement.children.item(7)?.textContent).toBe("ts")
+    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("sc-all")
+    await expect(targetSelect.parentElement.children.item(2)?.textContent).toBe("sc-jest")
+    await expect(targetSelect.parentElement.children.item(3)?.textContent).toBe("sc-js")
+    await expect(targetSelect.parentElement.children.item(4)?.textContent).toBe("sc-next")
+    await expect(targetSelect.parentElement.children.item(5)?.textContent).toBe("sc-react")
+    await expect(targetSelect.parentElement.children.item(6)?.textContent).toBe("sc-storybook")
+    await expect(targetSelect.parentElement.children.item(7)?.textContent).toBe("sc-ts")
   },
 }
 
@@ -103,7 +103,7 @@ export const ChangeCategoryToPluginTest: Story = {
     await userEvent.selectOptions(categorySelect.parentElement, "plugin")
     await expect(targetSelect.parentElement.childElementCount).toBe(2)
     await expect(targetSelect.parentElement.children.item(0)?.textContent).toBe("------")
-    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("js")
+    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("sc-js")
   },
 }
 
@@ -123,8 +123,8 @@ export const ClickTargetTest1: Story = {
     await sleep()
     await userEvent.selectOptions(categorySelect.parentElement, "config")
     await sleep()
-    await userEvent.selectOptions(targetSelect.parentElement, "all")
-    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-all" })
+    await userEvent.selectOptions(targetSelect.parentElement, "sc-all")
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-config-sc-all" })
   },
 }
 
@@ -144,7 +144,7 @@ export const ClickTargetTest2: Story = {
     await sleep()
     await userEvent.selectOptions(categorySelect.parentElement, "plugin")
     await sleep()
-    await userEvent.selectOptions(targetSelect.parentElement, "js")
-    await expect(mockRouter).toMatchObject({ pathname: "/eslint-plugin-js" })
+    await userEvent.selectOptions(targetSelect.parentElement, "sc-js")
+    await expect(mockRouter).toMatchObject({ pathname: "/eslint-plugin-sc-js" })
   },
 }

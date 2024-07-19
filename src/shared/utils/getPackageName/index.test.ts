@@ -19,12 +19,12 @@ describe("getPackageName", () => {
       { category: "------", linter: "eslint", target: "------" },
     ],
     [
-      "/eslint-config-all",
-      { category: "config", linter: "eslint", target: "all" },
+      "/eslint-config-sc-all",
+      { category: "config", linter: "eslint", target: "sc-all" },
     ],
     [
-      "/eslint-plugin-js",
-      { category: "plugin", linter: "eslint", target: "js" },
+      "/eslint-plugin-sc-js",
+      { category: "plugin", linter: "eslint", target: "sc-js" },
     ],
   ])("input が %s の時、 %s を返す", (value, output) => {
     expect(getPackageName(value)).toStrictEqual(output)

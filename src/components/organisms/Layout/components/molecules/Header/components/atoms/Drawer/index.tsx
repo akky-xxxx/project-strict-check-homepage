@@ -40,7 +40,7 @@ const root = css({
   width: "100%",
 })
 
-const MENU_WIDTH = 244
+const MENU_WIDTH = 254
 
 const menu = css({
   backgroundColor: "backgroundColor",

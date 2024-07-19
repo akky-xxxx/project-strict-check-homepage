@@ -42,11 +42,11 @@ const category = css({
 })
 
 const target = css({
-  width: 112,
+  width: 140,
 })
 
 const packageNameStyle = css({
-  width: 220,
+  width: 230,
 })
 
 export const styles = {

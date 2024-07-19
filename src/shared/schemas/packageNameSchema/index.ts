@@ -13,13 +13,13 @@ export const packageNameSchema = union([
 
     target: union([
       literal("------"),
-      literal("all"),
-      literal("jest"),
-      literal("js"),
-      literal("next"),
-      literal("react"),
-      literal("storybook"),
-      literal("ts"),
+      literal("sc-all"),
+      literal("sc-jest"),
+      literal("sc-js"),
+      literal("sc-next"),
+      literal("sc-react"),
+      literal("sc-storybook"),
+      literal("sc-ts"),
     ]),
   }),
 
@@ -35,7 +35,7 @@ export const packageNameSchema = union([
 
     target: union([
       literal("------"),
-      literal("js"),
+      literal("sc-js"),
     ]),
   }),
 ])
