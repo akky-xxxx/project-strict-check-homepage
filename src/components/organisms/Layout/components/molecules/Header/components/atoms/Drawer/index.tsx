@@ -10,6 +10,11 @@ type Props = {
 export const Drawer: FCWithChildren<Props> = (props) => {
   const { children, handleCloseMenu, isOpened } = props
 
+  const rootStyle = [
+    root,
+    isOpened && openedRoot,
+  ]
+
   const menuStyles = [
     menu,
     isOpened && openedMenu,
@@ -20,7 +25,7 @@ export const Drawer: FCWithChildren<Props> = (props) => {
   ]
 
   return (
-    <div className={root}>
+    <div className={cx(...rootStyle)}>
       <button aria-label="Close the menu" className={cx(...backdropStyles)} type="button" onClick={handleCloseMenu} />
       <div className={cx(...menuStyles)}>{children}</div>
     </div>
@@ -34,10 +39,15 @@ const root = css({
   },
   left: 0,
   overflow: "hidden",
+  pointerEvents: "none",
   position: "absolute",
   right: 0,
   top: "var(--header-height)",
   width: "100%",
+})
+
+const openedRoot = css({
+  pointerEvents: "initial",
 })
 
 const MENU_WIDTH = 254
