@@ -32,22 +32,8 @@ const activeTabItem = css({
   borderBottomWidth: 1,
 })
 
-const contentStyle = css({
-  display: "none",
-
-  _hasChecked: {
-    display: "block",
-  },
-})
-
-const hiddenRadio = css({
-  display: "none",
-})
-
 export const styles = {
   activeTabItem,
-  contentStyle,
-  hiddenRadio,
   tabItem,
   tabs,
 } as const

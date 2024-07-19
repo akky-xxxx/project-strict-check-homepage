@@ -1,7 +1,5 @@
 "use client"
 
-import { useId } from "react"
-
 import { cx } from "@panda/css"
 
 import { styles } from "./styles"
@@ -15,11 +13,10 @@ type Props<L extends string = string> = {
   handleSelectLabel: (label: L) => void
 }
 
-const { activeTabItem, contentStyle, hiddenRadio, tabItem, tabs } = styles
+const { activeTabItem, tabItem, tabs } = styles
 
 export const TabContents = <L extends string = string>(props: Props<L>): ReactNode => {
   const { contents, selectedLabel, handleSelectLabel } = props
-  const id = useId()
 
   return (
     <div>
@@ -27,6 +24,7 @@ export const TabContents = <L extends string = string>(props: Props<L>): ReactNo
         {contents.map((content) => {
           const { label } = content
           const onClickLabel = () => {
+            if (label === selectedLabel) return
             handleSelectLabel(label)
           }
           const tabItemStyle = [
@@ -35,11 +33,9 @@ export const TabContents = <L extends string = string>(props: Props<L>): ReactNo
           ]
           return (
             <li key={label}>
-              <label htmlFor={`${label}-${id}`}>
-                <button className={cx(...tabItemStyle)} type="button" onClick={onClickLabel}>
-                  {label}
-                </button>
-              </label>
+              <button className={cx(...tabItemStyle)} type="button" onClick={onClickLabel}>
+                {label}
+              </button>
             </li>
           )
         })}
@@ -48,10 +44,11 @@ export const TabContents = <L extends string = string>(props: Props<L>): ReactNo
         {contents.map((content) => {
           const { label, contentInner } = content
 
+          if (label !== selectedLabel) return null
+
           return (
-            <div key={label} className={contentStyle}>
+            <div key={label}>
               {contentInner}
-              <input checked={label === selectedLabel} className={hiddenRadio} id={`${label}-${id}`} name="tab" type="radio" />
             </div>
           )
         })}
