@@ -1,9 +1,8 @@
-import Link from "next/link"
-
 import { GithubLink } from "./components/atoms/GithubLink"
 import { PackageSelector } from "./components/organisms/PackageSelector"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
 import { styles } from "./styles"
+import { NextLink } from "../../../../../../../../atoms/NextLink"
 
 import type { FC } from "react"
 
@@ -19,7 +18,7 @@ const {
 export const MenuItems: FC = () => (
   <div className={root}>
     <nav className={navStyle}>
-      <Link className={packageLink} href="/packages">Packages</Link>
+      <NextLink className={packageLink} href="/packages">Packages</NextLink>
       <div className={packageSelectWrapper}>
         <PackageSelector />
       </div>

@@ -1,7 +1,7 @@
-import NextLink from "next/link"
-
 import { EXTERNAL_LINK_ATTRIBUTES } from "@shared/constants/EXTERNAL_LINK_ATTRIBUTES"
 import { link } from "@shared/styles/link"
+
+import { NextLink } from "../NextLink"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 

@@ -1,7 +1,6 @@
-import Link from "next/link"
-
 import { css } from "@panda/css"
 
+import { NextLink } from "../NextLink"
 import { Paragraph } from "../Paragraph"
 
 import type { FC } from "react"
@@ -17,14 +16,14 @@ export const Card: FC<Props> = (props) => {
 
   return (
     <div>
-      <Link className={link} href={href}>
+      <NextLink className={link} href={href}>
         <p className={titleStyle}>{title}</p>
         {Boolean(description) && (
           <Paragraph>
             {description}
           </Paragraph>
         )}
-      </Link>
+      </NextLink>
     </div>
   )
 }
