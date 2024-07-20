@@ -2,6 +2,7 @@
   "extends": ["@tsconfig/strictest", "@tsconfig/next"],
   "compilerOptions": {
     "paths": {
+      "@lib/*": ["./src/lib/*"],
       "@panda/*": ["./styled-system/*"],
       "@shared/*": ["./src/shared/*"]
     },

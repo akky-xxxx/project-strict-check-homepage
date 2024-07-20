@@ -1,6 +1,7 @@
 module.exports = {
   coveragePathIgnorePatterns: ["/styled-system/"],
   moduleNameMapper: {
+    "^@lib/(.+)": "<rootDir>/src/lib/$1",
     "^@panda/(.+)": "<rootDir>/styled-system/$1",
     "^@shared/(.+)": "<rootDir>/src/shared/$1",
   },

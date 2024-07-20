@@ -15,6 +15,7 @@ module.exports = {
   ignorePaths: [
     "coverage/**",
     "node_modules/**",
+    "src/lib/**",
     "styled-system/**",
   ],
   language: "en",

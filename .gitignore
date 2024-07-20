@@ -33,3 +33,6 @@ next-env.d.ts
 styled-system
 styled-system-studio
 *storybook.log
+
+## pathpida
+src/lib/$path.ts

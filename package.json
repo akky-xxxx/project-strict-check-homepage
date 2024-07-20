@@ -8,12 +8,16 @@
     "yarn": "pnpmを使用してください"
   },
   "scripts": {
-    "build": "next build",
+    "build": "run-s build:pathpida build:next",
     "build-storybook": "storybook build",
+    "build:next": "next build",
+    "build:pathpida": "pathpida --ignorePath .gitignore",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "check-code": "npm-run-all -p lint spell-check type-check -s test-jest",
     "deploy": "$npm_execpath run pages:build && wrangler pages deploy",
-    "dev": "next dev",
+    "dev": "run-p dev:*",
+    "dev:next": "next dev",
+    "dev:path": "pathpida --ignorePath .gitignore --watch",
     "fix": "run-p -c \"fix:*\"",
     "fix:config": "eslint -c eslint.config.js.mjs \"./\" --max-warnings 0 --fix",
     "fix:pack": "fixpack",
@@ -33,7 +37,8 @@
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,ts,tsx}\" \"./*.{js,mjs}\"",
     "start": "next start",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "run-s build:pathpida storybook:storybook",
+    "storybook:storybook": "storybook dev -p 6006",
     "test-jest": "jest --coverage",
     "test-storybook": "test-storybook",
     "type-check": "tsc"
