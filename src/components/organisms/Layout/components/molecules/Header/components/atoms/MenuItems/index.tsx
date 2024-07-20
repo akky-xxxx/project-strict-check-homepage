@@ -1,3 +1,5 @@
+import { pagesPath } from "@lib/$path"
+
 import { GithubLink } from "./components/atoms/GithubLink"
 import { PackageSelector } from "./components/organisms/PackageSelector"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
@@ -18,7 +20,7 @@ const {
 export const MenuItems: FC = () => (
   <div className={root}>
     <nav className={navStyle}>
-      <NextLink className={packageLink} href="/packages">Packages</NextLink>
+      <NextLink className={packageLink} href={pagesPath.packages.$url().path}>Packages</NextLink>
       <div className={packageSelectWrapper}>
         <PackageSelector />
       </div>

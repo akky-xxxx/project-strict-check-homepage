@@ -1,3 +1,4 @@
+import { pagesPath } from "@lib/$path"
 import { css } from "@panda/css"
 import { accent } from "@shared/styles/accent"
 import { bold } from "@shared/styles/bold"
@@ -59,7 +60,7 @@ export const Introduction: FC = () => (
     <Paragraph>
       About packages, please refer the
       {" "}
-      <Link href="/packages">this</Link>
+      <Link href={pagesPath.packages.$url().path}>this</Link>
       .
     </Paragraph>
   </div>

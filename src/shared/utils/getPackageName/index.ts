@@ -1,5 +1,6 @@
 import { safeParse } from "valibot"
 
+import { pagesPath } from "@lib/$path"
 import { DEFAULT_PACKAGE_NAME } from "@shared/constants/DEFAULT_PACKAGE_NAME"
 import { packageNameSchema } from "@shared/schemas/packageNameSchema"
 
@@ -13,7 +14,7 @@ const REQUIRED_SPLIT_LENGTH = ["LINTER", "CATEGORY", "PREFIX", "TARGET"].length
 const FIRST_CHARACTER = 1
 
 export const getPackageName: GetPackageName = (input) => {
-  const splitUrl = input.replace("/packages", "").slice(FIRST_CHARACTER).split("-")
+  const splitUrl = input.replace(pagesPath.packages.$url().path, "").slice(FIRST_CHARACTER).split("-")
   if (splitUrl.length < REQUIRED_SPLIT_LENGTH) return DEFAULT_PACKAGE_NAME
   const [linter, category, prefix, target] = splitUrl
   const result = safeParse(packageNameSchema, { category, linter, target: `${prefix ?? ""}-${target ?? ""}` })

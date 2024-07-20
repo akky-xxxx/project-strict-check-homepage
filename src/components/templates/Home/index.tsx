@@ -1,3 +1,4 @@
+import { pagesPath } from "@lib/$path"
 import { css } from "@panda/css"
 
 import { Introduction } from "./components/atoms/Introduction"
@@ -17,7 +18,7 @@ export const Home: FC = () => (
       <nav className={cardWrapper}>
         <Card
           description="SC series package list and each outline descriptions."
-          href="/packages"
+          href={pagesPath.packages.$url().path}
           title="Packages"
         />
       </nav>

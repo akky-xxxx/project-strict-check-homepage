@@ -1,3 +1,5 @@
+import { pagesPath } from "@lib/$path"
+
 export const LINK_ITEMS = [
   {
     href: "https://typescript-eslint.io/",
@@ -5,7 +7,7 @@ export const LINK_ITEMS = [
     label: "typescript-eslint",
   },
   {
-    href: "/packages/eslint-config-sc-js",
+    href: pagesPath.packages.eslint_config_sc_js.$url().path,
     label: "eslint-config-sc-js",
   },
 ] as const satisfies Array<Record<"href" | "label", string> & { isExternal?: boolean }>

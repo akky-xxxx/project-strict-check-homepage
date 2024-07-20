@@ -1,3 +1,4 @@
+import { pagesPath } from "@lib/$path"
 import { css } from "@panda/css"
 
 import { Card } from "../../../../../atoms/Card"
@@ -9,42 +10,42 @@ import type { ComponentProps, FC } from "react"
 const CARD_DATA = [
   {
     description: "All in one package that eslint config sc series.",
-    href: "/packages/eslint-config-sc-all",
+    href: pagesPath.packages.eslint_config_sc_all.$url().path,
     title: "eslint-config-sc-all",
   },
   {
     description: "eslint config for javascript.",
-    href: "/packages/eslint-config-sc-js",
+    href: pagesPath.packages.eslint_config_sc_js.$url().path,
     title: "eslint-config-sc-js",
   },
   {
     description: "eslint config for typescript.",
-    href: "/packages/eslint-config-sc-ts",
+    href: pagesPath.packages.eslint_config_sc_ts.$url().path,
     title: "eslint-config-sc-ts",
   },
   {
     description: "eslint config for Jest.",
-    href: "/packages/eslint-config-sc-jest",
+    href: pagesPath.packages.eslint_config_sc_jest.$url().path,
     title: "eslint-config-sc-jest",
   },
   {
     description: "eslint config for React.js.",
-    href: "/packages/eslint-config-sc-react",
+    href: pagesPath.packages.eslint_config_sc_react.$url().path,
     title: "eslint-config-sc-react",
   },
   {
     description: "eslint config for Next.js.",
-    href: "/packages/eslint-config-sc-next",
+    href: pagesPath.packages.eslint_config_sc_next.$url().path,
     title: "eslint-config-sc-next",
   },
   {
     description: "eslint config for Storybook.",
-    href: "/packages/eslint-config-sc-storybook",
+    href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
     title: "eslint-config-sc-storybook",
   },
   {
     description: "eslint plugin for javascript.",
-    href: "/packages/eslint-plugin-sc-js",
+    href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
     title: "eslint-plugin-sc-js",
   },
 ] as const satisfies Array<ComponentProps<typeof Card>>

@@ -1,3 +1,5 @@
+import { pagesPath } from "@lib/$path"
+
 export const LINK_ITEMS = [
   {
     href: "https://www.npmjs.com/package/eslint-plugin-react",
@@ -10,7 +12,7 @@ export const LINK_ITEMS = [
     label: "eslint-plugin-react-hook",
   },
   {
-    href: "/packages/eslint-config-sc-js",
+    href: pagesPath.packages.eslint_config_sc_js.$url().path,
     label: "eslint-config-sc-js",
   },
 ] as const satisfies Array<Record<"href" | "label", string> & { isExternal?: boolean }>
