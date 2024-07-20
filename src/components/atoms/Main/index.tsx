@@ -20,7 +20,5 @@ const root = css({
     base: 12,
     md: 24,
   },
-  paddingInline: {
-    md: 12,
-  },
+  paddingInline: 20,
 })
