@@ -1,5 +1,7 @@
 "use client"
 
+import { Fragment } from "react"
+
 import { cx } from "@panda/css"
 
 import { styles } from "./styles"
@@ -40,19 +42,17 @@ export const TabContents = <L extends string = string>(props: Props<L>): ReactNo
           )
         })}
       </ul>
-      <div>
-        {contents.map((content) => {
-          const { label, contentInner } = content
+      {contents.map((content) => {
+        const { label, contentInner } = content
 
-          if (label !== selectedLabel) return null
+        if (label !== selectedLabel) return null
 
-          return (
-            <div key={label}>
-              {contentInner}
-            </div>
-          )
-        })}
-      </div>
+        return (
+          <Fragment key={label}>
+            {contentInner}
+          </Fragment>
+        )
+      })}
     </div>
   )
 }
