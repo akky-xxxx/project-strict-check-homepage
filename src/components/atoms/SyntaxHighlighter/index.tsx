@@ -31,6 +31,7 @@ export const SyntaxHighlighter: FC<Props> = (props) => {
 
   return (
     <div className={root}>
+      {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
       <button aria-label="Copy the code" className={iconWrapper} type="button" onClick={onClickIcon}>
         <CopyIcon />
       </button>

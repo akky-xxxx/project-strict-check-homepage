@@ -28,6 +28,7 @@ export const CopyHash: FC<Props> = (props) => {
     })
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
   return <button className={root} type="button" onClick={onClick}>#</button>
 }
 
