@@ -1,6 +1,7 @@
 import { expect, userEvent, within } from "@storybook/test"
 import mockRouter from "next-router-mock"
 
+import { pagesPath } from "@lib/$path"
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { PackageSelector } from "."
@@ -46,6 +47,7 @@ export const DarkSp: Story = {
   },
 }
 
+// 実装側で遷移先の url を動的に生成してるため、テスト側で pathpida を使うことにより値を担保させる
 export const PcChangingAndLinkDestinationTest: Story = {
   tags: ["!autodocs"],
   parameters: {
@@ -64,13 +66,13 @@ export const PcChangingAndLinkDestinationTest: Story = {
     ) return
 
     const TEST_CASES = [
-      { input: "sc-all", output: "/packages/eslint-config-sc-all" },
-      { input: "sc-js", output: "/packages/eslint-config-sc-js" },
-      { input: "sc-ts", output: "/packages/eslint-config-sc-ts" },
-      { input: "sc-jest", output: "/packages/eslint-config-sc-jest" },
-      { input: "sc-react", output: "/packages/eslint-config-sc-react" },
-      { input: "sc-next", output: "/packages/eslint-config-sc-next" },
-      { input: "sc-storybook", output: "/packages/eslint-config-sc-storybook" },
+      { input: "sc-all", output: pagesPath.packages.eslint_config_sc_all.$url().path },
+      { input: "sc-js", output: pagesPath.packages.eslint_config_sc_js.$url().path },
+      { input: "sc-ts", output: pagesPath.packages.eslint_config_sc_ts.$url().path },
+      { input: "sc-jest", output: pagesPath.packages.eslint_config_sc_jest.$url().path },
+      { input: "sc-react", output: pagesPath.packages.eslint_config_sc_react.$url().path },
+      { input: "sc-next", output: pagesPath.packages.eslint_config_sc_next.$url().path },
+      { input: "sc-storybook", output: pagesPath.packages.eslint_config_sc_storybook.$url().path },
     ]
     await userEvent.selectOptions(categorySelect.parentElement, "config")
     // eslint-disable-next-line no-restricted-syntax
@@ -81,10 +83,13 @@ export const PcChangingAndLinkDestinationTest: Story = {
 
     await userEvent.selectOptions(categorySelect.parentElement, "plugin")
     await userEvent.selectOptions(targetSelect.parentElement, "sc-js")
-    await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-plugin-sc-js" })
+    await expect(mockRouter).toMatchObject(
+      { pathname: pagesPath.packages.eslint_plugin_sc_js.$url().path },
+    )
   },
 }
 
+// 実装側で遷移先の url を動的に生成してるため、テスト側で pathpida を使うことにより値を担保させる
 export const SpChangingAndLinkDestinationTest: Story = {
   tags: ["!autodocs"],
   parameters: {
@@ -98,14 +103,14 @@ export const SpChangingAndLinkDestinationTest: Story = {
     if (!optionElement?.parentElement) return
 
     const TEST_CASES = [
-      { input: "eslint-config-sc-all", output: "/packages/eslint-config-sc-all" },
-      { input: "eslint-config-sc-js", output: "/packages/eslint-config-sc-js" },
-      { input: "eslint-config-sc-ts", output: "/packages/eslint-config-sc-ts" },
-      { input: "eslint-config-sc-jest", output: "/packages/eslint-config-sc-jest" },
-      { input: "eslint-config-sc-react", output: "/packages/eslint-config-sc-react" },
-      { input: "eslint-config-sc-next", output: "/packages/eslint-config-sc-next" },
-      { input: "eslint-config-sc-storybook", output: "/packages/eslint-config-sc-storybook" },
-      { input: "eslint-plugin-sc-js", output: "/packages/eslint-plugin-sc-js" },
+      { input: "eslint-config-sc-all", output: pagesPath.packages.eslint_config_sc_all.$url().path },
+      { input: "eslint-config-sc-js", output: pagesPath.packages.eslint_config_sc_js.$url().path },
+      { input: "eslint-config-sc-ts", output: pagesPath.packages.eslint_config_sc_ts.$url().path },
+      { input: "eslint-config-sc-jest", output: pagesPath.packages.eslint_config_sc_jest.$url().path },
+      { input: "eslint-config-sc-react", output: pagesPath.packages.eslint_config_sc_react.$url().path },
+      { input: "eslint-config-sc-next", output: pagesPath.packages.eslint_config_sc_next.$url().path },
+      { input: "eslint-config-sc-storybook", output: pagesPath.packages.eslint_config_sc_storybook.$url().path },
+      { input: "eslint-plugin-sc-js", output: pagesPath.packages.eslint_plugin_sc_js.$url().path },
     ]
     // eslint-disable-next-line no-restricted-syntax
     for await (const testCase of TEST_CASES) {
