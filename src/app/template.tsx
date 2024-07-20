@@ -1,6 +1,5 @@
 import { cookies } from "next/headers"
 import { pathname } from "next-extra/pathname"
-import { Fragment } from "react"
 
 import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 import { getPackageName } from "@shared/utils/getPackageName"
@@ -19,12 +18,11 @@ const RootLayout: FCWithChildren = (props) => {
   const packageName = getPackageName(pathname())
 
   return (
-    <Fragment>
-      <Layout packageName={packageName} theme={theme} />
+    <Layout packageName={packageName} theme={theme}>
       <Main>
         {children}
       </Main>
-    </Fragment>
+    </Layout>
   )
 }
 
