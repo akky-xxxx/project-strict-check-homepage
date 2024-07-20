@@ -12,7 +12,7 @@ export const Footer: FC = () => (
       <p>
         Copyright &copy;
         {" "}
-        <Link isExternal href="https://github.com/akky-xxxx">akky-xxxx</Link>
+        <Link href="https://github.com/akky-xxxx">akky-xxxx</Link>
       </p>
     </div>
   </footer>

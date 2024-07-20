@@ -15,10 +15,7 @@ export const EslintConfigJsIntroduction: FC = () => (
     <p>
       And, set some rules from
       {" "}
-      <Link
-        isExternal
-        href="https://www.npmjs.com/package/eslint-plugin-import"
-      >
+      <Link href="https://www.npmjs.com/package/eslint-plugin-import">
         eslint-plugin-import
       </Link>
       .

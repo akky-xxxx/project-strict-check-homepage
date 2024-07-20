@@ -5,7 +5,7 @@ import { Link } from "../Link"
 import type { FC } from "react"
 
 type Props = {
-  items: Array<Record<"href" | "label", string> & { isExternal?: boolean }>
+  items: Array<Record<"href" | "label", string>>
 }
 
 export const UnOrderLinkList: FC<Props> = (props) => {
@@ -14,11 +14,11 @@ export const UnOrderLinkList: FC<Props> = (props) => {
   return (
     <ul className={unOrderListStyles.ul}>
       {items.map((item) => {
-        const { href, isExternal, label } = item
+        const { href, label } = item
 
         return (
           <li key={label} className={unOrderListStyles.li}>
-            <Link href={href} isExternal={isExternal}>
+            <Link href={href}>
               {label}
             </Link>
           </li>
