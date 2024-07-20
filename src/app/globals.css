@@ -4,6 +4,7 @@
 @layer tokens {
   :where(:root,:host) {
     --root-font-size: 16;
+    line-height: 2;
 
     /* cookie の値がない時の初期表示用 */
     @media (prefers-color-scheme: dark) {
