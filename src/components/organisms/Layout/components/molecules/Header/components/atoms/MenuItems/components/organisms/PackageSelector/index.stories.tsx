@@ -2,7 +2,6 @@ import { expect, userEvent, within } from "@storybook/test"
 import mockRouter from "next-router-mock"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
-import { sleep } from "@shared/utils/sleep"
 
 import { PackageSelector } from "."
 
@@ -47,22 +46,11 @@ export const DarkSp: Story = {
   },
 }
 
-export const CategoryListTest: Story = {
+export const PcChangingAndLinkDestinationTest: Story = {
   tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const optionElements = canvas.getAllByText("------")
-    const categorySelect = optionElements.at(0)
-    if (!categorySelect?.parentElement) return
-    await expect(categorySelect.parentElement.childElementCount).toBe(3)
-    await expect(categorySelect.parentElement.children.item(0)?.textContent).toBe("------")
-    await expect(categorySelect.parentElement.children.item(1)?.textContent).toBe("config")
-    await expect(categorySelect.parentElement.children.item(2)?.textContent).toBe("plugin")
+  parameters: {
+    ...STORY_PARAMETERS.VIEWPORT.PC,
   },
-}
-
-export const ChangeCategoryToConfigTest: Story = {
-  tags: ["!autodocs"],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const optionElements = canvas.getAllByText("------")
@@ -74,77 +62,55 @@ export const ChangeCategoryToConfigTest: Story = {
       || !categorySelect.parentElement
       || !targetSelect.parentElement
     ) return
+
+    const TEST_CASES = [
+      { input: "sc-all", output: "/packages/eslint-config-sc-all" },
+      { input: "sc-js", output: "/packages/eslint-config-sc-js" },
+      { input: "sc-ts", output: "/packages/eslint-config-sc-ts" },
+      { input: "sc-jest", output: "/packages/eslint-config-sc-jest" },
+      { input: "sc-react", output: "/packages/eslint-config-sc-react" },
+      { input: "sc-next", output: "/packages/eslint-config-sc-next" },
+      { input: "sc-storybook", output: "/packages/eslint-config-sc-storybook" },
+    ]
     await userEvent.selectOptions(categorySelect.parentElement, "config")
-    await expect(targetSelect.parentElement.childElementCount).toBe(8)
-    await expect(targetSelect.parentElement.children.item(0)?.textContent).toBe("------")
-    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("sc-all")
-    await expect(targetSelect.parentElement.children.item(2)?.textContent).toBe("sc-jest")
-    await expect(targetSelect.parentElement.children.item(3)?.textContent).toBe("sc-js")
-    await expect(targetSelect.parentElement.children.item(4)?.textContent).toBe("sc-next")
-    await expect(targetSelect.parentElement.children.item(5)?.textContent).toBe("sc-react")
-    await expect(targetSelect.parentElement.children.item(6)?.textContent).toBe("sc-storybook")
-    await expect(targetSelect.parentElement.children.item(7)?.textContent).toBe("sc-ts")
-  },
-}
+    // eslint-disable-next-line no-restricted-syntax
+    for await (const testCase of TEST_CASES) {
+      await userEvent.selectOptions(targetSelect.parentElement, testCase.input)
+      await expect(mockRouter).toMatchObject({ pathname: testCase.output })
+    }
 
-export const ChangeCategoryToPluginTest: Story = {
-  tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const optionElements = canvas.getAllByText("------")
-    const categorySelect = optionElements.at(0)
-    const targetSelect = optionElements.at(1)
-    if (
-      !categorySelect
-      || !targetSelect
-      || !categorySelect.parentElement
-      || !targetSelect.parentElement
-    ) return
     await userEvent.selectOptions(categorySelect.parentElement, "plugin")
-    await expect(targetSelect.parentElement.childElementCount).toBe(2)
-    await expect(targetSelect.parentElement.children.item(0)?.textContent).toBe("------")
-    await expect(targetSelect.parentElement.children.item(1)?.textContent).toBe("sc-js")
-  },
-}
-
-export const ClickTargetTest1: Story = {
-  tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const optionElements = canvas.getAllByText("------")
-    const categorySelect = optionElements.at(0)
-    const targetSelect = optionElements.at(1)
-    if (
-      !categorySelect
-      || !targetSelect
-      || !categorySelect.parentElement
-      || !targetSelect.parentElement
-    ) return
-    await sleep()
-    await userEvent.selectOptions(categorySelect.parentElement, "config")
-    await sleep()
-    await userEvent.selectOptions(targetSelect.parentElement, "sc-all")
-    await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-config-sc-all" })
-  },
-}
-
-export const ClickTargetTest2: Story = {
-  tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const optionElements = canvas.getAllByText("------")
-    const categorySelect = optionElements.at(0)
-    const targetSelect = optionElements.at(1)
-    if (
-      !categorySelect
-      || !targetSelect
-      || !categorySelect.parentElement
-      || !targetSelect.parentElement
-    ) return
-    await sleep()
-    await userEvent.selectOptions(categorySelect.parentElement, "plugin")
-    await sleep()
     await userEvent.selectOptions(targetSelect.parentElement, "sc-js")
     await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-plugin-sc-js" })
+  },
+}
+
+export const SpChangingAndLinkDestinationTest: Story = {
+  tags: ["!autodocs"],
+  parameters: {
+    ...STORY_PARAMETERS.VIEWPORT.SP,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const optionElements = canvas.getAllByText("------")
+    const optionElement = optionElements.at(2)
+
+    if (!optionElement?.parentElement) return
+
+    const TEST_CASES = [
+      { input: "eslint-config-sc-all", output: "/packages/eslint-config-sc-all" },
+      { input: "eslint-config-sc-js", output: "/packages/eslint-config-sc-js" },
+      { input: "eslint-config-sc-ts", output: "/packages/eslint-config-sc-ts" },
+      { input: "eslint-config-sc-jest", output: "/packages/eslint-config-sc-jest" },
+      { input: "eslint-config-sc-react", output: "/packages/eslint-config-sc-react" },
+      { input: "eslint-config-sc-next", output: "/packages/eslint-config-sc-next" },
+      { input: "eslint-config-sc-storybook", output: "/packages/eslint-config-sc-storybook" },
+      { input: "eslint-plugin-sc-js", output: "/packages/eslint-plugin-sc-js" },
+    ]
+    // eslint-disable-next-line no-restricted-syntax
+    for await (const testCase of TEST_CASES) {
+      await userEvent.selectOptions(optionElement.parentElement, testCase.input)
+      await expect(mockRouter).toMatchObject({ pathname: testCase.output })
+    }
   },
 }
