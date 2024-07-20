@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 
 import { LINK_ITEMS } from "./constants/LINK_ITEMS"
-import { UnOrderLinkList } from "../../../../../atoms/UnOrderLinkList"
+import { UnOrderLinkList } from "../UnOrderLinkList"
 
 import type { FC } from "react"
 

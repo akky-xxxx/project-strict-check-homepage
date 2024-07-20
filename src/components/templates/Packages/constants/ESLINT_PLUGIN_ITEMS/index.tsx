@@ -1,4 +1,4 @@
-import { EslintPluginJavascriptIntroduction } from "../../components/atoms/EslintPluginJavascriptIntroduction"
+import { EslintPluginJavascriptIntroduction } from "../../../../atoms/EslintPluginJavascriptIntroduction"
 
 import type { PackageItem } from "../../types/PackageItem"
 

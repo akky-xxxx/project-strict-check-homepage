@@ -1,10 +1,10 @@
-import { EslintConfigAllIntroduction } from "../../components/atoms/EslintConfigAllIntroduction"
-import { EslintConfigJestIntroduction } from "../../components/atoms/EslintConfigJestIntroduction"
-import { EslintConfigJsIntroduction } from "../../components/atoms/EslintConfigJsIntroduction"
-import { EslintConfigNextIntroduction } from "../../components/atoms/EslintConfigNextIntroduction"
-import { EslintConfigReactIntroduction } from "../../components/atoms/EslintConfigReactIntroduction"
-import { EslintConfigStorybookIntroduction } from "../../components/atoms/EslintConfigStorybookIntroduction"
-import { EslintConfigTsIntroduction } from "../../components/atoms/EslintConfigTsIntroduction"
+import { EslintConfigAllIntroduction } from "../../../../atoms/EslintConfigAllIntroduction"
+import { EslintConfigJestIntroduction } from "../../../../atoms/EslintConfigJestIntroduction"
+import { EslintConfigJsIntroduction } from "../../../../atoms/EslintConfigJsIntroduction"
+import { EslintConfigNextIntroduction } from "../../../../atoms/EslintConfigNextIntroduction"
+import { EslintConfigReactIntroduction } from "../../../../atoms/EslintConfigReactIntroduction"
+import { EslintConfigStorybookIntroduction } from "../../../../atoms/EslintConfigStorybookIntroduction"
+import { EslintConfigTsIntroduction } from "../../../../atoms/EslintConfigTsIntroduction"
 
 import type { PackageItem } from "../../types/PackageItem"
 

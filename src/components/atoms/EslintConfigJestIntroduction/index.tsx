@@ -1,4 +1,4 @@
-import { Link } from "../../../../../atoms/Link"
+import { Link } from "../Link"
 
 import type { FC } from "react"
 
