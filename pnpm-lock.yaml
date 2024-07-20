@@ -17,6 +17,9 @@ importers:
       next-extra:
         specifier: 0.4.1
         version: 0.4.1(next@14.2.5(@babel/core@7.24.8)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      pathpida:
+        specifier: 0.22.0
+        version: 0.22.0
       preact:
         specifier: 10.22.0
         version: 10.22.0
@@ -7007,6 +7010,10 @@ packages:
 
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
+
+  pathpida@0.22.0:
+    resolution: {integrity: sha512-aoBBy2e9Ov2Nd/ryeIX8Cn6kNqgblYWlDDLArM3WEctRwlOvqNn4D9WJOTpB+EVr5MkQNAiwNoi7iYSGDNLZ0A==}
+    hasBin: true
 
   pathval@1.1.1:
     resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
@@ -17119,6 +17126,12 @@ snapshots:
   path-type@5.0.0: {}
 
   pathe@1.1.2: {}
+
+  pathpida@0.22.0:
+    dependencies:
+      chokidar: 3.6.0
+      ignore: 5.3.1
+      minimist: 1.2.8
 
   pathval@1.1.1: {}
 
