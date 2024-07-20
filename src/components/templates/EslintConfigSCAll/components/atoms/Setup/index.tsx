@@ -15,7 +15,7 @@ export default [
 
 export const Setup: FC = () => (
   <Fragment>
-    <Heading3>Setup</Heading3>
+    <Heading3 id="setup">Setup</Heading3>
     <EslintConfigTabContents
       flatCode={source}
       legacyCode="// Incompatible"

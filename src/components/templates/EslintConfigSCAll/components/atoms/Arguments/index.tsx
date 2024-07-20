@@ -12,7 +12,7 @@ const SECOND_ARGUMENT = ["jest", "react", "next", "storybook"] as const
 
 export const Arguments: FC = () => (
   <Fragment>
-    <Heading4>Arguments</Heading4>
+    <Heading4 id="arguments">Arguments</Heading4>
     <ul className={unOrderListStyles.ul}>
       <li className={unOrderListStyles.li}>
         <span>First ( required ) - string</span>

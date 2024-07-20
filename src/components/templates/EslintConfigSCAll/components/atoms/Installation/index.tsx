@@ -9,7 +9,7 @@ const PACKAGE_NAME = "eslint-config-sc-all"
 
 export const Installation: FC = () => (
   <Fragment>
-    <Heading3>Installation</Heading3>
+    <Heading3 id="installation">Installation</Heading3>
 
     <PackageManagerTabContents
       bun={`$ bun add -D ${PACKAGE_NAME}`}

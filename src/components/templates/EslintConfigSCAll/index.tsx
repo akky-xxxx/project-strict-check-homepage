@@ -10,11 +10,11 @@ import type { FC } from "react"
 
 export const EslintConfigSCAll: FC = () => (
   <div>
-    <Heading1>eslint-config-sc-all</Heading1>
+    <Heading1 id="package-name">eslint-config-sc-all</Heading1>
     <EslintConfigAllIntroduction />
 
     <Section>
-      <Heading2>Usage</Heading2>
+      <Heading2 id="usage">Usage</Heading2>
       <Section>
         <Installation />
       </Section>
