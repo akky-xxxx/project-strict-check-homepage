@@ -13,6 +13,7 @@ export const HLJS_THEME = {
     padding: "0.5em",
     background: BACKGROUND_COLOR,
     color: COLOR,
+    width: "calc(100% - 40px)",
   },
   "hljs-keyword": { color: HIGHLIGHT1, fontWeight: FONT_WEIGHT_BOLD },
   "hljs-selector-tag": { color: HIGHLIGHT1, fontWeight: FONT_WEIGHT_BOLD },
