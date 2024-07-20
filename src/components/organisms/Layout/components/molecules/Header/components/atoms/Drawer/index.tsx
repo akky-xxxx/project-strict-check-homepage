@@ -44,6 +44,7 @@ const root = css({
   right: 0,
   top: "var(--header-height)",
   width: "100%",
+  zIndex: 10,
 })
 
 const openedRoot = css({
