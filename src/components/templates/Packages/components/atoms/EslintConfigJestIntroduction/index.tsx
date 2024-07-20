@@ -2,7 +2,7 @@ import { Link } from "../../../../../atoms/Link"
 
 import type { FC } from "react"
 
-export const EslintConfigJest: FC = () => (
+export const EslintConfigJestIntroduction: FC = () => (
   <p>
     This package sets some rules based on the shared config of
     {" "}

@@ -1,10 +1,10 @@
-import { EslintConfigAll } from "../../components/atoms/EslintConfigAll"
-import { EslintConfigJest } from "../../components/atoms/EslintConfigJest"
-import { EslintConfigJs } from "../../components/atoms/EslintConfigJs"
-import { EslintConfigNext } from "../../components/atoms/EslintConfigNext"
-import { EslintConfigReact } from "../../components/atoms/EslintConfigReact"
-import { EslintConfigStorybook } from "../../components/atoms/EslintConfigStorybook"
-import { EslintConfigTs } from "../../components/atoms/EslintConfigTs"
+import { EslintConfigAllIntroduction } from "../../components/atoms/EslintConfigAllIntroduction"
+import { EslintConfigJestIntroduction } from "../../components/atoms/EslintConfigJestIntroduction"
+import { EslintConfigJsIntroduction } from "../../components/atoms/EslintConfigJsIntroduction"
+import { EslintConfigNextIntroduction } from "../../components/atoms/EslintConfigNextIntroduction"
+import { EslintConfigReactIntroduction } from "../../components/atoms/EslintConfigReactIntroduction"
+import { EslintConfigStorybookIntroduction } from "../../components/atoms/EslintConfigStorybookIntroduction"
+import { EslintConfigTsIntroduction } from "../../components/atoms/EslintConfigTsIntroduction"
 
 import type { PackageItem } from "../../types/PackageItem"
 
@@ -12,36 +12,36 @@ export const ESLINT_CONFIG_ITEMS = [
   {
     title: "eslint-config-sc-all",
 
-    contents: <EslintConfigAll />,
+    contents: <EslintConfigAllIntroduction />,
   },
   {
     title: "eslint-config-sc-js",
 
-    contents: <EslintConfigJs />,
+    contents: <EslintConfigJsIntroduction />,
   },
   {
     title: "eslint-config-sc-ts",
 
-    contents: <EslintConfigTs />,
+    contents: <EslintConfigTsIntroduction />,
   },
   {
     title: "eslint-config-sc-jest",
 
-    contents: <EslintConfigJest />,
+    contents: <EslintConfigJestIntroduction />,
   },
   {
     title: "eslint-config-sc-react",
 
-    contents: <EslintConfigReact />,
+    contents: <EslintConfigReactIntroduction />,
   },
   {
     title: "eslint-config-sc-next",
 
-    contents: <EslintConfigNext />,
+    contents: <EslintConfigNextIntroduction />,
   },
   {
     title: "eslint-config-sc-storybook",
 
-    contents: <EslintConfigStorybook />,
+    contents: <EslintConfigStorybookIntroduction />,
   },
 ] as const satisfies PackageItem[]

@@ -5,7 +5,7 @@ import { UnOrderLinkList } from "../../../../../atoms/UnOrderLinkList"
 
 import type { FC } from "react"
 
-export const EslintConfigTs: FC = () => (
+export const EslintConfigTsIntroduction: FC = () => (
   <Fragment>
     <p>
       This package sets some rules based on the shared config of below packages.
