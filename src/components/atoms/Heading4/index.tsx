@@ -1,5 +1,7 @@
 import { css } from "@panda/css"
 
+import { CopyHash } from "../CopyHash"
+
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
 type Props = {
@@ -12,6 +14,7 @@ export const Heading4: FCWithChildren<Props> = (props) => {
   return (
     <h4 className={root} id={id}>
       {children}
+      <CopyHash hash={id} />
     </h4>
   )
 }
