@@ -36,7 +36,7 @@ export const ExternalLinkTest: Story = {
   tags: ["!autodocs"],
 
   args: {
-    isExternal: true,
+    href: "http",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -44,7 +44,7 @@ export const ExternalLinkTest: Story = {
     const LinkElement = canvas.getByText("link text")
 
     await expect(LinkElement).toBeInTheDocument()
-    await expect(LinkElement).toHaveAttribute("href", "/test")
+    await expect(LinkElement).toHaveAttribute("href", "http")
     await expect(LinkElement).toHaveAttribute("target", "_blank")
     await expect(LinkElement).toHaveAttribute("rel", "noopener noreferrer")
   },

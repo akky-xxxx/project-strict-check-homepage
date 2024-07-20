@@ -7,12 +7,12 @@ import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
 type Props = {
   href: string
-  isExternal?: boolean | undefined
 }
 
 export const Link: FCWithChildren<Props> = (props) => {
-  const { children, href, isExternal = false } = props
+  const { children, href } = props
   const commonAttributes = { className: link, href }
+  const isExternal = href.startsWith("http")
 
   if (isExternal) {
     return (
