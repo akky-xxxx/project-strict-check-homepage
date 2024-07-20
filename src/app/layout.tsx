@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
+import { Toaster } from "react-hot-toast"
 
 import { css } from "@panda/css"
 import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_PACKAGE_MANAGER, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
@@ -37,6 +38,7 @@ const RootLayout: FCWithChildren = (props) => {
           <div className={mainContentsWrapper}>
             <MainContentProviders eslintConfig={eslintConfig} packageManager={packageManager}>
               {children}
+              <Toaster />
             </MainContentProviders>
           </div>
           <Footer />
