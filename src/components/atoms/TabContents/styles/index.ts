@@ -2,6 +2,10 @@ import { css } from "@panda/css"
 
 const BACKGROUND_COLOR_CASE2 = "backgroundColor.case2"
 
+const root = css({
+  marginTop: 8,
+})
+
 const tabs = css({
   background: BACKGROUND_COLOR_CASE2,
   borderBottomColor: "backgroundColor.case3",
@@ -34,6 +38,7 @@ const activeTabItem = css({
 
 export const styles = {
   activeTabItem,
+  root,
   tabItem,
   tabs,
 } as const

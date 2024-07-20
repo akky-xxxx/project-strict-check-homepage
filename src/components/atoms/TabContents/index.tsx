@@ -15,13 +15,13 @@ type Props<L extends string = string> = {
   handleSelectLabel: (label: L) => void
 }
 
-const { activeTabItem, tabItem, tabs } = styles
+const { activeTabItem, root, tabItem, tabs } = styles
 
 export const TabContents = <L extends string = string>(props: Props<L>): ReactNode => {
   const { contents, selectedLabel, handleSelectLabel } = props
 
   return (
-    <div>
+    <div className={root}>
       <ul className={tabs}>
         {contents.map((content) => {
           const { label } = content
