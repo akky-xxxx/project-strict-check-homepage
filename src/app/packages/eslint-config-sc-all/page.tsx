@@ -1,5 +1,7 @@
+import { EslintConfigSCAll } from "../../../components/templates/EslintConfigSCAll"
+
 export const runtime = "edge"
 
-const Page = () => <div>/eslint-config-all</div>
+const Page = () => <EslintConfigSCAll />
 
 export default Page
