@@ -26,6 +26,14 @@ describe("getPackageName", () => {
       "/packages/eslint-plugin-sc-js",
       { category: "plugin", linter: "eslint", target: "sc-js" },
     ],
+    [
+      "/packages/eslint-plugin-sc-js/rules",
+      { category: "plugin", linter: "eslint", target: "sc-js" },
+    ],
+    [
+      "/packages/eslint-plugin-sc-js/rules/some-rule-name",
+      { category: "plugin", linter: "eslint", target: "sc-js" },
+    ],
   ])("input が %s の時、 %s を返す", (value, output) => {
     expect(getPackageName(value)).toStrictEqual(output)
   })
