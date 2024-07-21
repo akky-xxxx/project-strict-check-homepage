@@ -42,6 +42,12 @@ export const ITEMS = [
     label: "eslint-config-sc-storybook",
   },
   {
+    childList: [
+      {
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
+        label: "rules",
+      },
+    ],
     href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
     label: "eslint-plugin-sc-js",
   },
