@@ -42,6 +42,7 @@
 
     --colors-background-color-backdrop: #000;
     --header-height: 70px;
+    --main-contents-padding: 20px;
 
     .ThemeSwitch {
       --icon-size-small: 20px;

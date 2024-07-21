@@ -22,7 +22,7 @@ const root = css({
   borderTopColor: "backgroundColor.case2",
   borderTopStyle: "solid",
   borderTopWidth: 1,
-  marginTop: 36,
+  marginTop: 24,
   paddingBlock: 12,
   paddingInline: {
     md: 12,

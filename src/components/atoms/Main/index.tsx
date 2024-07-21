@@ -16,9 +16,5 @@ export const Main: FCWithChildren = (props) => {
 }
 
 const root = css({
-  paddingBlock: {
-    base: 12,
-    md: 24,
-  },
-  paddingInline: 20,
+  padding: "var(--main-contents-padding)",
 })
