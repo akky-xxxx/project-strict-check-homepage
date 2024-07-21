@@ -1,5 +1,6 @@
 "use client"
 
+import { usePathname } from "next/navigation"
 import { useEffect } from "react"
 
 import { usePackageNameStore } from "@shared/storeProviders/packageName"
@@ -9,12 +10,12 @@ import type { FC } from "react"
 
 export const SetPackageName: FC = () => {
   const { setPackageName } = usePackageNameStore((store) => store)
+  const pathname = usePathname()
 
   useEffect(() => {
-    const parsedURL = new URL(window.location.href)
-    const packageName = getPackageName(parsedURL.pathname)
+    const packageName = getPackageName(pathname)
     setPackageName(packageName)
-  }, [setPackageName])
+  }, [setPackageName, pathname])
 
   return null
 }
