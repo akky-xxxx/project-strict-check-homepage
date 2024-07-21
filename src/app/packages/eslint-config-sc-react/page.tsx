@@ -1,5 +1,7 @@
+import { EslintConfigSCReact } from "../../../components/templates/EslintConfigSCReact"
+
 export const runtime = "edge"
 
-const Page = () => <div>/eslint-config-react</div>
+const Page = () => <EslintConfigSCReact />
 
 export default Page
