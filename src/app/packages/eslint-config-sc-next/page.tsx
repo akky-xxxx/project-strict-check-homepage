@@ -1,5 +1,7 @@
+import { EslintConfigSCNext } from "../../../components/templates/EslintConfigSCNext"
+
 export const runtime = "edge"
 
-const Page = () => <div>/eslint-config-next</div>
+const Page = () => <EslintConfigSCNext />
 
 export default Page
