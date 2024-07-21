@@ -45,10 +45,18 @@ export const Header: FC = () => {
 }
 
 const root = css({
+  backgroundColor: "backgroundColor",
   borderBottomColor: "backgroundColor.case2",
   borderBottomStyle: "solid",
   borderBottomWidth: 2,
+  height: "var(--header-height)",
   paddingInline: 12,
+
+  md: {
+    position: "sticky",
+    top: 0,
+    zIndex: 20,
+  },
 })
 
 const inner = css({
