@@ -9,6 +9,7 @@ export const Footer: FC = () => (
   <footer className={root}>
     <div className={maxContentsWidth}>
       <p>Released under the MIT License.</p>
+      <p>Partial package includes the work that is distributed in the Apache License 2.0.</p>
       <p>
         Copyright &copy;
         {" "}
