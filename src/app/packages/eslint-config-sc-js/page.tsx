@@ -1,5 +1,7 @@
+import { EslintConfigSCJs } from "../../../components/templates/EslintConfigSCJs"
+
 export const runtime = "edge"
 
-const Page = () => <div>/eslint-config-js</div>
+const Page = () => <EslintConfigSCJs />
 
 export default Page
