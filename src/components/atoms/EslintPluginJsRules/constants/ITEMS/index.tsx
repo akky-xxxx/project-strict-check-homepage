@@ -1,9 +1,17 @@
+import { pagesPath } from "@lib/$path"
+
+import { Link } from "../../../Link"
+
 import type { PluginRulesTableProps } from "../../../PluginRulesTable/types/PluginRulesTableProps"
 
 export const ITEMS = [
   [
     {
-      content: "file-path-patterns",
+      content: (
+        <Link href={pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path}>
+          file-path-patterns
+        </Link>
+      ),
       key: "file-path-patterns",
     },
     "Check if file path follows regular expression",

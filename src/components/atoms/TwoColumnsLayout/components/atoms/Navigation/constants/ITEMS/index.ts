@@ -44,6 +44,12 @@ export const ITEMS = [
   {
     childList: [
       {
+        childList: [
+          {
+            href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
+            label: "file-path-patterns",
+          },
+        ],
         href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         label: "rules",
       },
