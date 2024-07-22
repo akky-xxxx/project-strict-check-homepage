@@ -49,6 +49,11 @@ export const ITEMS = [
             href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
             label: "file-path-patterns",
           },
+          {
+            // eslint-disable-next-line @stylistic/max-len
+            href: pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path,
+            label: "forbidden-multiple-named-exports",
+          },
         ],
         href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         label: "rules",

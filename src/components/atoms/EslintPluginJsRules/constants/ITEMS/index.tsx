@@ -19,7 +19,14 @@ export const ITEMS = [
   ],
   [
     {
-      content: "forbidden-multiple-named-exports",
+      content: (
+        <Link
+          // eslint-disable-next-line @stylistic/max-len
+          href={pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path}
+        >
+          forbidden-multiple-named-exports
+        </Link>
+      ),
       key: "forbidden-multiple-named-exports",
     },
     "Forbidden the multiple named exports at one file",
