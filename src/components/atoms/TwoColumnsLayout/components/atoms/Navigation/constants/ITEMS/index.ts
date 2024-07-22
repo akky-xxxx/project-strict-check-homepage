@@ -54,6 +54,10 @@ export const ITEMS = [
             href: pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path,
             label: "forbidden-multiple-named-exports",
           },
+          {
+            href: pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path,
+            label: "individual-import",
+          },
         ],
         href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         label: "rules",

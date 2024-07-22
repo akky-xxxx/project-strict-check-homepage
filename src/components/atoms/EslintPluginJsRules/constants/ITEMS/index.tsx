@@ -34,7 +34,11 @@ export const ITEMS = [
   ],
   [
     {
-      content: "individual-import",
+      content: (
+        <Link href={pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path}>
+          individual-import
+        </Link>
+      ),
       key: "individual-import",
     },
     "Import them individual",
