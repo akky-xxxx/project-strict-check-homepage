@@ -45,8 +45,14 @@ export const LinkItemsTest: Story = {
       { name: "eslint-config-sc-next", href: "/packages/eslint-config-sc-next" },
       { name: "eslint-config-sc-storybook", href: "/packages/eslint-config-sc-storybook" },
       { name: "eslint-plugin-sc-js", href: "/packages/eslint-plugin-sc-js" },
+      { name: "rules", href: "/packages/eslint-plugin-sc-js/rules" },
+      { name: "file-path-patterns", href: "/packages/eslint-plugin-sc-js/rules/file-path-patterns" },
+      { name: "forbidden-multiple-named-exports", href: "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports" },
+      { name: "individual-import", href: "/packages/eslint-plugin-sc-js/rules/individual-import" },
+      { name: "match-names-of-file-and-export", href: "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export" },
+      { name: "restrict-use-of-process-env", href: "/packages/eslint-plugin-sc-js/rules/restrict-use-of-process-env" },
     ] as const
-    await expect(anchorElements).toHaveLength(10)
+    await expect(anchorElements).toHaveLength(16)
 
     // eslint-disable-next-line no-restricted-syntax
     for await (const [index, expected] of expects.entries()) {
