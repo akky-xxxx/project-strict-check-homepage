@@ -58,6 +58,11 @@ export const ITEMS = [
             href: pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path,
             label: "individual-import",
           },
+          {
+            // eslint-disable-next-line @stylistic/max-len
+            href: pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path,
+            label: "match-names-of-file-and-export",
+          },
         ],
         href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         label: "rules",

@@ -46,7 +46,14 @@ export const ITEMS = [
   ],
   [
     {
-      content: "match-names-of-file-and-export",
+      content: (
+        <Link
+          // eslint-disable-next-line @stylistic/max-len
+          href={pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path}
+        >
+          match-names-of-file-and-export
+        </Link>
+      ),
       key: "match-names-of-file-and-export",
     },
     "Match name of filename and export target",
