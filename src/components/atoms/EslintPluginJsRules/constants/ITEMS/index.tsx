@@ -61,7 +61,14 @@ export const ITEMS = [
   ],
   [
     {
-      content: "restrict-use-of-process-env",
+      content: (
+        <Link
+          // eslint-disable-next-line @stylistic/max-len
+          href={pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path}
+        >
+          restrict-use-of-process-env
+        </Link>
+      ),
       key: "restrict-use-of-process-env",
     },
     "Restrict environment usage",

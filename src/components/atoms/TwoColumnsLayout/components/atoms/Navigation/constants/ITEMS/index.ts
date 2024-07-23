@@ -63,6 +63,11 @@ export const ITEMS = [
             href: pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path,
             label: "match-names-of-file-and-export",
           },
+          {
+            // eslint-disable-next-line @stylistic/max-len
+            href: pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path,
+            label: "restrict-use-of-process-env",
+          },
         ],
         href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         label: "rules",
