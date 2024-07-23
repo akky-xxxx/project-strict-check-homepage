@@ -18,7 +18,7 @@ export const PLUGIN_SC_JS = [
     },
   },
   {
-    files: ["**/*.stories.tsx"],
+    files: ["**/*.stories.tsx", "**/app/{layout,page}.tsx", "**/app/**/{layout,page}.tsx"],
     rules: {
       "sc-js/forbidden-multiple-named-exports": 0,
     },
