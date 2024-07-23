@@ -33,6 +33,7 @@
     "prepare": "run-s \"prepare:*\"",
     "prepare:huksy": "husky",
     "prepare:panda": "panda codegen",
+    "prepare:pathpida": "pnpm build:pathpida",
     "prepare:playwright": "pnpm exec playwright install",
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,ts,tsx}\" \"./*.{js,mjs}\"",
