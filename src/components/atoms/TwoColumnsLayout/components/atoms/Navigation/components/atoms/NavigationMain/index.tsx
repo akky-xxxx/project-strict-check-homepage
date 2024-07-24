@@ -55,18 +55,16 @@ const anchor = css({
   paddingBlock: 8,
   paddingInline: 12,
   transitionDuration: "0.1s",
-  transitionProperty: "background-color, color",
+  transitionProperty: "background-color",
   transitionTimingFunction: "ease-in-out",
 
   _hover: {
-    backgroundColor: "backgroundColor.case2",
-    color: "color.accent",
+    backgroundColor: "color.highlight",
   },
 })
 
 const currentAnchor = css({
-  backgroundColor: "backgroundColor.case2 !important",
-  color: "color.accent",
+  backgroundColor: "color.highlight !important",
 })
 
 const navigationMainWrapperWithChildren = css({

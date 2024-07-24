@@ -75,7 +75,7 @@ export const SEMANTIC_TOKEN_COLORS = {
     highlight1: {
       value: {
         _dark: "#96cbfe",
-        _light: "#4286f4",
+        _light: "#12f",
       },
     },
     highlight2: {

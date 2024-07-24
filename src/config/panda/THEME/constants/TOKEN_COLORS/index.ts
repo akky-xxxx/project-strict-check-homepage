@@ -20,7 +20,7 @@ export const TOKEN_COLORS = {
 
   ACCENT: {
     100: { value: "#afa" },
-    200: { value: "#191" },
+    200: { value: "#171" },
   },
   HIGHLIGHT: {
     100: { value: "#030" },
