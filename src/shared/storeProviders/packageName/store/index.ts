@@ -7,11 +7,6 @@ import { packageNameSchema } from "@shared/schemas/packageNameSchema"
 
 import type { PackageNameState } from "./types/PackageNameState"
 import type { PackageNameStore } from "./types/PackageNameStore"
-import type { PackageName } from "@shared/types/PackageName"
-
-const initializeStore = (newPackageName: PackageName): PackageNameState => (
-  { packageName: newPackageName }
-)
 
 const DEFAULT_INIT_STATE: PackageNameState = {
   packageName: DEFAULT_PACKAGE_NAME,
@@ -56,5 +51,4 @@ const createPackageNameStore = (
 
 export const store = {
   createStore: createPackageNameStore,
-  initializeStore,
 }
