@@ -1,0 +1,65 @@
+/* for panda css */
+@layer reset, base, tokens, recipes, utilities;
+
+@layer tokens {
+  :where(:root,:host) {
+    --root-font-size: 16;
+    line-height: 2;
+
+    /* cookie の値がない時の初期表示用 */
+    @media (prefers-color-scheme: dark) {
+      --colors-background-color: var(--colors--b-l-a-c-k-100);
+      --colors-background-color-case2: var(--colors--b-l-a-c-k-200);
+      --colors-background-color-case3: var(--colors--b-l-a-c-k-300);
+      --colors-color: var(--colors--w-h-i-t-e-100);
+      --colors-color-accent: var(--colors--a-c-c-e-n-t-100);
+      --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-100);
+      --colors-color-link: var(--colors--b-l-u-e-100);
+
+      --colors-syntax-highlight-background-color: var(--colors--b-l-a-c-k-200);
+      --colors-syntax-highlight-color: #f8f8f8;
+      --colors-syntax-highlight-comment: #969896;
+      --colors-syntax-highlight-highlight1: #96cbfe;
+      --colors-syntax-highlight-highlight2: #a8ff60
+    }
+
+    /* cookie の値がない時の初期表示用 */
+    @media (prefers-color-scheme: light) {
+      --colors-background-color: var(--colors--w-h-i-t-e-100);
+      --colors-background-color-case2: var(--colors--w-h-i-t-e-200);
+      --colors-background-color-case3: var(--colors--w-h-i-t-e-300);
+      --colors-color: var(--colors--b-l-a-c-k-100);
+      --colors-color-accent: var(--colors--a-c-c-e-n-t-200);
+      --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-200);
+      --colors-color-link: var(--colors--b-l-u-e-200);
+
+      --colors-syntax-highlight-background-color: var(--colors--w-h-i-t-e-200);
+      --colors-syntax-highlight-color: #000;
+      --colors-syntax-highlight-comment: #494949;
+      --colors-syntax-highlight-highlight1: #4286f4;
+      --colors-syntax-highlight-highlight2: #a626a4
+    }
+
+    --colors-background-color-backdrop: #000;
+    --header-height: 70px;
+    --main-contents-padding: 20px;
+
+    .ThemeSwitch {
+      --icon-size-small: 20px;
+      --icon-size-large: 34px;
+      --switch-size-small: 30px;
+      --switch-size-large: 44px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--colors-background-color);
+    color: var(--colors-color);
+    font-size: calc(16 / var(--root-font-size) * 1rem);
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  }
+}

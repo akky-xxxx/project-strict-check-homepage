@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest", "@tsconfig/next"],
+  "compilerOptions": {
+    "paths": {
+      "@lib/*": ["./src/lib/*"],
+      "@panda/*": ["./styled-system/*"],
+      "@shared/*": ["./src/shared/*"]
+    },
+    "types": ["@cloudflare/workers-types/2023-07-01", "@types/jest"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": [".next", "/node_modules"]
+}

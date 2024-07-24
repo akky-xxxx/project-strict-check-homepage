@@ -1,0 +1,26 @@
+{
+  "sortToTop": [
+    "name",
+    "description",
+    "license",
+    "keywords",
+    "author",
+    "repository",
+    "bugs",
+    "homepage",
+    "engines",
+    "main",
+    "exports",
+    "types",
+    "scripts",
+    "dependencies",
+    "devDependencies",
+    "peerDependencies",
+    "peerDependenciesMeta",
+    "private",
+    "version"
+  ],
+  "warn": [
+    "author"
+  ]
+}

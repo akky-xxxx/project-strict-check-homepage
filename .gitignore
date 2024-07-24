@@ -1,0 +1,38 @@
+# general
+.DS_Store
+.cache
+Thumbs.db
+
+# ide 関連
+.idea/
+.vscode
+
+# develop 関連
+*.tsbuildinfo
+coverage
+node_modules
+yarn-error.log*
+next-env.d.ts
+
+# next.js
+/.next/
+/out/
+.vercel/
+
+# production
+/build
+
+# local env files
+.env*.local
+
+# wrangler files
+../.next/.wrangler
+.dev.vars
+
+## Panda
+styled-system
+styled-system-studio
+*storybook.log
+
+## pathpida
+src/lib/$path.ts
