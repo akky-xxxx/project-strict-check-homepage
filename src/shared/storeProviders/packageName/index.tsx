@@ -6,7 +6,6 @@ import { useStore } from "zustand"
 import { store } from "./store"
 
 import type { PackageNameStore } from "./store/types/PackageNameStore"
-import type { PackageName } from "../../types/PackageName"
 import type { ReactNode } from "react"
 
 type PackageNameStoreApi = ReturnType<typeof store.createStore>
@@ -17,17 +16,12 @@ const PackageNameStoreContext = createContext<PackageNameStoreApi | undefined>(
 
 type PackageNameStoreProviderProps = {
   children: ReactNode
-  packageName: PackageName
 }
 
 export const PackageNameProvider = (props: PackageNameStoreProviderProps) => {
-  const { children, packageName } = props
+  const { children } = props
   const storeRef = useRef<PackageNameStoreApi>()
-  if (!storeRef.current) {
-    storeRef.current = store.createStore(
-      store.initializeStore(packageName),
-    )
-  }
+  if (!storeRef.current) storeRef.current = store.createStore()
 
   return (
     <PackageNameStoreContext.Provider value={storeRef.current}>
