@@ -33,7 +33,6 @@ const root = css({
 })
 
 const iconWrapper = css({
-  height: 20,
   width: 20,
 })
 
