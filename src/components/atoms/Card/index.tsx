@@ -29,7 +29,7 @@ export const Card: FC<Props> = (props) => {
 }
 
 const link = css({
-  borderColor: "backgroundColor.case2",
+  borderColor: "borderColor",
   borderRadius: 4,
   borderStyle: "solid",
   borderWidth: 1,

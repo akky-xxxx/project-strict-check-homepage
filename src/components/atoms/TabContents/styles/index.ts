@@ -8,7 +8,7 @@ const root = css({
 
 const tabs = css({
   background: BACKGROUND_COLOR_CASE2,
-  borderBottomColor: "backgroundColor.case3",
+  borderBottomColor: "borderColor",
   borderBottomStyle: "solid",
   borderBottomWidth: 1,
   borderTopLeftRadius: { md: 8 },
@@ -21,7 +21,7 @@ const tabs = css({
 
 const tabItem = css({
   backgroundColor: BACKGROUND_COLOR_CASE2,
-  borderBottomColor: BACKGROUND_COLOR_CASE2,
+  borderBottomColor: "borderColor",
   borderBottomStyle: "solid",
   borderBottomWidth: 1,
   cursor: "pointer",
