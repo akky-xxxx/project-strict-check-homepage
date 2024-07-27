@@ -60,7 +60,7 @@ export const Introduction: FC = () => (
     <Paragraph>
       About packages, please refer the
       {" "}
-      <Link href={pagesPath.packages.$url().path}>this</Link>
+      <Link href={pagesPath.packages.$url().path}>Packages</Link>
       .
     </Paragraph>
   </div>
