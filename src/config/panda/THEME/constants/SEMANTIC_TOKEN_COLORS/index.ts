@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { SemanticTokens } from "@pandacss/dev"
 
 export const SEMANTIC_TOKEN_COLORS = {
