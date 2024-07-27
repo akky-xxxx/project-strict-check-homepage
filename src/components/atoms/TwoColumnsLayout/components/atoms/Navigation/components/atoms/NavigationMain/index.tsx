@@ -31,7 +31,7 @@ export const NavigationMain: FC<Props> = (props) => {
           Boolean(childList) && navigationMainWrapperWithChildren,
         ]
         return (
-          <li key={href} className={li}>
+          <li key={href}>
             <NextLink className={cx(...anchorStyles)} href={href}>{label}</NextLink>
             <NavigationMain
               className={cx(...navigationMainWrapperStyles)}
@@ -44,10 +44,6 @@ export const NavigationMain: FC<Props> = (props) => {
     </ul>
   )
 }
-
-const li = css({
-  width: "100%",
-})
 
 const anchor = css({
   backgroundColor: "backgroundColor",
