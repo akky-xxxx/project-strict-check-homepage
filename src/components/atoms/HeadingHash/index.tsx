@@ -10,7 +10,7 @@ type Props = {
   hash: string | undefined
 }
 
-export const CopyHash: FC<Props> = (props) => {
+export const HeadingHash: FC<Props> = (props) => {
   const { hash } = props
 
   if (hash == null) return null
