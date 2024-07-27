@@ -20,6 +20,7 @@ export const Footer: FC = () => (
 )
 
 const root = css({
+  backgroundColor: "backgroundColor.headerFooter",
   borderTopColor: "borderColor",
   borderTopStyle: "solid",
   borderTopWidth: 1,

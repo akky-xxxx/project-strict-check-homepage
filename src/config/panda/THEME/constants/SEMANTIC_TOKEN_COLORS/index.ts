@@ -25,6 +25,12 @@ export const SEMANTIC_TOKEN_COLORS = {
     backdrop: {
       value: "#000",
     },
+    headerFooter: {
+      value: {
+        _dark: "#00160e",
+        _light: "#f6fff6",
+      },
+    },
   },
   borderColor: {
     DEFAULT: {
@@ -34,6 +40,7 @@ export const SEMANTIC_TOKEN_COLORS = {
       },
     },
   },
+
   color: {
     DEFAULT: {
       value: {

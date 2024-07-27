@@ -45,7 +45,7 @@ export const Header: FC = () => {
 }
 
 const root = css({
-  backgroundColor: "backgroundColor",
+  backgroundColor: "backgroundColor.headerFooter",
   borderBottomColor: "borderColor",
   borderBottomStyle: "solid",
   borderBottomWidth: 2,
