@@ -4,6 +4,7 @@ export const IGNORES = {
     ".vercel",
     "coverage",
     "env.d.ts",
+    "out",
     "src/lib",
     "styled-system",
   ],
