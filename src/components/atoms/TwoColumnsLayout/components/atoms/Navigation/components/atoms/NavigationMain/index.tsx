@@ -9,17 +9,18 @@ type Item = Record<"href" | "label", string> & {
 }
 
 type Props = {
+  className?: string
   items: Item[] | undefined
   pathname: string
 }
 
 export const NavigationMain: FC<Props> = (props) => {
-  const { items, pathname } = props
+  const { className, items, pathname } = props
 
   if (!items) return null
 
   return (
-    <ul>
+    <ul className={className}>
       {items.map((item) => {
         const { childList, href, label } = item
         const anchorStyles = [
@@ -32,9 +33,11 @@ export const NavigationMain: FC<Props> = (props) => {
         return (
           <li key={href} className={li}>
             <NextLink className={cx(...anchorStyles)} href={href}>{label}</NextLink>
-            <div className={cx(...navigationMainWrapperStyles)}>
-              <NavigationMain items={childList} pathname={pathname} />
-            </div>
+            <NavigationMain
+              className={cx(...navigationMainWrapperStyles)}
+              items={childList}
+              pathname={pathname}
+            />
           </li>
         )
       })}
