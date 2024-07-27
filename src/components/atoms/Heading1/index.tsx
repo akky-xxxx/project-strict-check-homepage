@@ -1,6 +1,7 @@
-import { css } from "@panda/css"
+import { css, cx } from "@panda/css"
+import { heading } from "@shared/styles/heading"
 
-import { CopyHash } from "../CopyHash"
+import { HeadingHash } from "../HeadingHash"
 
 import type { FCWithChildren } from "@shared/types/FCWithChildren"
 
@@ -12,9 +13,9 @@ export const Heading1: FCWithChildren<Props> = (props) => {
   const { children, id } = props
 
   return (
-    <h1 className={root} id={id}>
+    <h1 className={cx(root, heading)} id={id}>
       {children}
-      <CopyHash hash={id} />
+      <HeadingHash hash={id} />
     </h1>
   )
 }
@@ -24,5 +25,4 @@ const root = css({
     base: "heading1",
     md: "heading1.md",
   },
-  fontWeight: "fontWeight.bold",
 })
