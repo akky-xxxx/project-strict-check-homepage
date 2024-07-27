@@ -50,6 +50,7 @@ const anchor = css({
   backgroundColor: "backgroundColor",
   borderRadius: 4,
   color: "color",
+  cursor: "pointer",
   display: "block",
   opacity: 1,
   paddingBlock: 8,
