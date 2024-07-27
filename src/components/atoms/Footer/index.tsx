@@ -20,7 +20,8 @@ export const Footer: FC = () => (
 )
 
 const root = css({
-  borderTopColor: "backgroundColor.case2",
+  backgroundColor: "backgroundColor.headerFooter",
+  borderTopColor: "borderColor",
   borderTopStyle: "solid",
   borderTopWidth: 1,
   marginTop: 24,

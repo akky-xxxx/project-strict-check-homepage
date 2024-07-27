@@ -26,7 +26,7 @@ const root = css({
 })
 
 const withBorder = css({
-  borderTopColor: "backgroundColor.case2",
+  borderTopColor: "borderColor",
   borderTopStyle: "solid",
   borderTopWidth: 1,
   paddingTop: 24,
