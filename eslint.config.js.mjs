@@ -17,14 +17,6 @@ const config = [
       "sc-js": eslintPluginSCJs,
     },
   },
-  {
-    languageOptions: {
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-      },
-    },
-  },
   eslintConfigSCAll.getConfigs("javascript"),
   {
     rules: {
