@@ -6,10 +6,10 @@ import { EslintConfigTabContents } from "../../../../../organisms/EslintConfigTa
 import type { FC } from "react"
 
 const source = `// eslint.config.mjs
-import eslintConfigSC from "eslint-config-sc"
+import eslintConfigSCAll from "eslint-config-sc"
 
 export default [
-  eslintConfigSC.getConfigs("typescript", ["react", "next", "jest", "storybook"]),
+  eslintConfigSCAll.getConfigs("typescript", ["react", "next", "jest", "storybook"]),
 ].flat()
 `
 
