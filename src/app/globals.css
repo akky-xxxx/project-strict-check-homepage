@@ -65,4 +65,8 @@
     font-size: calc(16 / var(--root-font-size) * 1rem);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
   }
+
+  mark {
+    background-color: var(--colors-color-accent);
+  }
 }
