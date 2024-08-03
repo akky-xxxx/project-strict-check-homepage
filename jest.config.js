@@ -5,7 +5,7 @@ module.exports = {
     "^@panda/(.+)": "<rootDir>/styled-system/$1",
     "^@shared/(.+)": "<rootDir>/src/shared/$1",
   },
-  roots: ["<rootDir>/src"],
+  roots: ["<rootDir>/spec", "<rootDir>/src"],
   setupFilesAfterEnv: ["@testing-library/jest-dom"],
   testEnvironment: "jsdom",
   testMatch: ["**/?(*.)test.(ts|js)?(x)"],
