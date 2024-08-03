@@ -1,3 +1,5 @@
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
+
 import { Installation } from "./components/atoms/Installation"
 import { Setup } from "./components/atoms/Setup"
 import { EslintConfigStorybookIntroduction } from "../../atoms/EslintConfigStorybookIntroduction"
@@ -7,13 +9,22 @@ import { Section } from "../../atoms/Section"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_CONFIG_STORYBOOK: {
+    HOME: {
+      PAGE_TITLE,
+      USAGE,
+    },
+  },
+} = HEADINGS_INFO
+
 export const EslintConfigSCStorybook: FC = () => (
   <div>
-    <Heading1 id="package-name">eslint-config-sc-storybook</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <EslintConfigStorybookIntroduction />
 
     <Section>
-      <Heading2 id="usage">Usage</Heading2>
+      <Heading2 id={USAGE.hash}>{USAGE.name}</Heading2>
       <Section>
         <Installation />
       </Section>
