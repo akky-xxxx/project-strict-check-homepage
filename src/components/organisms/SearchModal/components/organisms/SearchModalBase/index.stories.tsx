@@ -5,19 +5,19 @@ import { useState } from "react"
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 import { sleep } from "@shared/utils/sleep"
 
-import { SiteSearchModal } from "."
+import { SearchModalBase } from "."
 
 import type { Meta, StoryObj } from "@storybook/react"
 
 export default {
-  component: SiteSearchModal,
+  component: SearchModalBase,
 
   args: {
     isShown: true,
   },
-} satisfies Meta<typeof SiteSearchModal>
+} satisfies Meta<typeof SearchModalBase>
 
-type Story = StoryObj<typeof SiteSearchModal>
+type Story = StoryObj<typeof SearchModalBase>
 
 export const LightTb: Story = {
   parameters: {

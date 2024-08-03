@@ -2,7 +2,7 @@ import { memo } from "react"
 
 import { css, cx } from "@panda/css"
 
-import { NextLink } from "../../../../../../../../atoms/NextLink"
+import { NextLink } from "../../../../../../../../../../../atoms/NextLink"
 
 import type { FC } from "react"
 

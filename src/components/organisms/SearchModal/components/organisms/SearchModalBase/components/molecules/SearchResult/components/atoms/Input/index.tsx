@@ -2,7 +2,7 @@ import { cx } from "@panda/css"
 
 import { ResetIcon } from "./components/atoms/ResetIcon"
 import { styles } from "./styles"
-import { SearchIcon } from "../../../../../../../../icons/SearchIcon"
+import { SearchIcon } from "../../../../../../../../../../../icons/SearchIcon"
 
 import type { ChangeEventHandler, FC, MutableRefObject } from "react"
 

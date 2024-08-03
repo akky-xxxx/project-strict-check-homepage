@@ -6,7 +6,7 @@ import { SearchResult } from "./components/molecules/SearchResult"
 import { Input } from "./components/molecules/SearchResult/components/atoms/Input"
 import { useSiteSearchModal } from "./modules/useSiteSearchModal"
 import { styles } from "./styles"
-import { ScrollLock } from "../../atoms/ScrollLock"
+import { ScrollLock } from "../../../../../atoms/ScrollLock"
 
 import type { FC } from "react"
 
@@ -23,7 +23,7 @@ const {
   shownRoot,
 } = styles
 
-export const SiteSearchModal: FC<Props> = (props) => {
+export const SearchModalBase: FC<Props> = (props) => {
   const {
     handleCloseModal,
     isShown,
