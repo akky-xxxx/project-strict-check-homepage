@@ -79,12 +79,6 @@ export const HEADINGS_INFO = {
         href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JEST,
       },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_JEST} > Setup`,
-      },
     },
   },
   ESLINT_CONFIG_JS: {
@@ -112,12 +106,6 @@ export const HEADINGS_INFO = {
         hash: "setup",
         href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JS,
-      },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_js.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_JS} > Setup`,
       },
     },
   },
@@ -147,12 +135,6 @@ export const HEADINGS_INFO = {
         href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: ESLINT_CONFIG_SC_NEXT,
       },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_next.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_NEXT} > Setup`,
-      },
     },
   },
   ESLINT_CONFIG_REACT: {
@@ -180,12 +162,6 @@ export const HEADINGS_INFO = {
         hash: "setup",
         href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: ESLINT_CONFIG_SC_REACT,
-      },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_react.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_REACT} > Setup`,
       },
     },
   },
@@ -215,12 +191,6 @@ export const HEADINGS_INFO = {
         href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: ESLINT_CONFIG_SC_STORYBOOK,
       },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_STORYBOOK} > Setup`,
-      },
     },
   },
   ESLINT_CONFIG_TS: {
@@ -248,12 +218,6 @@ export const HEADINGS_INFO = {
         hash: "setup",
         href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: ESLINT_CONFIG_SC_TS,
-      },
-      ARGUMENTS: {
-        name: "Arguments",
-        hash: "arguments",
-        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
-        searchTitle: `${ESLINT_CONFIG_SC_TS} > Setup`,
       },
     },
   },

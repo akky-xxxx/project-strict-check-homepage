@@ -77,13 +77,6 @@ describe("HEADINGS_INFO", () => {
           "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest",
         ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-jest",
-          "eslint-config-sc-jest > Setup",
-        ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_JEST.HOME[property]).toStrictEqual(output)
@@ -120,13 +113,6 @@ describe("HEADINGS_INFO", () => {
           "setup",
           "/packages/eslint-config-sc-js",
           "eslint-config-sc-js",
-        ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-js",
-          "eslint-config-sc-js > Setup",
         ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
@@ -165,13 +151,6 @@ describe("HEADINGS_INFO", () => {
           "/packages/eslint-config-sc-next",
           "eslint-config-sc-next",
         ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-next",
-          "eslint-config-sc-next > Setup",
-        ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_NEXT.HOME[property]).toStrictEqual(output)
@@ -208,13 +187,6 @@ describe("HEADINGS_INFO", () => {
           "setup",
           "/packages/eslint-config-sc-react",
           "eslint-config-sc-react",
-        ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-react",
-          "eslint-config-sc-react > Setup",
         ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
@@ -253,13 +225,6 @@ describe("HEADINGS_INFO", () => {
           "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook",
         ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-storybook",
-          "eslint-config-sc-storybook > Setup",
-        ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_STORYBOOK.HOME[property]).toStrictEqual(output)
@@ -296,13 +261,6 @@ describe("HEADINGS_INFO", () => {
           "setup",
           "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts",
-        ],
-        [
-          "ARGUMENTS",
-          "Arguments",
-          "arguments",
-          "/packages/eslint-config-sc-ts",
-          "eslint-config-sc-ts > Setup",
         ],
       ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
         const output = { name, hash, href, searchTitle }
