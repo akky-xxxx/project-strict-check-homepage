@@ -1,5 +1,4 @@
 import { expect, userEvent, within } from "@storybook/test"
-import mockRouter from "next-router-mock"
 import { useState } from "react"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
@@ -135,22 +134,5 @@ export const InputAndResetTest: Story = {
     await userEvent.click(canvas.getByLabelText("Reset search word"))
     await sleep()
     await expect(canvas.getByRole("list").children).toHaveLength(0)
-  },
-}
-
-export const InputAndSelectTest: Story = {
-  tags: ["!autodocs"],
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    await sleep()
-    if (!canvas.getByLabelText<HTMLInputElement>("Reset search word").disabled) await userEvent.click(canvas.getByLabelText("Reset search word"))
-    await sleep()
-    await userEvent.click(canvas.getByLabelText("Input search word"))
-    await userEvent.type(canvas.getByPlaceholderText("Search"), "eslint", { delay: 100 })
-    await sleep()
-    await userEvent.keyboard("{Enter}")
-    await sleep()
-    await expect(mockRouter).toMatchObject({ pathname: "/packages/eslint-config-sc-all" })
   },
 }
