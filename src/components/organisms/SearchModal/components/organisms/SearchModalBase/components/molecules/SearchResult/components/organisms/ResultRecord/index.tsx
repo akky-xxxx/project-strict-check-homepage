@@ -1,10 +1,9 @@
 import { memo } from "react"
 
 import { css, cx } from "@panda/css"
+import { useSearchModal } from "@shared/utils/useSearchModal"
 
-import { NextLink } from "../../../../../../../../../../../atoms/NextLink"
-
-import type { FC } from "react"
+import type { FC, MouseEventHandler } from "react"
 
 type Props = {
   title: string
@@ -23,6 +22,11 @@ const ResultRecordBase: FC<Props> = (props) => {
     href,
   } = props
 
+  const handleCloseModal = useSearchModal((state) => state.handleCloseModal)
+  const onClickRecord: MouseEventHandler = () => {
+    handleCloseModal()
+  }
+
   const lyStyles = [
     li,
     isSelected && selectedLi,
@@ -30,14 +34,14 @@ const ResultRecordBase: FC<Props> = (props) => {
 
   return (
     <li className={cx(...lyStyles)} onMouseEnter={handleMouseEnter}>
-      <NextLink className={link} href={href}>
+      <a className={link} href={href} onClick={onClickRecord}>
         <p className={titleStyle}>
           {/* eslint-disable-next-line @typescript-eslint/naming-convention,react/no-danger */}
           <span dangerouslySetInnerHTML={{ __html: title }} />
         </p>
         {/* eslint-disable-next-line @typescript-eslint/naming-convention,react/no-danger */}
         <p dangerouslySetInnerHTML={{ __html: text }} />
-      </NextLink>
+      </a>
     </li>
   )
 }
