@@ -1,9 +1,11 @@
 import { css } from "@panda/css"
 
 const root = css({
+  bottom: 0,
   marginInline: "auto",
   opacity: 0,
   position: "fixed",
+  top: 0,
   transition: "opacity 0.1s ease-in-out",
   visibility: "hidden",
 
