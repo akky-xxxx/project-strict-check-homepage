@@ -11,18 +11,30 @@ const root = css({
     base: "grid",
     md: "flex",
   },
-  gridTemplateColumns: "50% 50%",
+  gridTemplateColumns: "auto 1fr",
 })
 
 const navStyle = css({
-  alignItems: {
-    md: "center",
+  base: {
+    gridColumn: "1 / 3",
   },
-  columnGap: {
-    md: 12,
+  md: {
+    alignItems: "center",
+    columnGap: 12,
+    display: "flex",
   },
-  display: {
-    md: "flex",
+})
+
+const searchButtonWrapper = css({
+  base: {
+    gridColumn: "1 / 3",
+    paddingBlock: 4,
+    paddingInline: 12,
+  },
+  md: {
+    gridColumn: "initial",
+    paddingBlock: "initial",
+    paddingInline: "initial",
   },
 })
 
@@ -42,7 +54,7 @@ const packageSelectWrapper = css({
     alignItems: "center",
     display: "flex",
     gridColumn: "1/3",
-    gridRow: "2/3",
+    gridRow: "3/4",
   },
 
   md: {
@@ -80,5 +92,6 @@ export const styles = {
   packageLink,
   packageSelectWrapper,
   root,
+  searchButtonWrapper,
   themeSwitchWrapper,
 } as const
