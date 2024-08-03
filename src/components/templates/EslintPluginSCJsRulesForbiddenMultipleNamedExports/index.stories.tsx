@@ -61,11 +61,11 @@ export const IdAndHeadingTextTest: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const packageNameElement = canvas.getByText("forbidden-multiple-named-exports")
-    await expect(packageNameElement.getAttribute("id")).toBe("rule-name")
+    await expect(packageNameElement).toHaveAttribute("id", "rule-name")
     await expect(packageNameElement.tagName).toBe("H1")
 
     const usageElement = canvas.getByText("Rule Options")
-    await expect(usageElement.getAttribute("id")).toBe("rule-options")
+    await expect(usageElement).toHaveAttribute("id", "rule-options")
     await expect(usageElement.tagName).toBe("H2")
   },
 }

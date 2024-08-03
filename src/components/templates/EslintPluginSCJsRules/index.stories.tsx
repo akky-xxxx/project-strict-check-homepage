@@ -61,7 +61,7 @@ export const IdAndHeadingTextTest: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const packageNameElement = canvas.getByText("Rules of eslint-plugin-sc-js")
-    await expect(packageNameElement.getAttribute("id")).toBe("rules")
+    await expect(packageNameElement).toHaveAttribute("id", "rules")
     await expect(packageNameElement.tagName).toBe("H1")
   },
 }

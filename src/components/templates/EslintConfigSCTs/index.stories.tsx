@@ -61,19 +61,19 @@ export const IdAndHeadingTextTest: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const packageNameElement = canvas.getByText("eslint-config-sc-ts")
-    await expect(packageNameElement.getAttribute("id")).toBe("package-name")
+    await expect(packageNameElement).toHaveAttribute("id", "package-name")
     await expect(packageNameElement.tagName).toBe("H1")
 
     const usageElement = canvas.getByText("Usage")
-    await expect(usageElement.getAttribute("id")).toBe("usage")
+    await expect(usageElement).toHaveAttribute("id", "usage")
     await expect(usageElement.tagName).toBe("H2")
 
     const installationElement = canvas.getByText("Installation")
-    await expect(installationElement.getAttribute("id")).toBe("installation")
+    await expect(installationElement).toHaveAttribute("id", "installation")
     await expect(installationElement.tagName).toBe("H3")
 
     const setupElement = canvas.getByText("Setup")
-    await expect(setupElement.getAttribute("id")).toBe("setup")
+    await expect(setupElement).toHaveAttribute("id", "setup")
     await expect(setupElement.tagName).toBe("H3")
   },
 }
