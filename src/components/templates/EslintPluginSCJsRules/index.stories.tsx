@@ -1,3 +1,5 @@
+import { expect, within } from "@storybook/test"
+
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { EslintPluginSCJsRules } from "."
@@ -50,5 +52,16 @@ export const DarkSp: Story = {
   parameters: {
     ...STORY_PARAMETERS.THEME.DARK,
     ...STORY_PARAMETERS.VIEWPORT.SP,
+  },
+}
+
+export const IdAndHeadingTextTest: Story = {
+  ...DarkPc,
+  tags: ["!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const packageNameElement = canvas.getByText("Rules of eslint-plugin-sc-js")
+    await expect(packageNameElement.getAttribute("id")).toBe("rules")
+    await expect(packageNameElement.tagName).toBe("H1")
   },
 }

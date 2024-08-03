@@ -20,7 +20,7 @@ const {
 
 export const EslintConfigSCNext: FC = () => (
   <div>
-    <Heading1 id={PAGE_TITLE.name}>{PAGE_TITLE.name}</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <EslintConfigNextIntroduction />
 
     <Section>
