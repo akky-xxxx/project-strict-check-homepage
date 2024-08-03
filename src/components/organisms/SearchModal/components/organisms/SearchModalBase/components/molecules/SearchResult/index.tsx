@@ -3,7 +3,7 @@ import { memo } from "react"
 import { css } from "@panda/css"
 
 import { NoResult } from "./components/atoms/NoResult"
-import { ResultRecord } from "./components/atoms/ResultRecord"
+import { ResultRecord } from "./components/organisms/ResultRecord"
 import { useSearchResult } from "./modules/useSearchResult"
 
 import type { FC } from "react"
