@@ -48,7 +48,7 @@ export const getHandleKeyDown = (input: Input) => {
         ulRef.current?.querySelectorAll("a").item(selectedIndex).click()
         break
       }
-      case "Esc": {
+      case "Escape": {
         event.preventDefault()
         handleCloseModal()
         break

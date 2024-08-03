@@ -108,7 +108,7 @@ export const OpenAndCloseTest2: Story = {
 
     await userEvent.click(canvas.getByText("Open"))
     await sleep()
-    await userEvent.keyboard("{Esc}")
+    await userEvent.keyboard("{Escape}")
     await sleep()
     await expect(canvas.getByPlaceholderText("Search")).not.toBeVisible()
     await expect(canvas.getByLabelText("Input search word")).not.toBeVisible()
