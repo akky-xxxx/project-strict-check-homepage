@@ -5,7 +5,7 @@ const overTb = css({
   columnGap: 8,
   display: {
     base: "none",
-    md: "flex",
+    lg: "flex",
   },
   height: 30,
 })

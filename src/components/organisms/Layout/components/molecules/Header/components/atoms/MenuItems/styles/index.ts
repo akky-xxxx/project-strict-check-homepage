@@ -29,19 +29,25 @@ const navStyle = css({
 const packageLink = css({
   alignItems: "center",
   display: "flex",
-  textDecoration: "underline",
-
-  base: {
-    height: 48,
-    paddingInline: 12,
+  height: 48,
+  paddingInline: {
+    base: 12,
+    md: "initial",
   },
+  textDecoration: "underline",
 })
 
 const packageSelectWrapper = css({
-  alignItems: "center",
-  display: "flex",
-  gridColumn: "1/3",
-  gridRow: "2/3",
+  lg: {
+    alignItems: "center",
+    display: "flex",
+    gridColumn: "1/3",
+    gridRow: "2/3",
+  },
+
+  md: {
+    display: "none",
+  },
 
   base: {
     height: 48,
