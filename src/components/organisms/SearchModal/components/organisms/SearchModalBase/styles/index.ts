@@ -2,12 +2,15 @@ import { css } from "@panda/css"
 
 const root = css({
   bottom: 0,
+  display: "grid",
   marginInline: "auto",
   opacity: 0,
+  placeContent: "center",
   position: "fixed",
   top: 0,
   transition: "opacity 0.1s ease-in-out",
   visibility: "hidden",
+  zIndex: 100,
 
   base: {
     left: 10,
@@ -16,8 +19,7 @@ const root = css({
   },
   md: {
     left: 0,
-    maxWidth: 500,
-    paddingBlock: 50,
+    paddingBlock: "initial",
     right: 0,
   },
 })
@@ -29,6 +31,7 @@ const shownRoot = css({
 
 const mainContents = css({
   backgroundColor: "backgroundColor",
+  minWidth: "80dvw",
   position: "relative",
   zIndex: 20,
 
