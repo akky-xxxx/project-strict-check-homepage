@@ -3,7 +3,7 @@
 import { useSearchModal } from "@shared/utils/useSearchModal"
 
 import { SearchModalBase } from "./components/organisms/SearchModalBase"
-import { Portal } from "../../atoms/Portal"
+import { Portal } from "../../molecules/Portal"
 
 import type { FC } from "react"
 
