@@ -1,4 +1,4 @@
-type Item = Record<"href" | "name" | "searchTitle", string>
+type Item = Record<"hash" | "href" | "name" | "searchTitle", string>
 
 // ネストが多く分かりづらいので
 /* eslint-disable @typescript-eslint/consistent-indexed-object-style */

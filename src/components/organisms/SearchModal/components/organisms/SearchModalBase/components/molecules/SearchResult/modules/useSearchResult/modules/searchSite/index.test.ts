@@ -9,17 +9,20 @@ type TestCase = [Input, Return]
 
 const DICTIONARY = [
   {
-    href: "hash1",
+    hash: "hash1",
+    href: "href1",
     text: "h1",
     title: "PAGE_NAME",
   },
   {
-    href: "hash2",
+    hash: "hash2",
+    href: "href2",
     text: "h2",
     title: "PAGE_NAME",
   },
   {
-    href: "hash3",
+    hash: "hash3",
+    href: "href3",
     text: "page",
     title: "PAGE_NAME",
   },
@@ -30,17 +33,17 @@ const TEST_CASES = [
     "PAGE_NAME",
     [
       {
-        href: "hash1",
+        href: "href1#hash1",
         text: "h1",
         title: "<mark>PAGE_NAME</mark>",
       },
       {
-        href: "hash2",
+        href: "href2#hash2",
         text: "h2",
         title: "<mark>PAGE_NAME</mark>",
       },
       {
-        href: "hash3",
+        href: "href3#hash3",
         text: "page",
         title: "<mark>PAGE_NAME</mark>",
       },
@@ -50,17 +53,17 @@ const TEST_CASES = [
     "PAGE",
     [
       {
-        href: "hash1",
+        href: "href1#hash1",
         text: "h1",
         title: "<mark>PAGE</mark>_NAME",
       },
       {
-        href: "hash2",
+        href: "href2#hash2",
         text: "h2",
         title: "<mark>PAGE</mark>_NAME",
       },
       {
-        href: "hash3",
+        href: "href3#hash3",
         text: "<mark>page</mark>",
         title: "<mark>PAGE</mark>_NAME",
       },
@@ -70,17 +73,17 @@ const TEST_CASES = [
     "A",
     [
       {
-        href: "hash1",
+        href: "href1#hash1",
         text: "h1",
         title: "P<mark>A</mark>GE_N<mark>A</mark>ME",
       },
       {
-        href: "hash2",
+        href: "href2#hash2",
         text: "h2",
         title: "P<mark>A</mark>GE_N<mark>A</mark>ME",
       },
       {
-        href: "hash3",
+        href: "href3#hash3",
         text: "p<mark>a</mark>ge",
         title: "P<mark>A</mark>GE_N<mark>A</mark>ME",
       },
@@ -90,12 +93,12 @@ const TEST_CASES = [
     "h",
     [
       {
-        href: "hash1",
+        href: "href1#hash1",
         text: "<mark>h</mark>1",
         title: "PAGE_NAME",
       },
       {
-        href: "hash2",
+        href: "href2#hash2",
         text: "<mark>h</mark>2",
         title: "PAGE_NAME",
       },

@@ -14,33 +14,41 @@ const ESLINT_PLUGIN_SC_JS = "eslint-plugin-sc-js"
 
 const RULE_OPTIONS = "Rule Options"
 
+const HASH_PACKAGE_NAME = "package-name"
+const HASH_RULE_OPTIONS = "rule-options"
+
 export const HEADINGS_INFO = {
   /* eslint-disable sort-keys */
   ESLINT_CONFIG_ALL: {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_ALL,
-        href: `${pagesPath.packages.eslint_config_sc_all.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_all.$url().path,
         searchTitle: ESLINT_CONFIG_SC_ALL,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_all.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_all.$url().path,
         searchTitle: ESLINT_CONFIG_SC_ALL,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_all.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_all.$url().path,
         searchTitle: ESLINT_CONFIG_SC_ALL,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_all.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_all.$url().path,
         searchTitle: ESLINT_CONFIG_SC_ALL,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_all.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_all.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_ALL} > Setup`,
       },
     },
@@ -49,27 +57,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_JEST,
-        href: `${pagesPath.packages.eslint_config_sc_jest.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JEST,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_jest.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JEST,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_jest.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JEST,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_jest.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JEST,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_jest.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_jest.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_JEST} > Setup`,
       },
     },
@@ -78,27 +91,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_JS,
-        href: `${pagesPath.packages.eslint_config_sc_js.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JS,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_js.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JS,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_js.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JS,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_js.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: ESLINT_CONFIG_SC_JS,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_js.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_js.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_JS} > Setup`,
       },
     },
@@ -107,27 +125,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_NEXT,
-        href: `${pagesPath.packages.eslint_config_sc_next.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: ESLINT_CONFIG_SC_NEXT,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_next.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: ESLINT_CONFIG_SC_NEXT,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_next.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: ESLINT_CONFIG_SC_NEXT,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_next.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: ESLINT_CONFIG_SC_NEXT,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_next.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_next.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_NEXT} > Setup`,
       },
     },
@@ -136,27 +159,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_REACT,
-        href: `${pagesPath.packages.eslint_config_sc_react.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: ESLINT_CONFIG_SC_REACT,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_react.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: ESLINT_CONFIG_SC_REACT,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_react.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: ESLINT_CONFIG_SC_REACT,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_react.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: ESLINT_CONFIG_SC_REACT,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_react.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_react.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_REACT} > Setup`,
       },
     },
@@ -165,27 +193,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_STORYBOOK,
-        href: `${pagesPath.packages.eslint_config_sc_storybook.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: ESLINT_CONFIG_SC_STORYBOOK,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_storybook.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: ESLINT_CONFIG_SC_STORYBOOK,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_storybook.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: ESLINT_CONFIG_SC_STORYBOOK,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_storybook.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: ESLINT_CONFIG_SC_STORYBOOK,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_storybook.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_storybook.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_STORYBOOK} > Setup`,
       },
     },
@@ -194,27 +227,32 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_CONFIG_SC_TS,
-        href: `${pagesPath.packages.eslint_config_sc_ts.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: ESLINT_CONFIG_SC_TS,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_config_sc_ts.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: ESLINT_CONFIG_SC_TS,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_config_sc_ts.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: ESLINT_CONFIG_SC_TS,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_config_sc_ts.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: ESLINT_CONFIG_SC_TS,
       },
       ARGUMENTS: {
         name: "Arguments",
-        href: `${pagesPath.packages.eslint_config_sc_ts.$url().path}#arguments`,
+        hash: "arguments",
+        href: pagesPath.packages.eslint_config_sc_ts.$url().path,
         searchTitle: `${ESLINT_CONFIG_SC_TS} > Setup`,
       },
     },
@@ -223,109 +261,133 @@ export const HEADINGS_INFO = {
     HOME: {
       PAGE_TITLE: {
         name: ESLINT_PLUGIN_SC_JS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.$url().path}#package-name`,
+        hash: HASH_PACKAGE_NAME,
+        href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       USAGE: {
         name: "Usage",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.$url().path}#usage`,
+        hash: "usage",
+        href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       INSTALLATION: {
         name: "Installation",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.$url().path}#installation`,
+        hash: "installation",
+        href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       SETUP: {
         name: "Setup",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.$url().path}#setup`,
+        hash: "setup",
+        href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       RULES: {
         name: "Rules",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.$url().path}#rules`,
+        hash: "rules",
+        href: pagesPath.packages.eslint_plugin_sc_js.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > Rules`,
       },
     },
     RULES: {
       PAGE_TITLE: {
         name: `Rules of ${ESLINT_PLUGIN_SC_JS}`,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.$url().path}#rules`,
+        hash: "rules",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
     },
     FILE_PATH_PATTERNS: {
       PAGE_TITLE: {
         name: "file-path-patterns",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path}#rule-name`,
+        hash: "rule-name",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       OPTIONS: {
         name: RULE_OPTIONS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path}#rule-options`,
+        hash: HASH_RULE_OPTIONS,
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > file-path-patterns`,
       },
       ALLOW_PATTERNS: {
         name: "allowPatterns",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path}#arrow-patterns`,
+        hash: "arrow-patterns",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > file-path-patterns > Rule Options`,
       },
     },
     FORBIDDEN_MULTIPLE_NAMED_EXPORTS: {
       PAGE_TITLE: {
         name: "forbidden-multiple-named-exports",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path}#rule-name`,
+        hash: "rule-name",
+        href:
+          pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       OPTIONS: {
         name: RULE_OPTIONS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path}#rule-options`,
+        hash: HASH_RULE_OPTIONS,
+        href:
+          pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > forbidden-multiple-named-exports`,
       },
     },
     INDIVIDUAL_IMPORT: {
       PAGE_TITLE: {
         name: "individual-import",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path}#rule-name`,
+        hash: "rule-name",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       OPTIONS: {
         name: RULE_OPTIONS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path}#rule-options`,
+        hash: HASH_RULE_OPTIONS,
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > individual-import`,
       },
       TARGETS: {
         name: "targets",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path}#targets`,
+        hash: "targets",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.individual_import.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > individual-import > Rule Options`,
       },
     },
     MATCH_NAMES_OF_FILE_AND_EXPORT: {
       PAGE_TITLE: {
         name: "match-names-of-file-and-export",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path}#rule-name`,
+        hash: "rule-name",
+        href:
+          pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       OPTIONS: {
         name: RULE_OPTIONS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path}#rule-options`,
+        hash: HASH_RULE_OPTIONS,
+        href:
+          pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > match-names-of-file-and-export`,
       },
       CAPTURES: {
         name: "captures",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path}#captures`,
+        hash: "captures",
+        href:
+          pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > match-names-of-file-and-export > Rule Options`,
       },
     },
     RESTRICT_USE_OF_PROCESS_ENV: {
       PAGE_TITLE: {
         name: "restrict-use-of-process-env",
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path}#rule-name`,
+        hash: "rule-name",
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path,
         searchTitle: ESLINT_PLUGIN_SC_JS,
       },
       OPTIONS: {
         name: RULE_OPTIONS,
-        href: `${pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path}#rule-options`,
+        hash: HASH_RULE_OPTIONS,
+        href: pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > restrict-use-of-process-env`,
       },
     },

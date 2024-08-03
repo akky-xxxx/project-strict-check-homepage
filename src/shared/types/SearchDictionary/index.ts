@@ -1,1 +1,1 @@
-export type SearchDictionary = Array<Record<"href" | "text" | "title", string>>
+export type SearchDictionary = Array<Record<"hash" | "href" | "text" | "title", string>>

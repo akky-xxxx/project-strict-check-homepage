@@ -11,7 +11,7 @@ export const searchSite: SearchSite = (searchWord, dictionary) => {
   const searchWordRegExp = new RegExp(`(${searchWord})`, "gi")
 
   return dictionary.reduce<Item[]>((previousValue, item) => {
-    const { href, text, title } = item
+    const { hash, href, text, title } = item
     const matchedTitle = searchWordRegExp.test(title)
     const matchedTexts = searchWordRegExp.test(text)
     if (!matchedTitle && !matchedTexts) return previousValue
@@ -21,7 +21,7 @@ export const searchSite: SearchSite = (searchWord, dictionary) => {
     return [
       ...previousValue,
       {
-        href,
+        href: `${href}#${hash}`,
         text: markedUpText,
         title: markedUpTitle,
       },

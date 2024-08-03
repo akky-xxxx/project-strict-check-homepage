@@ -8,35 +8,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-all",
-          "/packages/eslint-config-sc-all#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-all",
           "eslint-config-sc-all",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-all#usage",
+          "usage",
+          "/packages/eslint-config-sc-all",
           "eslint-config-sc-all",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-all#installation",
+          "installation",
+          "/packages/eslint-config-sc-all",
           "eslint-config-sc-all",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-all#setup",
+          "setup",
+          "/packages/eslint-config-sc-all",
           "eslint-config-sc-all",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-all#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-all",
           "eslint-config-sc-all > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_ALL.HOME[property]).toStrictEqual(output)
       })
     })
@@ -47,35 +52,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-jest",
-          "/packages/eslint-config-sc-jest#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-jest#usage",
+          "usage",
+          "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-jest#installation",
+          "installation",
+          "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-jest#setup",
+          "setup",
+          "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-jest#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-jest",
           "eslint-config-sc-jest > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_JEST.HOME[property]).toStrictEqual(output)
       })
     })
@@ -86,35 +96,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-js",
-          "/packages/eslint-config-sc-js#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-js",
           "eslint-config-sc-js",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-js#usage",
+          "usage",
+          "/packages/eslint-config-sc-js",
           "eslint-config-sc-js",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-js#installation",
+          "installation",
+          "/packages/eslint-config-sc-js",
           "eslint-config-sc-js",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-js#setup",
+          "setup",
+          "/packages/eslint-config-sc-js",
           "eslint-config-sc-js",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-js#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-js",
           "eslint-config-sc-js > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_JS.HOME[property]).toStrictEqual(output)
       })
     })
@@ -125,35 +140,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-next",
-          "/packages/eslint-config-sc-next#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-next",
           "eslint-config-sc-next",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-next#usage",
+          "usage",
+          "/packages/eslint-config-sc-next",
           "eslint-config-sc-next",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-next#installation",
+          "installation",
+          "/packages/eslint-config-sc-next",
           "eslint-config-sc-next",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-next#setup",
+          "setup",
+          "/packages/eslint-config-sc-next",
           "eslint-config-sc-next",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-next#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-next",
           "eslint-config-sc-next > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_NEXT.HOME[property]).toStrictEqual(output)
       })
     })
@@ -164,35 +184,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-react",
-          "/packages/eslint-config-sc-react#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-react",
           "eslint-config-sc-react",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-react#usage",
+          "usage",
+          "/packages/eslint-config-sc-react",
           "eslint-config-sc-react",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-react#installation",
+          "installation",
+          "/packages/eslint-config-sc-react",
           "eslint-config-sc-react",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-react#setup",
+          "setup",
+          "/packages/eslint-config-sc-react",
           "eslint-config-sc-react",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-react#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-react",
           "eslint-config-sc-react > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_REACT.HOME[property]).toStrictEqual(output)
       })
     })
@@ -203,35 +228,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-storybook",
-          "/packages/eslint-config-sc-storybook#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-storybook#usage",
+          "usage",
+          "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-storybook#installation",
+          "installation",
+          "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-storybook#setup",
+          "setup",
+          "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-storybook#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-storybook",
           "eslint-config-sc-storybook > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_STORYBOOK.HOME[property]).toStrictEqual(output)
       })
     })
@@ -242,35 +272,40 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-config-sc-ts",
-          "/packages/eslint-config-sc-ts#package-name",
+          "package-name",
+          "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-config-sc-ts#usage",
+          "usage",
+          "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-config-sc-ts#installation",
+          "installation",
+          "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-config-sc-ts#setup",
+          "setup",
+          "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts",
         ],
         [
           "ARGUMENTS",
           "Arguments",
-          "/packages/eslint-config-sc-ts#arguments",
+          "arguments",
+          "/packages/eslint-config-sc-ts",
           "eslint-config-sc-ts > Setup",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_CONFIG_TS.HOME[property]).toStrictEqual(output)
       })
     })
@@ -281,29 +316,33 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "eslint-plugin-sc-js",
-          "/packages/eslint-plugin-sc-js#package-name",
+          "package-name",
+          "/packages/eslint-plugin-sc-js",
           "eslint-plugin-sc-js",
         ],
         [
           "USAGE",
           "Usage",
-          "/packages/eslint-plugin-sc-js#usage",
+          "usage",
+          "/packages/eslint-plugin-sc-js",
           "eslint-plugin-sc-js",
         ],
         [
           "INSTALLATION",
           "Installation",
-          "/packages/eslint-plugin-sc-js#installation",
+          "installation",
+          "/packages/eslint-plugin-sc-js",
           "eslint-plugin-sc-js",
         ],
         [
           "SETUP",
           "Setup",
-          "/packages/eslint-plugin-sc-js#setup",
+          "setup",
+          "/packages/eslint-plugin-sc-js",
           "eslint-plugin-sc-js",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.HOME[property]).toStrictEqual(output)
       })
     })
@@ -312,11 +351,12 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "Rules of eslint-plugin-sc-js",
-          "/packages/eslint-plugin-sc-js/rules#rules",
+          "rules",
+          "/packages/eslint-plugin-sc-js/rules",
           "eslint-plugin-sc-js",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.RULES[property]).toStrictEqual(output)
       })
     })
@@ -325,23 +365,26 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "file-path-patterns",
-          "/packages/eslint-plugin-sc-js/rules/file-path-patterns#rule-name",
+          "rule-name",
+          "/packages/eslint-plugin-sc-js/rules/file-path-patterns",
           "eslint-plugin-sc-js",
         ],
         [
           "OPTIONS",
           "Rule Options",
-          "/packages/eslint-plugin-sc-js/rules/file-path-patterns#rule-options",
+          "rule-options",
+          "/packages/eslint-plugin-sc-js/rules/file-path-patterns",
           "eslint-plugin-sc-js > file-path-patterns",
         ],
         [
           "ALLOW_PATTERNS",
           "allowPatterns",
-          "/packages/eslint-plugin-sc-js/rules/file-path-patterns#arrow-patterns",
+          "arrow-patterns",
+          "/packages/eslint-plugin-sc-js/rules/file-path-patterns",
           "eslint-plugin-sc-js > file-path-patterns > Rule Options",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.FILE_PATH_PATTERNS[property]).toStrictEqual(output)
       })
     })
@@ -350,17 +393,19 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "forbidden-multiple-named-exports",
-          "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports#rule-name",
+          "rule-name",
+          "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports",
           "eslint-plugin-sc-js",
         ],
         [
           "OPTIONS",
           "Rule Options",
-          "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports#rule-options",
+          "rule-options",
+          "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports",
           "eslint-plugin-sc-js > forbidden-multiple-named-exports",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(
           HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.FORBIDDEN_MULTIPLE_NAMED_EXPORTS[property],
         ).toStrictEqual(output)
@@ -371,23 +416,26 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "individual-import",
-          "/packages/eslint-plugin-sc-js/rules/individual-import#rule-name",
+          "rule-name",
+          "/packages/eslint-plugin-sc-js/rules/individual-import",
           "eslint-plugin-sc-js",
         ],
         [
           "OPTIONS",
           "Rule Options",
-          "/packages/eslint-plugin-sc-js/rules/individual-import#rule-options",
+          "rule-options",
+          "/packages/eslint-plugin-sc-js/rules/individual-import",
           "eslint-plugin-sc-js > individual-import",
         ],
         [
           "TARGETS",
           "targets",
-          "/packages/eslint-plugin-sc-js/rules/individual-import#targets",
+          "targets",
+          "/packages/eslint-plugin-sc-js/rules/individual-import",
           "eslint-plugin-sc-js > individual-import > Rule Options",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.INDIVIDUAL_IMPORT[property]).toStrictEqual(output)
       })
     })
@@ -396,23 +444,26 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "match-names-of-file-and-export",
-          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export#rule-name",
+          "rule-name",
+          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export",
           "eslint-plugin-sc-js",
         ],
         [
           "OPTIONS",
           "Rule Options",
-          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export#rule-options",
+          "rule-options",
+          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export",
           "eslint-plugin-sc-js > match-names-of-file-and-export",
         ],
         [
           "CAPTURES",
           "captures",
-          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export#captures",
+          "captures",
+          "/packages/eslint-plugin-sc-js/rules/match-names-of-file-and-export",
           "eslint-plugin-sc-js > match-names-of-file-and-export > Rule Options",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(
           HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.MATCH_NAMES_OF_FILE_AND_EXPORT[property],
         ).toStrictEqual(output)
@@ -423,17 +474,19 @@ describe("HEADINGS_INFO", () => {
         [
           "PAGE_TITLE",
           "restrict-use-of-process-env",
-          "/packages/eslint-plugin-sc-js/rules/restrict-use-of-process-env#rule-name",
+          "rule-name",
+          "/packages/eslint-plugin-sc-js/rules/restrict-use-of-process-env",
           "eslint-plugin-sc-js",
         ],
         [
           "OPTIONS",
           "Rule Options",
-          "/packages/eslint-plugin-sc-js/rules/restrict-use-of-process-env#rule-options",
+          "rule-options",
+          "/packages/eslint-plugin-sc-js/rules/restrict-use-of-process-env",
           "eslint-plugin-sc-js > restrict-use-of-process-env",
         ],
-      ] as const)("%s の name は「%s」, href は「%s」,  searchTitle は「%s」", (property, name, href, searchTitle) => {
-        const output = { name, href, searchTitle }
+      ] as const)("%s の name は「%s」, href は「%s」, hash は「%s」,  searchTitle は「%s」", (property, name, hash, href, searchTitle) => {
+        const output = { name, hash, href, searchTitle }
         expect(
           HEADINGS_INFO.ESLINT_PLUGIN_SC_JS.RESTRICT_USE_OF_PROCESS_ENV[property],
         ).toStrictEqual(output)

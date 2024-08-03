@@ -6,6 +6,6 @@ export const convertHeadingInfoToSearchDictionary = (data: HeadingsInfo): Search
   Object.values(data).flatMap((pageNames) =>
     Object.values(pageNames).flatMap((items) =>
       Object.values(items).flatMap((item) => {
-        const { href, searchTitle, name } = item
-        return { href, text: name, title: searchTitle }
+        const { hash, href, searchTitle, name } = item
+        return { hash, href, text: name, title: searchTitle }
       })))
