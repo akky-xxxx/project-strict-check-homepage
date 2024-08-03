@@ -7,7 +7,7 @@ const declarations = [/declarations\/[\d@-_a-z]+\/index(?:\.d)?.ts/]
 const types = [/types\/[A-Z][\dA-Za-z]+\/index.ts/]
 
 const icons = [/components\/icons\/[A-Z][\dA-Za-z]Icon+\/index.tsx/]
-const components = [/components\/(?:atoms|molecules|organisms|templates)\/[A-Z][\dA-Za-z]+\/index\.tsx/]
+const components = [/components\/(?:icons|atoms|molecules|organisms|templates)\/[A-Z][\dA-Za-z]+\/index\.tsx/]
 
 const nextRouting = "layout|page|loading|not-found|error|global-error|route|template|default"
 const page = new RegExp(`app(?:/[^/]+)*/(?:${nextRouting}).tsx`)
