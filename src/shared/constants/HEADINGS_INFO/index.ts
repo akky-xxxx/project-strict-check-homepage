@@ -277,7 +277,7 @@ export const HEADINGS_INFO = {
       },
       ALLOW_PATTERNS: {
         name: "allowPatterns",
-        hash: "arrow-patterns",
+        hash: "allow-patterns",
         href: pagesPath.packages.eslint_plugin_sc_js.rules.file_path_patterns.$url().path,
         searchTitle: `${ESLINT_PLUGIN_SC_JS} > file-path-patterns > Rule Options`,
       },

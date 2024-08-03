@@ -52,7 +52,7 @@ describe("search results href", () => {
       "/packages/eslint-plugin-sc-js/rules#rules",
       "/packages/eslint-plugin-sc-js/rules/file-path-patterns#rule-name",
       "/packages/eslint-plugin-sc-js/rules/file-path-patterns#rule-options",
-      "/packages/eslint-plugin-sc-js/rules/file-path-patterns#arrow-patterns",
+      "/packages/eslint-plugin-sc-js/rules/file-path-patterns#allow-patterns",
       "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports#rule-name",
       "/packages/eslint-plugin-sc-js/rules/forbidden-multiple-named-exports#rule-options",
       "/packages/eslint-plugin-sc-js/rules/individual-import#rule-name",
