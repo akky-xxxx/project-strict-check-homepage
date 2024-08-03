@@ -17,7 +17,7 @@ const root = css({
 const MENU_TITLE_ROW = 49
 
 const menuTitleRow = css({
-  "borderBottomColor": "backgroundColor.case2",
+  "borderBottomColor": "borderColor",
   "borderBottomStyle": "solid",
   "borderBottomWidth": 1,
   "display": "flex",

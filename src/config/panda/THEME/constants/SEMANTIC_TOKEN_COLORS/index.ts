@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { SemanticTokens } from "@pandacss/dev"
 
 export const SEMANTIC_TOKEN_COLORS = {
@@ -25,7 +26,22 @@ export const SEMANTIC_TOKEN_COLORS = {
     backdrop: {
       value: "#000",
     },
+    headerFooter: {
+      value: {
+        _dark: "#00160e",
+        _light: "#f6fff6",
+      },
+    },
   },
+  borderColor: {
+    DEFAULT: {
+      value: {
+        _dark: "#666a66",
+        _light: "#bbbcbb",
+      },
+    },
+  },
+
   color: {
     DEFAULT: {
       value: {

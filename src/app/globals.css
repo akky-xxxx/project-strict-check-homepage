@@ -10,7 +10,8 @@
     @media (prefers-color-scheme: dark) {
       --colors-background-color: var(--colors--b-l-a-c-k-100);
       --colors-background-color-case2: var(--colors--b-l-a-c-k-200);
-      --colors-background-color-case3: var(--colors--b-l-a-c-k-300);
+      --colors-background-color-header-footer: #00160e;
+      --colors-border-color: #666a66;
       --colors-color: var(--colors--w-h-i-t-e-100);
       --colors-color-accent: var(--colors--a-c-c-e-n-t-100);
       --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-100);
@@ -27,7 +28,8 @@
     @media (prefers-color-scheme: light) {
       --colors-background-color: var(--colors--w-h-i-t-e-100);
       --colors-background-color-case2: var(--colors--w-h-i-t-e-200);
-      --colors-background-color-case3: var(--colors--w-h-i-t-e-300);
+      --colors-background-color-header-footer: #f6fff6;
+      --colors-border-color: #bbbcbb;
       --colors-color: var(--colors--b-l-a-c-k-100);
       --colors-color-accent: var(--colors--a-c-c-e-n-t-200);
       --colors-color-highlight: var(--colors--h-i-g-h-l-i-g-h-t-200);
@@ -54,6 +56,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + var(--main-contents-padding));
   }
 
   body {
@@ -61,5 +64,9 @@
     color: var(--colors-color);
     font-size: calc(16 / var(--root-font-size) * 1rem);
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  }
+
+  mark {
+    background-color: var(--colors-color-accent);
   }
 }

@@ -1,6 +1,7 @@
 {
   "extends": ["@tsconfig/strictest", "@tsconfig/next"],
   "compilerOptions": {
+    "downlevelIteration": true,
     "paths": {
       "@lib/*": ["./src/lib/*"],
       "@panda/*": ["./styled-system/*"],

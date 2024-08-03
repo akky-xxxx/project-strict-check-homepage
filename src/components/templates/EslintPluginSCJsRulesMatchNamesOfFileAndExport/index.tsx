@@ -1,3 +1,5 @@
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
+
 import { CorrectExample } from "./components/atoms/CorrectExample"
 import { InCorrectExample } from "./components/atoms/InCorrectExample"
 import { CODES } from "./constants/CODES"
@@ -12,9 +14,19 @@ import { SyntaxHighlighter } from "../../atoms/SyntaxHighlighter"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_PLUGIN_SC_JS: {
+    MATCH_NAMES_OF_FILE_AND_EXPORT: {
+      PAGE_TITLE,
+      OPTIONS,
+      CAPTURES,
+    },
+  },
+} = HEADINGS_INFO
+
 export const EslintPluginSCJsRulesMatchNamesOfFileAndExport: FC = () => (
   <div>
-    <Heading1 id="rule-name">match-names-of-file-and-export</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <Paragraph>
       Match name of filename and export target.
       <br />
@@ -22,14 +34,14 @@ export const EslintPluginSCJsRulesMatchNamesOfFileAndExport: FC = () => (
     </Paragraph>
 
     <Section>
-      <Heading2 id="rule-options">Rule options</Heading2>
+      <Heading2 id={OPTIONS.hash}>{OPTIONS.name}</Heading2>
       <SyntaxHighlighter
         code={CODES.OPTIONS}
         language="javascript"
       />
 
       <Section>
-        <Heading3 id="targets">captures</Heading3>
+        <Heading3 id={CAPTURES.hash}>{CAPTURES.name}</Heading3>
         <Paragraph>
           Specify the regular expression array for allows path.
         </Paragraph>

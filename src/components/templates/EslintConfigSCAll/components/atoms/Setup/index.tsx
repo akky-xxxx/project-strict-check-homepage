@@ -1,21 +1,31 @@
 import { Fragment } from "react"
 
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
+
 import { Heading3 } from "../../../../../atoms/Heading3"
 import { EslintConfigTabContents } from "../../../../../organisms/EslintConfigTabContents"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_CONFIG_ALL: {
+    HOME: {
+      SETUP,
+    },
+  },
+} = HEADINGS_INFO
+
 const source = `// eslint.config.mjs
-import eslintConfigSC from "eslint-config-sc"
+import eslintConfigSCAll from "eslint-config-sc"
 
 export default [
-  eslintConfigSC.getConfigs("typescript", ["react", "next", "jest", "storybook"]),
+  eslintConfigSCAll.getConfigs("typescript", ["react", "next", "jest", "storybook"]),
 ].flat()
 `
 
 export const Setup: FC = () => (
   <Fragment>
-    <Heading3 id="setup">Setup</Heading3>
+    <Heading3 id={SETUP.hash}>{SETUP.name}</Heading3>
     <EslintConfigTabContents
       flatCode={source}
       legacyCode="// Incompatible"

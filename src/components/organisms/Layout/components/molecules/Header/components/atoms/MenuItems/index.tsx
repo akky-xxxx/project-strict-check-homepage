@@ -2,6 +2,7 @@ import { pagesPath } from "@lib/$path"
 
 import { GithubLink } from "./components/atoms/GithubLink"
 import { PackageSelector } from "./components/organisms/PackageSelector"
+import { SearchButton } from "./components/organisms/SearchButton"
 import { ThemeSwitch } from "./components/organisms/ThemeSwitch"
 import { styles } from "./styles"
 import { NextLink } from "../../../../../../../../atoms/NextLink"
@@ -14,6 +15,7 @@ const {
   packageLink,
   packageSelectWrapper,
   root,
+  searchButtonWrapper,
   themeSwitchWrapper,
 } = styles
 
@@ -25,6 +27,9 @@ export const MenuItems: FC = () => (
         <PackageSelector />
       </div>
     </nav>
+    <div className={searchButtonWrapper}>
+      <SearchButton />
+    </div>
     <div className={themeSwitchWrapper}>
       <ThemeSwitch />
     </div>

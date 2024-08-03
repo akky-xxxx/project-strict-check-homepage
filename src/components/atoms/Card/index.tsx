@@ -15,21 +15,19 @@ export const Card: FC<Props> = (props) => {
   const { description, href, title } = props
 
   return (
-    <div>
-      <NextLink className={link} href={href}>
-        <p className={titleStyle}>{title}</p>
-        {Boolean(description) && (
-          <Paragraph>
-            {description}
-          </Paragraph>
-        )}
-      </NextLink>
-    </div>
+    <NextLink className={link} href={href}>
+      <p className={titleStyle}>{title}</p>
+      {Boolean(description) && (
+        <Paragraph>
+          {description}
+        </Paragraph>
+      )}
+    </NextLink>
   )
 }
 
 const link = css({
-  borderColor: "backgroundColor.case2",
+  borderColor: "borderColor",
   borderRadius: 4,
   borderStyle: "solid",
   borderWidth: 1,

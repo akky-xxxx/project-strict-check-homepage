@@ -1,3 +1,5 @@
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
+
 import { CorrectExample } from "./components/atoms/CorrectExample"
 import { InCorrectExample } from "./components/atoms/InCorrectExample"
 import { CODES } from "./constants/CODES"
@@ -12,22 +14,32 @@ import { SyntaxHighlighter } from "../../atoms/SyntaxHighlighter"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_PLUGIN_SC_JS: {
+    FILE_PATH_PATTERNS: {
+      PAGE_TITLE,
+      OPTIONS,
+      ALLOW_PATTERNS,
+    },
+  },
+} = HEADINGS_INFO
+
 export const EslintPluginSCJsRulesFilePathPatterns: FC = () => (
   <div>
-    <Heading1 id="rule-name">file-path-patterns</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <Paragraph>
       Check if file path follows regular expression.
     </Paragraph>
 
     <Section>
-      <Heading2 id="rule-options">Rule options</Heading2>
+      <Heading2 id={OPTIONS.hash}>{OPTIONS.name}</Heading2>
       <SyntaxHighlighter
         code={CODES.OPTIONS}
         language="javascript"
       />
 
       <Section>
-        <Heading3 id="allowPatterns">allowPatterns</Heading3>
+        <Heading3 id={ALLOW_PATTERNS.hash}>{ALLOW_PATTERNS.name}</Heading3>
         <Paragraph>
           Specify the regular expression array for allows path
         </Paragraph>

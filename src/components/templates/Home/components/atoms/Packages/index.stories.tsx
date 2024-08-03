@@ -81,14 +81,14 @@ export const OrderAndAttributesTest: Story = {
     await expect(linkElements.at(6)?.querySelectorAll("p")[1]?.textContent).toBe("eslint config for Storybook.")
     await expect(linkElements.at(7)?.querySelectorAll("p")[1]?.textContent).toBe("eslint plugin for javascript.")
 
-    await expect(linkElements.at(0)?.getAttribute("href")).toBe("/packages/eslint-config-sc-all")
-    await expect(linkElements.at(1)?.getAttribute("href")).toBe("/packages/eslint-config-sc-js")
-    await expect(linkElements.at(2)?.getAttribute("href")).toBe("/packages/eslint-config-sc-ts")
-    await expect(linkElements.at(3)?.getAttribute("href")).toBe("/packages/eslint-config-sc-jest")
-    await expect(linkElements.at(4)?.getAttribute("href")).toBe("/packages/eslint-config-sc-react")
-    await expect(linkElements.at(5)?.getAttribute("href")).toBe("/packages/eslint-config-sc-next")
-    await expect(linkElements.at(6)?.getAttribute("href")).toBe("/packages/eslint-config-sc-storybook")
-    await expect(linkElements.at(7)?.getAttribute("href")).toBe("/packages/eslint-plugin-sc-js")
+    await expect(linkElements.at(0)).toHaveAttribute("href", "/packages/eslint-config-sc-all")
+    await expect(linkElements.at(1)).toHaveAttribute("href", "/packages/eslint-config-sc-js")
+    await expect(linkElements.at(2)).toHaveAttribute("href", "/packages/eslint-config-sc-ts")
+    await expect(linkElements.at(3)).toHaveAttribute("href", "/packages/eslint-config-sc-jest")
+    await expect(linkElements.at(4)).toHaveAttribute("href", "/packages/eslint-config-sc-react")
+    await expect(linkElements.at(5)).toHaveAttribute("href", "/packages/eslint-config-sc-next")
+    await expect(linkElements.at(6)).toHaveAttribute("href", "/packages/eslint-config-sc-storybook")
+    await expect(linkElements.at(7)).toHaveAttribute("href", "/packages/eslint-plugin-sc-js")
   },
 }
 

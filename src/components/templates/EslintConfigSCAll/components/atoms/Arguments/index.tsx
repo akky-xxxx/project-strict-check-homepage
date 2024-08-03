@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
 import { unOrderListStyles } from "@shared/styles/unOrderListStyles"
 
 import { Code } from "../../../../../atoms/Code"
@@ -8,11 +9,18 @@ import { Note } from "../../../../../atoms/Note"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_CONFIG_ALL: {
+    HOME: {
+      ARGUMENTS,
+    },
+  },
+} = HEADINGS_INFO
 const SECOND_ARGUMENT = ["jest", "react", "next", "storybook"] as const
 
 export const Arguments: FC = () => (
   <Fragment>
-    <Heading4 id="arguments">Arguments</Heading4>
+    <Heading4 id={ARGUMENTS.hash}>{ARGUMENTS.name}</Heading4>
     <ul className={unOrderListStyles.ul}>
       <li className={unOrderListStyles.li}>
         <span>First ( required ) - string</span>

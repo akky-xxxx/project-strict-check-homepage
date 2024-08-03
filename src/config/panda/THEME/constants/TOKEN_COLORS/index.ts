@@ -3,14 +3,14 @@ import type { Tokens } from "@pandacss/dev"
 export const TOKEN_COLORS = {
   /* eslint-disable @typescript-eslint/naming-convention */
   BLACK: {
-    100: { value: "#333" },
-    200: { value: "#222" },
-    300: { value: "#111" },
+    100: { value: "#1c1d1c" },
+    200: { value: "#161716" },
+    300: { value: "#060706" },
   },
   WHITE: {
-    100: { value: "#eee" },
-    200: { value: "#ddd" },
-    300: { value: "#ccc" },
+    100: { value: "#fcfdfc" },
+    200: { value: "#f8f9f8" },
+    300: { value: "#e8e9e8" },
   },
 
   BLUE: {
