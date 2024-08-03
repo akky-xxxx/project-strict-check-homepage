@@ -4,13 +4,18 @@ import { useSearchWord } from "@shared/utils/useSearchWord"
 
 import type { ChangeEventHandler } from "react"
 
-export const useSiteSearchModal = () => {
+type Input = {
+  isShown: boolean
+}
+
+export const useSiteSearchModal = (input: Input) => {
+  const { isShown } = input
   const { searchWord, setSearchWord } = useSearchWord()
   const inputRef = useRef<HTMLInputElement>(null)
   const deferredSearchWord = useDeferredValue(searchWord.trim())
   useEffect(() => {
     inputRef.current?.focus()
-  }, [])
+  }, [isShown])
 
   const handleChangeSearchWord: ChangeEventHandler<HTMLInputElement> = (event) => {
     setSearchWord(event.currentTarget.value)

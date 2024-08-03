@@ -35,7 +35,7 @@ export const SearchModalBase: FC<Props> = (props) => {
     handleResetSearchWord,
     inputRef,
     searchWord,
-  } = useSiteSearchModal()
+  } = useSiteSearchModal({ isShown })
   const backdropStyles = [
     backdrop,
     isShown && shownBackdrop,
