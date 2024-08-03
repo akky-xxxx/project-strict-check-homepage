@@ -1,3 +1,5 @@
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
+
 import { Installation } from "./components/atoms/Installation"
 import { Setup } from "./components/atoms/Setup"
 import { EslintConfigTsIntroduction } from "../../atoms/EslintConfigTsIntroduction"
@@ -7,13 +9,22 @@ import { Section } from "../../atoms/Section"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_CONFIG_TS: {
+    HOME: {
+      PAGE_TITLE,
+      USAGE,
+    },
+  },
+} = HEADINGS_INFO
+
 export const EslintConfigSCTs: FC = () => (
   <div>
-    <Heading1 id="package-name">eslint-config-sc-ts</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <EslintConfigTsIntroduction />
 
     <Section>
-      <Heading2 id="usage">Usage</Heading2>
+      <Heading2 id={USAGE.hash}>{USAGE.name}</Heading2>
       <Section>
         <Installation />
       </Section>

@@ -1,4 +1,5 @@
 import { pagesPath } from "@lib/$path"
+import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
 
 import { Installation } from "./components/atoms/Installation"
 import { Setup } from "./components/atoms/Setup"
@@ -12,13 +13,23 @@ import { Section } from "../../atoms/Section"
 
 import type { FC } from "react"
 
+const {
+  ESLINT_PLUGIN_SC_JS: {
+    HOME: {
+      PAGE_TITLE,
+      USAGE,
+      RULES,
+    },
+  },
+} = HEADINGS_INFO
+
 export const EslintPluginSCJs: FC = () => (
   <div>
-    <Heading1 id="package-name">eslint-plugin-sc-js</Heading1>
+    <Heading1 id={PAGE_TITLE.hash}>{PAGE_TITLE.name}</Heading1>
     <EslintPluginJavascriptIntroduction />
 
     <Section>
-      <Heading2 id="usage">Usage</Heading2>
+      <Heading2 id={USAGE.hash}>{USAGE.name}</Heading2>
       <Section>
         <Installation />
       </Section>
@@ -28,9 +39,9 @@ export const EslintPluginSCJs: FC = () => (
       </Section>
 
       <Section>
-        <Heading3 id="rules">
+        <Heading3 id={RULES.hash}>
           <Link href={pagesPath.packages.eslint_plugin_sc_js.rules.$url().path}>
-            Rules
+            {RULES.name}
           </Link>
         </Heading3>
         <EslintPluginJsRules />

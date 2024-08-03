@@ -12,7 +12,7 @@ export const ScrollLock: FC<Props> = (props) => {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         // eslint-disable-next-line @typescript-eslint/naming-convention
-        __html: "<style type='text/css'>html,body { overflow: hidden; }</style>",
+        __html: "<style type='text/css'>html,body { overflow: clip; }</style>",
       }}
     />
   )
