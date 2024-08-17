@@ -30,7 +30,7 @@ export const EslintPluginSCJsRulesMatchNamesOfFileAndExport: FC = () => (
     <Paragraph>
       Match name of filename and export target.
       <br />
-      Filename is specified by capture of regular expression.
+      Name that want to match is specified by capture of regular expression.
     </Paragraph>
 
     <Section>
@@ -43,13 +43,27 @@ export const EslintPluginSCJsRulesMatchNamesOfFileAndExport: FC = () => (
       <Section>
         <Heading3 id={CAPTURES.hash}>{CAPTURES.name}</Heading3>
         <Paragraph>
-          Specify the regular expression array for allows path.
+          Specify the
+          {" "}
+          <Code>string array that be able to hands over to RegExp</Code>
+          {" "}
+          or
+          {" "}
+          <Code>regular expression array</Code>
+          {" "}
+          for allows path.
         </Paragraph>
         <Paragraph>
-          value:
-          {" "}
+          values:
+          <br />
           <Code>
-            [/\/components\/(?:atoms|molecules|organisms|templates)\/([^/]+)\/index.tsx/]
+            [&quot;/components/(?:atoms|molecules|organisms|templates)/([^/]+)/index.tsx&quot;]
+          </Code>
+          <br />
+          or
+          <br />
+          <Code>
+            [/\/components\/(?:atoms|molecules|organisms|templates)\/([^/]+)\/index\.tsx/]
           </Code>
         </Paragraph>
         <InCorrectExample />

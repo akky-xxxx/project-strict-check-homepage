@@ -8,14 +8,12 @@ export const CODES = {
   },
 }`,
 
-  INCORRECT_EXAMPLE: `// "sc-js/individual-import": ["warn", { "targets": ["react"] }]
-const [state, setState] = React.useState(1)
+  INCORRECT_EXAMPLE: `const [state, setState] = React.useState(1)
 const changeHandler: React.ChangeEventHandler = () => {}
 const Component = () => <React.Fragment>Component</React.Fragment>
 `,
 
-  CORRECT_EXAMPLE: `// "sc-js/individual-import": ["warn", { "targets": ["react"] }]
-const [state, setState] = useState(1)
+  CORRECT_EXAMPLE: `const [state, setState] = useState(1)
 const changeHandler: ChangeEventHandler = () => {}
 const Component = () => <Fragment>Component</Fragment>`,
 } as const
