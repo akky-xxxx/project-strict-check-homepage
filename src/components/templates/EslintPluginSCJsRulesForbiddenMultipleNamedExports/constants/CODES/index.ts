@@ -5,10 +5,8 @@ export const CODES = {
   },
 }`,
 
-  INCORRECT_EXAMPLE: `// "sc-js/forbidden-multiple-named-exports": ["error"]
-export const One = 1;
+  INCORRECT_EXAMPLE: `export const One = 1;
 export const Two = 2;`,
 
-  CORRECT_EXAMPLE: `// "sc-js/forbidden-multiple-named-exports": ["error"]
-export const One = 1;`,
+  CORRECT_EXAMPLE: "export const One = 1;",
 } as const

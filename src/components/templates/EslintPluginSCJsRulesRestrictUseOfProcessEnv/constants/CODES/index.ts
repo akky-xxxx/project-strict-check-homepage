@@ -5,13 +5,10 @@ export const CODES = {
   },
 }`,
 
-  INCORRECT_EXAMPLE1: `// "sc-js/restrict-use-of-process-env": ["error"]
-const env = process.env;`,
-  INCORRECT_EXAMPLE2: `// "sc-js/restrict-use-of-process-env": ["error"]
-const { env: variableName } = process;`,
+  INCORRECT_EXAMPLE1: "const env = process.env;",
+  INCORRECT_EXAMPLE2: "const { env: variableName } = process;",
 
-  CORRECT_EXAMPLE: `// "sc-js/restrict-use-of-process-env": ["error"]
-// const file
+  CORRECT_EXAMPLE: `// const file
 /* eslint-disable sc-js/restrict-use-of-process-env */
 export const Environment = {
   NODE_ENV: process.env.NODE_ENV || "development",
