@@ -41,11 +41,25 @@ export const EslintPluginSCJsRulesFilePathPatterns: FC = () => (
       <Section>
         <Heading3 id={ALLOW_PATTERNS.hash}>{ALLOW_PATTERNS.name}</Heading3>
         <Paragraph>
-          Specify the regular expression array for allows path
+          Specify the
+          {" "}
+          <Code>string array that be able to hands over to RegExp</Code>
+          {" "}
+          or
+          {" "}
+          <Code>regular expression array</Code>
+          {" "}
+          for allows path
         </Paragraph>
         <Paragraph>
-          value:
-          {" "}
+          values:
+          <br />
+          <Code>
+            [&quot;index(?:.(?:stories|test))?.tsx?&quot;]
+          </Code>
+          <br />
+          or
+          <br />
           <Code>
             [/index(?:\.(?:stories|test))?\.tsx?/]
           </Code>
