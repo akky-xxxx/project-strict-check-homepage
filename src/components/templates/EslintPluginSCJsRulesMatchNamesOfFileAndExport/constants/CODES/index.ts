@@ -3,16 +3,17 @@ export const CODES = {
   rules: {
     "sc-js/match-names-of-file-and-export": [
       <enabled>,
-      { "captures": <RegExp>[] },
+      {
+        "captures": <String>[], // Next standard. string that be able to hands over to RegExp
+        "captures": <RegExp>[], // Deprecated
+      },
     ],
   },
 }`,
 
-  INCORRECT_EXAMPLE: `// "sc-js/match-names-of-file-and-export": ["error", { "captures": [/\\/components\\/(?:atoms|molecules|organisms|templates)\\/([^/]+)\\/index.tsx/] }]
-// /components/atoms/Button/index.tsx
+  INCORRECT_EXAMPLE: `// /components/atoms/Button/index.tsx
 export const button = () => {}`,
 
-  CORRECT_EXAMPLE: `// "sc-js/match-names-of-file-and-export": ["error", { "captures": [/\\/components\\/(?:atoms|molecules|organisms|templates)\\/([^/]+)\\/index.tsx/]] }]
-// /components/atoms/Button/index.tsx
+  CORRECT_EXAMPLE: `// /components/atoms/Button/index.tsx
 export const Button = () => {}`,
 } as const
