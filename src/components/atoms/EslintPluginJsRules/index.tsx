@@ -1,6 +1,6 @@
-import { ITEMS } from "./constants/ITEMS"
 import { Paragraph } from "../Paragraph"
 import { PluginRulesTable } from "../PluginRulesTable"
+import { ITEMS } from "./constants/ITEMS"
 
 import type { FC } from "react"
 

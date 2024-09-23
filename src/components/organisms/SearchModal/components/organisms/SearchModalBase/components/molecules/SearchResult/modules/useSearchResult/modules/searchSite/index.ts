@@ -8,6 +8,7 @@ const REPLACE_VALUE = "<mark>$1</mark>"
 
 export const searchSite: SearchSite = (searchWord, dictionary) => {
   if (searchWord === "") return []
+  // eslint-disable-next-line sonarjs/stateful-regex
   const searchWordRegExp = new RegExp(`(${searchWord})`, "gi")
 
   return dictionary.reduce<Item[]>((previousValue, item) => {

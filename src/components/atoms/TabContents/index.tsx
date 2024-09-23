@@ -17,6 +17,8 @@ type Props<L extends string = string> = {
 
 const { activeTabItem, root, tabItem, tabs } = styles
 
+// plugin のバグ？
+// eslint-disable-next-line sonarjs/function-return-type
 export const TabContents = <L extends string = string>(props: Props<L>): ReactNode => {
   const { contents, selectedLabel, handleSelectLabel } = props
 
