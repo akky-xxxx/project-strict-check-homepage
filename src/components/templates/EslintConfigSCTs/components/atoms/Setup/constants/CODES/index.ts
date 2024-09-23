@@ -41,26 +41,4 @@ export default [
     },
   },
 ].flat()`,
-  LEGACY1: `// .eslintrc.js
-module.exports = {
-  extends: ["sc-ts/legacy"]
-}`,
-  LEGACY2: `// .eslintrc.js
-const eslintConfigSCTs = require("eslint-config-sc-ts")
-
-module.exports = {
-  extends: [
-    "plugin:@stylistic/recommended-extends",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/strict-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-    "plugin:unicorn/recommended",
-    "airbnb-base",
-    "sc-js/legacy"
-  ],
-  plugins: ["unicorn"],
-  rules: {
-    ...eslintConfigSCTs.configs.customRecord.rules,
-  },
-}`,
 }

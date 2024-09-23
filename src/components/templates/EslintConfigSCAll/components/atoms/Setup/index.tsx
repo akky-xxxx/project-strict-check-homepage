@@ -3,7 +3,7 @@ import { Fragment } from "react"
 import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
 
 import { Heading3 } from "../../../../../atoms/Heading3"
-import { EslintConfigTabContents } from "../../../../../organisms/EslintConfigTabContents"
+import { SyntaxHighlighter } from "../../../../../atoms/SyntaxHighlighter"
 
 import type { FC } from "react"
 
@@ -26,9 +26,6 @@ export default [
 export const Setup: FC = () => (
   <Fragment>
     <Heading3 id={SETUP.hash}>{SETUP.name}</Heading3>
-    <EslintConfigTabContents
-      flatCode={source}
-      legacyCode="// Incompatible"
-    />
+    <SyntaxHighlighter code={source} language="javascript" />
   </Fragment>
 )

@@ -4,7 +4,7 @@ import { HEADINGS_INFO } from "@shared/constants/HEADINGS_INFO"
 
 import { CODES } from "./constants/CODES"
 import { Heading3 } from "../../../../../atoms/Heading3"
-import { EslintConfigTabContents } from "../../../../../organisms/EslintConfigTabContents"
+import { SyntaxHighlighter } from "../../../../../atoms/SyntaxHighlighter"
 
 import type { FC } from "react"
 
@@ -19,15 +19,9 @@ const {
 export const Setup: FC = () => (
   <Fragment>
     <Heading3 id={SETUP.hash}>{SETUP.name}</Heading3>
-    <EslintConfigTabContents
-      flatCode={CODES.FLAT1}
-      legacyCode={CODES.LEGACY1}
-    />
+    <SyntaxHighlighter code={CODES.FLAT1} language="javascript" />
 
     <p>Equally</p>
-    <EslintConfigTabContents
-      flatCode={CODES.FLAT2}
-      legacyCode={CODES.LEGACY2}
-    />
+    <SyntaxHighlighter code={CODES.FLAT2} language="javascript" />
   </Fragment>
 )

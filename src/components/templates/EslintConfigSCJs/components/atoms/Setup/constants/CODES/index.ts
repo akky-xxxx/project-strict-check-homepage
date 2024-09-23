@@ -24,24 +24,4 @@ export default [
   // This is the reset config for @stylistic
   eslintConfigSCJs.configs.resetRecordForStylistic,
 ].flat()`,
-  LEGACY1: `// .eslintrc.js
-module.exports = {
-  extends: ["sc-js/legacy"]
-}`,
-  LEGACY2: `// .eslintrc.js
-const eslintConfigSCJs = require("eslint-config-sc-js")
-
-module.exports = {
-  extends: [
-    "plugin:@stylistic/recommended-extends",
-    "eslint:recommended",
-    "plugin:unicorn/recommended",
-    "airbnb-base",
-  ],
-  plugins: ["unicorn"],
-  rules: {
-    ...eslintConfigSCJs.configs.customRecord.rules,
-    ...eslintConfigSCJs.configs.resetRecordForStylistic.rules,
-  },
-}`,
 }
