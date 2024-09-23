@@ -5,6 +5,8 @@ import { packageNameSchema } from "@shared/schemas/packageNameSchema"
 
 import type { PackageName } from "@shared/types/PackageName"
 
+// 名前付けしたいため
+// eslint-disable-next-line sonarjs/redundant-type-aliases
 type GetPackageNameInput = string
 type GetPackageNameReturn = PackageName
 type GetPackageName = (input: GetPackageNameInput) => GetPackageNameReturn
