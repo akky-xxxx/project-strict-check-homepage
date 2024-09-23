@@ -2,9 +2,9 @@ import { Fragment } from "react"
 
 import { pagesPath } from "@lib/$path"
 
-import { LINK_ITEMS } from "./constants/LINK_ITEMS"
 import { Link } from "../Link"
 import { UnOrderLinkList } from "../UnOrderLinkList"
+import { LINK_ITEMS } from "./constants/LINK_ITEMS"
 
 import type { FC } from "react"
 
