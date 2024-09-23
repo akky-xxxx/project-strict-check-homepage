@@ -15,9 +15,8 @@ const root = css({
 })
 
 const navStyle = css({
-  base: {
-    gridColumn: "1 / 3",
-  },
+  gridColumn: "1 / 3",
+
   md: {
     alignItems: "center",
     columnGap: 12,
@@ -26,11 +25,10 @@ const navStyle = css({
 })
 
 const searchButtonWrapper = css({
-  base: {
-    gridColumn: "1 / 3",
-    paddingBlock: 4,
-    paddingInline: 12,
-  },
+  gridColumn: "1 / 3",
+  paddingBlock: 4,
+  paddingInline: 12,
+
   md: {
     gridColumn: "initial",
     paddingBlock: "initial",
@@ -50,6 +48,9 @@ const packageLink = css({
 })
 
 const packageSelectWrapper = css({
+  height: 48,
+  paddingInline: 12,
+
   lg: {
     alignItems: "center",
     display: "flex",
@@ -59,11 +60,6 @@ const packageSelectWrapper = css({
 
   md: {
     display: "none",
-  },
-
-  base: {
-    height: 48,
-    paddingInline: 12,
   },
 })
 
