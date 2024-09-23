@@ -16,24 +16,4 @@ export default [
   eslintConfigSCJest.configs.overrideJavascriptRecord, // for javascript project
   eslintConfigSCJest.configs.overrideTypescriptRecord, // for typescript project
 ].flat()`,
-  LEGACY1: `// .eslintrc.js
-module.exports = {
-  extends: [
-    "...", // other extends for product code
-    "sc-jest/legacy",
-  ]
-}`,
-  LEGACY2: `// .eslintrc.js
-const eslintConfigSCJest = require("eslint-config-sc-jest")
-
-module.exports = {
-  extends: [
-    "...", // other extends for product code
-  ],
-  plugins: ["jest"],
-  overrides: [
-    ...[/* other overrides */],
-    ...eslintConfigSCJest.configs.legacy.overrides,
-  ],
-}`,
 }

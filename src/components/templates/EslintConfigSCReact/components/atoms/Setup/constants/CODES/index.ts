@@ -45,43 +45,4 @@ export default [
   // This is the reset config for stylistic
   eslintConfigSCReact.configs.resetRecordForStylistic,
 ].flat()`,
-  LEGACY1: `// .eslintrc.js
-module.exports = {
-  extends: ["sc-react/legacy"]
-}`,
-  LEGACY2: `// .eslintrc.js
-const eslintConfigSCReact = require("eslint-config-sc-react")
-
-module.exports = {
-  extends: [
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "sc-js/legacy"
-  ],
-  rules: {
-    ...eslintConfigSCReact.configs.customRecord.rules,
-  },
-}`,
-  LEGACY3: `// .eslintrc.js
-const eslintConfigSCReact = require("eslint-config-sc-react")
-const eslintConfigSCTs = require("eslint-config-sc-ts")
-
-module.exports = {
-  extends: [
-    "plugin:unicorn/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "sc-ts/legacy"
-  ],
-  rules: {
-    ...eslintConfigSCTs.configs.customRecord.rules,
-    ...eslintConfigSCReact.configs.customRecord.rules,
-    ...eslintConfigSCReact.configs.customRecordWithTypescript.rules,  // This is the custom config for typescript of eslint-config-sc-react
-    ...eslintConfigSCReact.configs.resetRecordForStylistic.rules,
-  },
-}`,
 }
