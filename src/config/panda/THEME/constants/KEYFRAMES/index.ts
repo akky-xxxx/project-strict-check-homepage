@@ -1,6 +1,6 @@
 import { defineKeyframes } from "@pandacss/dev"
 
-/* eslint-disable @typescript-eslint/naming-convention, sort-keys, sonarjs/no-duplicate-string */
+/* eslint-disable @typescript-eslint/naming-convention, sort-keys */
 export const KEYFRAMES = defineKeyframes({
   drawIconUpperLineToClose: {
     "0%": { transform: "translateY(11px) rotate(-45deg)" },

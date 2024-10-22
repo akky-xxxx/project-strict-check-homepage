@@ -7,6 +7,6 @@ import type { PackageName } from "@shared/types/PackageName"
 export const getTargetItems = (categoryName: PackageName["category"] = DEFAULT_PACKAGE_NAME.target): Array<PackageName["target"]> => {
   if (categoryName === DEFAULT_PACKAGE_NAME.target) return [DEFAULT_PACKAGE_NAME.target]
   return [...PACKAGE_NAMES.eslint[categoryName]]
-    .sort()
+    .sort((a, b) => a.localeCompare(b))
     .map((targetName) => (targetName))
 }

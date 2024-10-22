@@ -5,4 +5,10 @@ export const SONARJS = [
       "sonarjs/no-duplicate-string": 0,
     },
   },
+  {
+    rules: {
+      "sonarjs/no-misused-promises": 0, // @typescript-eslint/no-misused-promises と重複
+      "sonarjs/todo-tag": 0, // 使う
+    },
+  },
 ]

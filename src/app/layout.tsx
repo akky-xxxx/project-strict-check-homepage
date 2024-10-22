@@ -3,10 +3,9 @@ import { cookies } from "next/headers"
 import { Toaster } from "react-hot-toast"
 
 import { css } from "@panda/css"
-import { COOKIE_KEY_ESLINT_CONFIG, COOKIE_KEY_PACKAGE_MANAGER, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
+import { COOKIE_KEY_PACKAGE_MANAGER, COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 import { getMetadata } from "@shared/utils/getMetadata"
 
-import { getEslintConfig } from "./modules/getEslintConfig"
 import { getPackageManager } from "./modules/getPackageManager"
 import { getTheme } from "./modules/getTheme"
 import { Footer } from "../components/atoms/Footer"
@@ -26,7 +25,6 @@ const RootLayout: FCWithChildren = (props) => {
   const { children } = props
   const cookieObject = cookies()
   const theme = getTheme(cookieObject.get(COOKIE_KEY_THEME))
-  const eslintConfig = getEslintConfig(cookieObject.get(COOKIE_KEY_ESLINT_CONFIG))
   const packageManager = getPackageManager(cookieObject.get(COOKIE_KEY_PACKAGE_MANAGER))
 
   return (
@@ -34,7 +32,7 @@ const RootLayout: FCWithChildren = (props) => {
       <body className={inter.className}>
         <div className={bodyInner}>
           <div className={mainContentsWrapper}>
-            <MainContentProviders eslintConfig={eslintConfig} packageManager={packageManager}>
+            <MainContentProviders packageManager={packageManager}>
               {children}
               <Toaster />
             </MainContentProviders>
