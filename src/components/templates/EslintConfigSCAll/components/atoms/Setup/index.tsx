@@ -16,7 +16,7 @@ const {
 } = HEADINGS_INFO
 
 const source = `// eslint.config.mjs
-import eslintConfigSCAll from "eslint-config-sc"
+import eslintConfigSCAll from "eslint-config-sc-all"
 
 export default [
   eslintConfigSCAll.getConfigs("typescript", ["react", "next", "jest", "storybook"]),
