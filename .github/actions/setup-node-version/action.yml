@@ -6,7 +6,11 @@ runs:
       with:
         node-version-file: ./.node-version
 
-    - run: corepack enable
+    - name: Setup pnpm
+      run: |
+        npm i -g corepack@latest
+        corepack enable
+        corepack prepare pnpm@11.1.2 --activate
       shell: bash
 
     - name: Install dependencies
