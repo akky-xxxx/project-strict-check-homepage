@@ -3,7 +3,7 @@
   "license": "UNLICENSED",
   "author": "akky-xxxx",
   "engines": {
-    "node": "20.17.0",
+    "node": "26.1.0",
     "npm": "pnpmを使用してください",
     "yarn": "pnpmを使用してください"
   },
@@ -31,10 +31,10 @@
     "log": "wrangler pages deployment tail --project-name strict-check-series --environment preview",
     "pages:build": "npx @cloudflare/next-on-pages",
     "prepare": "run-s \"prepare:*\"",
+    "prepare-bk:playwright": "pnpm exec playwright install",
     "prepare:huksy": "husky",
     "prepare:panda": "panda codegen",
     "prepare:pathpida": "pnpm build:pathpida",
-    "prepare:playwright": "pnpm exec playwright install",
     "preview": "$npm_execpath run pages:build && wrangler pages dev",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,ts,tsx}\" \"./*.{js,mjs}\"",
     "start": "next start",
@@ -114,5 +114,5 @@
     "wrangler": "3.78.7"
   },
   "version": "0.0.1",
-  "packageManager": "pnpm@9.11.0"
+  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }
