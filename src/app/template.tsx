@@ -6,13 +6,14 @@ import { getTheme } from "./modules/getTheme"
 import { Main } from "../components/atoms/Main"
 import { Layout } from "../components/organisms/Layout"
 
-import type { FCWithChildren } from "@shared/types/FCWithChildren"
+import type { AsyncFCWithChildren } from "@shared/types/AsyncFCWithChildren"
 
 import "./globals.css"
 
-const RootLayout: FCWithChildren = (props) => {
+const RootLayout: AsyncFCWithChildren = async (props) => {
   const { children } = props
-  const theme = getTheme(cookies().get(COOKIE_KEY_THEME))
+  const cookieObject = await cookies()
+  const theme = getTheme(cookieObject.get(COOKIE_KEY_THEME))
 
   return (
     <Layout theme={theme}>

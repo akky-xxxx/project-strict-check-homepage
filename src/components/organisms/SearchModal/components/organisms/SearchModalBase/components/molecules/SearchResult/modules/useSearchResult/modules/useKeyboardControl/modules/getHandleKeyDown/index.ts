@@ -3,11 +3,11 @@ import { getLoopedPreviousIndex } from "./modules/getLoopedPreviousIndex"
 import { scrollWHenUp } from "./modules/scrollWHenUp"
 import { scrollWhenDown } from "./modules/scrollWhenDown"
 
-import type { Dispatch, MutableRefObject, SetStateAction } from "react"
+import type { Dispatch, RefObject, SetStateAction } from "react"
 
 type Input = {
   handleCloseModal: () => void
-  ulRef: MutableRefObject<HTMLUListElement | null>
+  ulRef: RefObject<HTMLUListElement | null>
   selectedIndex: number
   setSelectedIndex: Dispatch<SetStateAction<number>>
   resultLength: number

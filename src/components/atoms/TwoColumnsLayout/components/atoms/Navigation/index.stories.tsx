@@ -54,7 +54,7 @@ export const LinkItemsTest: Story = {
     ] as const
     await expect(anchorElements).toHaveLength(16)
 
-    // eslint-disable-next-line no-restricted-syntax
+    // eslint-disable-next-line no-restricted-syntax, @typescript-eslint/await-thenable
     for await (const [index, expected] of expects.entries()) {
       const targetAnchor = anchorElements.at(index)
       if (targetAnchor) {
