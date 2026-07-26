@@ -107,7 +107,7 @@
     "postcss": "8.5.20",
     "prettier": "3.9.5",
     "storybook": "10.5.2",
-    "typescript": "5.6.2",
+    "typescript": "6.0.2",
     "typescript-eslint": "8.64.0",
     "vercel": "56.3.2",
     "vite": "7.0.0",
