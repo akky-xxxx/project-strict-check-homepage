@@ -20,7 +20,7 @@ type PackageNameStoreProviderProps = {
 
 export const PackageNameProvider = (props: PackageNameStoreProviderProps) => {
   const { children } = props
-  const storeRef = useRef<PackageNameStoreApi>()
+  const storeRef = useRef<PackageNameStoreApi>(undefined)
   storeRef.current ??= store.createStore()
 
   return (

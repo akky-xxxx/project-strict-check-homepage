@@ -22,7 +22,7 @@ type PackageManagerStoreProviderProps = {
 
 export const PackageManagerProvider = (props: PackageManagerStoreProviderProps) => {
   const { children, packageManager } = props
-  const storeRef = useRef<PackageManagerStoreApi>()
+  const storeRef = useRef<PackageManagerStoreApi>(undefined)
   storeRef.current ??= store.createStore(
     store.initializeStore(packageManager),
   )

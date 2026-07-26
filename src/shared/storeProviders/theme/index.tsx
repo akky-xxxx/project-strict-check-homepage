@@ -22,7 +22,7 @@ type ThemeStoreProviderProps = {
 
 export const ThemeProvider = (props: ThemeStoreProviderProps) => {
   const { children, theme } = props
-  const storeRef = useRef<ThemeStoreApi>()
+  const storeRef = useRef<ThemeStoreApi>(undefined)
   storeRef.current ??= store.createStore(
     store.initializeStore(theme),
   )
