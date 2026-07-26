@@ -21,7 +21,7 @@ type PackageNameStoreProviderProps = {
 export const PackageNameProvider = (props: PackageNameStoreProviderProps) => {
   const { children } = props
   const storeRef = useRef<PackageNameStoreApi>()
-  if (!storeRef.current) storeRef.current = store.createStore()
+  storeRef.current ??= store.createStore()
 
   return (
     <PackageNameStoreContext.Provider value={storeRef.current}>

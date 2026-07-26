@@ -23,11 +23,9 @@ type PackageManagerStoreProviderProps = {
 export const PackageManagerProvider = (props: PackageManagerStoreProviderProps) => {
   const { children, packageManager } = props
   const storeRef = useRef<PackageManagerStoreApi>()
-  if (!storeRef.current) {
-    storeRef.current = store.createStore(
-      store.initializeStore(packageManager),
-    )
-  }
+  storeRef.current ??= store.createStore(
+    store.initializeStore(packageManager),
+  )
 
   return (
     <PackageManagerStoreContext.Provider value={storeRef.current}>

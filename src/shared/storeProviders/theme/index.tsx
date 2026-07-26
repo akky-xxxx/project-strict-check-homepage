@@ -23,11 +23,9 @@ type ThemeStoreProviderProps = {
 export const ThemeProvider = (props: ThemeStoreProviderProps) => {
   const { children, theme } = props
   const storeRef = useRef<ThemeStoreApi>()
-  if (!storeRef.current) {
-    storeRef.current = store.createStore(
-      store.initializeStore(theme),
-    )
-  }
+  storeRef.current ??= store.createStore(
+    store.initializeStore(theme),
+  )
 
   return (
     <ThemeStoreContext.Provider value={storeRef.current}>
