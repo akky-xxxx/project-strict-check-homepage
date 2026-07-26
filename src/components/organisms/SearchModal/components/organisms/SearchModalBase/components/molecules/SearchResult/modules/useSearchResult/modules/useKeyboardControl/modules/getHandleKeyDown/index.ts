@@ -25,37 +25,37 @@ export const getHandleKeyDown = (input: Input) => {
   // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   const maxIndex = resultLength - 1
 
-  // eslint-disable-next-line max-statements
+  // eslint-disable-next-line max-statements, complexity
   return (event: KeyboardEvent) => {
     const { key } = event
     switch (key) {
-      case "ArrowUp": {
-        event.preventDefault()
-        const previousIndex = getLoopedPreviousIndex(maxIndex)(selectedIndex)
-        scrollWHenUp({ maxIndex, previousIndex, ul: ulRef.current })
-        setSelectedIndex(previousIndex)
-        break
-      }
-      case "ArrowDown": {
-        event.preventDefault()
-        const nextIndex = getLoopedNextIndex(maxIndex)(selectedIndex)
-        scrollWhenDown({ nextIndex, ul: ulRef.current })
-        setSelectedIndex(nextIndex)
-        break
-      }
-      case "Enter": {
-        event.preventDefault()
-        ulRef.current?.querySelectorAll("a").item(selectedIndex).click()
-        break
-      }
-      case "Escape": {
-        event.preventDefault()
-        handleCloseModal()
-        break
-      }
-      default: {
-        break
-      }
+    case "ArrowUp": {
+      event.preventDefault()
+      const previousIndex = getLoopedPreviousIndex(maxIndex)(selectedIndex)
+      scrollWHenUp({ maxIndex, previousIndex, ul: ulRef.current })
+      setSelectedIndex(previousIndex)
+      break
+    }
+    case "ArrowDown": {
+      event.preventDefault()
+      const nextIndex = getLoopedNextIndex(maxIndex)(selectedIndex)
+      scrollWhenDown({ nextIndex, ul: ulRef.current })
+      setSelectedIndex(nextIndex)
+      break
+    }
+    case "Enter": {
+      event.preventDefault()
+      ulRef.current?.querySelectorAll("a").item(selectedIndex).click()
+      break
+    }
+    case "Escape": {
+      event.preventDefault()
+      handleCloseModal()
+      break
+    }
+    default: {
+      break
+    }
     }
   }
 }

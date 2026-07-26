@@ -36,10 +36,10 @@ const ResultRecordBase: FC<Props> = (props) => {
     <li className={cx(...lyStyles)} onMouseEnter={handleMouseEnter}>
       <a className={link} href={href} onClick={onClickRecord}>
         <p className={titleStyle}>
-          {/* eslint-disable-next-line @typescript-eslint/naming-convention,react/no-danger */}
+          {/* eslint-disable-next-line @typescript-eslint/naming-convention */}
           <span dangerouslySetInnerHTML={{ __html: title }} />
         </p>
-        {/* eslint-disable-next-line @typescript-eslint/naming-convention,react/no-danger */}
+        {/* eslint-disable-next-line @typescript-eslint/naming-convention */}
         <p dangerouslySetInnerHTML={{ __html: text }} />
       </a>
     </li>

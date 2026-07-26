@@ -1,5 +1,5 @@
 import Cookies from "js-cookie"
-import { persist, createJSONStorage, devtools, type StateStorage } from "zustand/middleware"
+import { persist, createJSONStorage, devtools } from "zustand/middleware"
 import { createStore } from "zustand/vanilla"
 
 import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
@@ -7,6 +7,7 @@ import { COOKIE_KEY_THEME } from "@shared/constants/COOKIE_KEYS"
 import type { ThemeState } from "./types/ThemeState"
 import type { ThemeStore } from "./types/ThemeStore"
 import type { Theme } from "@shared/types/Theme"
+import type { StateStorage } from "zustand/middleware"
 
 const cookieStorage: StateStorage = {
   getItem: () => null,

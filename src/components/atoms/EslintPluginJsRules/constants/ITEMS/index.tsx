@@ -21,7 +21,7 @@ export const ITEMS = [
     {
       content: (
         <Link
-          // eslint-disable-next-line @stylistic/max-len
+          // eslint-disable-next-line max-len
           href={pagesPath.packages.eslint_plugin_sc_js.rules.forbidden_multiple_named_exports.$url().path}
         >
           forbidden-multiple-named-exports
@@ -48,7 +48,7 @@ export const ITEMS = [
     {
       content: (
         <Link
-          // eslint-disable-next-line @stylistic/max-len
+          // eslint-disable-next-line max-len
           href={pagesPath.packages.eslint_plugin_sc_js.rules.match_names_of_file_and_export.$url().path}
         >
           match-names-of-file-and-export
@@ -63,7 +63,7 @@ export const ITEMS = [
     {
       content: (
         <Link
-          // eslint-disable-next-line @stylistic/max-len
+          // eslint-disable-next-line max-len
           href={pagesPath.packages.eslint_plugin_sc_js.rules.restrict_use_of_process_env.$url().path}
         >
           restrict-use-of-process-env
