@@ -10,7 +10,7 @@ runs:
       run: |
         npm i -g corepack@latest
         corepack enable
-        corepack prepare pnpm@11.1.2 --activate
+        corepack prepare pnpm@11.17.0 --activate
       shell: bash
 
     - name: Install dependencies
