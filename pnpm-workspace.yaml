@@ -6,6 +6,10 @@ allowBuilds:
   unrs-resolver: true
   workerd: true
 minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - "eslint-config-sc-*"
+  - eslint-plugin-sc-js
 overrides:
   "@types/react": "19.2.17"
   "@types/react-dom": "19.2.3"
+  eslint-plugin-unicorn: "65.0.0"

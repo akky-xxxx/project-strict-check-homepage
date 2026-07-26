@@ -3,7 +3,7 @@ import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 import { Table } from "."
 
 import type { TableProps } from "./types/TableProps"
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const DATA = [
   [{ content: "heading1", key: "heading1" }, { content: "heading2", key: "heading2" }, { content: "icon", key: "icons" }],

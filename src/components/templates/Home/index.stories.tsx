@@ -2,7 +2,7 @@ import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { Home } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const meta: Meta<typeof Home> = {
   component: Home,

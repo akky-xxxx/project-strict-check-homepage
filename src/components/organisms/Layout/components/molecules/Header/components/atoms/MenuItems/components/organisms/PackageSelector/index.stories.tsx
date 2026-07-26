@@ -1,12 +1,12 @@
-import { expect, userEvent, within } from "@storybook/test"
 import mockRouter from "next-router-mock"
+import { expect, userEvent, within } from "storybook/test"
 
 import { pagesPath } from "@lib/$path"
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { PackageSelector } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const meta: Meta<typeof PackageSelector> = {
   component: PackageSelector,
@@ -75,7 +75,7 @@ export const PcChangingAndLinkDestinationTest: Story = {
       { input: "sc-storybook", output: pagesPath.packages.eslint_config_sc_storybook.$url().path },
     ]
     await userEvent.selectOptions(categorySelect.parentElement, "config")
-    // eslint-disable-next-line no-restricted-syntax, @typescript-eslint/await-thenable
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const testCase of TEST_CASES) {
       await userEvent.selectOptions(targetSelect.parentElement, testCase.input)
       await expect(mockRouter).toMatchObject({ pathname: testCase.output })
@@ -112,7 +112,7 @@ export const SpChangingAndLinkDestinationTest: Story = {
       { input: "eslint-config-sc-storybook", output: pagesPath.packages.eslint_config_sc_storybook.$url().path },
       { input: "eslint-plugin-sc-js", output: pagesPath.packages.eslint_plugin_sc_js.$url().path },
     ]
-    // eslint-disable-next-line no-restricted-syntax, @typescript-eslint/await-thenable
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const testCase of TEST_CASES) {
       await userEvent.selectOptions(optionElement.parentElement, testCase.input)
       await expect(mockRouter).toMatchObject({ pathname: testCase.output })

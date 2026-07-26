@@ -1,11 +1,11 @@
-import { expect, userEvent, within } from "@storybook/test"
 import mockRouter from "next-router-mock"
+import { expect, userEvent, within } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { Navigation } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const meta: Meta<typeof Navigation> = {
   component: Navigation,
@@ -54,7 +54,7 @@ export const LinkItemsTest: Story = {
     ] as const
     await expect(anchorElements).toHaveLength(16)
 
-    // eslint-disable-next-line no-restricted-syntax, @typescript-eslint/await-thenable
+    // eslint-disable-next-line @typescript-eslint/await-thenable
     for await (const [index, expected] of expects.entries()) {
       const targetAnchor = anchorElements.at(index)
       if (targetAnchor) {

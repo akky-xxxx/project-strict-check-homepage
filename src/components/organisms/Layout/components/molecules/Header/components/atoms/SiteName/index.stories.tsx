@@ -1,11 +1,11 @@
-import { userEvent, within, expect } from "@storybook/test"
 import mockRouter from "next-router-mock"
+import { userEvent, within, expect } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { SiteName } from "./index"
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const meta: Meta<typeof SiteName> = {
   component: SiteName,

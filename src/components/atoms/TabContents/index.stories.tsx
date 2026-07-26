@@ -1,12 +1,12 @@
-import { expect, userEvent, within } from "@storybook/test"
 import { useState } from "react"
+import { expect, userEvent, within } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 import { sleep } from "@shared/utils/sleep"
 
 import { TabContents } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 import type { ReactNode } from "react"
 
 type Label = "content1" | "content2"
