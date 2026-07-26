@@ -1,11 +1,11 @@
-import { expect, within } from "@storybook/test"
+import { expect, within } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { PluginRulesTable } from "."
 
 import type { PluginRulesTableProps } from "./types/PluginRulesTableProps"
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const DATA = [
   [{ content: "rule-name1", key: "rule-name1" }, "description for rule-name1", true],

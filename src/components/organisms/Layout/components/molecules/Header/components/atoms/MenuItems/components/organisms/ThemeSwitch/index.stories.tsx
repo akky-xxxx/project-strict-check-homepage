@@ -1,10 +1,10 @@
-import { within, expect } from "@storybook/test"
+import { within, expect } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { ThemeSwitch } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const meta: Meta<typeof ThemeSwitch> = {
   component: ThemeSwitch,
@@ -19,6 +19,7 @@ export const TbSystemButtonActive: Story = {
   args: {
     selectedTheme: "system",
   },
+
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const systemThemeButton = [...canvas.getAllByRole("radio")]
@@ -27,11 +28,14 @@ export const TbSystemButtonActive: Story = {
   },
 
   parameters: {
-    backgrounds: {
-      default: "system",
-    },
-    ...STORY_PARAMETERS.VIEWPORT.TB,
+    ...STORY_PARAMETERS.VIEWPORT.TB
   },
+
+  globals: {
+    backgrounds: {
+      value: "system"
+    }
+  }
 }
 
 export const SpSystemButtonActive: Story = {

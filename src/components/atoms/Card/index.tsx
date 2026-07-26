@@ -17,11 +17,11 @@ export const Card: FC<Props> = (props) => {
   return (
     <NextLink className={link} href={href}>
       <p className={titleStyle}>{title}</p>
-      {Boolean(description) && (
+      {description != null && description !== "" ? (
         <Paragraph>
           {description}
         </Paragraph>
-      )}
+      ) : null}
     </NextLink>
   )
 }

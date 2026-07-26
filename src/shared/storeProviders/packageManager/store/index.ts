@@ -1,5 +1,5 @@
 import Cookies from "js-cookie"
-import { persist, createJSONStorage, devtools, type StateStorage } from "zustand/middleware"
+import { persist, createJSONStorage, devtools } from "zustand/middleware"
 import { createStore } from "zustand/vanilla"
 
 import { COOKIE_KEY_PACKAGE_MANAGER } from "@shared/constants/COOKIE_KEYS"
@@ -7,6 +7,7 @@ import { COOKIE_KEY_PACKAGE_MANAGER } from "@shared/constants/COOKIE_KEYS"
 import type { PackageManagerState } from "./types/PackageManagerState"
 import type { PackageManagerStore } from "./types/PackageManagerStore"
 import type { PackageManager } from "@shared/types/PackageManager"
+import type { StateStorage } from "zustand/middleware"
 
 const cookieStorage: StateStorage = {
   getItem: () => null,

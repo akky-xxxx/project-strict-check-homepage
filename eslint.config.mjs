@@ -10,6 +10,7 @@ import { IMPORT } from "./config/eslint/IMPORT/index.mjs"
 import { JSDOC } from "./config/eslint/JSDOC/index.mjs"
 import { PLUGIN_SC_JS } from "./config/eslint/PLUGIN_SC_JS/index.mjs"
 import { SONARJS } from "./config/eslint/SONARJS/index.mjs"
+import { STORYBOOK } from "./config/eslint/STORYBOOK/index.mjs"
 import { TYPESCRIPT_ESLINT } from "./config/eslint/TYPESCRIPT_ESLINT/index.mjs"
 
 const compat = new FlatCompat()
@@ -21,7 +22,7 @@ const config = [
   eslintPluginJsdoc.configs["flat/recommended-typescript"],
   compat.config(pluginNextOnPages.configs.recommended),
   eslintPluginSonarjs.configs.recommended,
-  eslintConfigSCAll.getConfigs("typescript", ["next", "jest", "storybook"]),
+  eslintConfigSCAll.getConfigs("typescript", ["next", "jest"]),
 
   ESLINT,
   PLUGIN_SC_JS,
@@ -29,6 +30,7 @@ const config = [
   IMPORT,
   SONARJS,
   JSDOC,
+  STORYBOOK,
 ].flat()
 
 export default config

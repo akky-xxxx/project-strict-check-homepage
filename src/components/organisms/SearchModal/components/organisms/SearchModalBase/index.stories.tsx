@@ -1,12 +1,12 @@
-import { expect, userEvent, within } from "@storybook/test"
 import { useState } from "react"
+import { expect, userEvent, within } from "storybook/test"
 
 import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 import { sleep } from "@shared/utils/sleep"
 
 import { SearchModalBase } from "."
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 export default {
   component: SearchModalBase,

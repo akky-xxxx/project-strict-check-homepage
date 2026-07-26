@@ -1,6 +1,6 @@
 import "../src/app/globals.css"
 
-import { getRouter, usePathname } from "@storybook/nextjs/navigation.mock"
+import { getRouter, usePathname } from "@storybook/nextjs-vite/navigation.mock"
 import mockRouter from "next-router-mock"
 import { useEffect } from "react"
 
@@ -8,7 +8,7 @@ import { PackageNameProvider } from "../src/shared/storeProviders/packageName"
 import { ThemeProvider } from "../src/shared/storeProviders/theme"
 import { MainContentProviders } from "../src/components/organisms/MainContentProviders"
 
-import type { Preview } from "@storybook/react"
+import type { Preview } from "@storybook/nextjs-vite"
 
 const preview: Preview = {
   beforeEach: () => {
@@ -54,7 +54,7 @@ const preview: Preview = {
       appDirectory: true,
     },
     viewport: {
-      viewports: [
+      options: [
         {
           name: "sp",
           styles: { height: "500px", width: "380px" },
