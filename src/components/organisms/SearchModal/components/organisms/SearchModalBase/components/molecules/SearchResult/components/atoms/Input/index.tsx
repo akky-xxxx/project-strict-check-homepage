@@ -4,13 +4,13 @@ import { ResetIcon } from "./components/atoms/ResetIcon"
 import { styles } from "./styles"
 import { SearchIcon } from "../../../../../../../../../../../icons/SearchIcon"
 
-import type { ChangeEventHandler, FC, MutableRefObject } from "react"
+import type { ChangeEventHandler, FC, RefObject } from "react"
 
 type Props = {
   enableReset: boolean
   handleChangeSearchWord: ChangeEventHandler<HTMLInputElement>
   handleResetSearchWord: () => void
-  inputRef: MutableRefObject<HTMLInputElement | null>
+  inputRef: RefObject<HTMLInputElement | null>
   searchWord: string
 }
 
