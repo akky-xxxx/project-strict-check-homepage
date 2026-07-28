@@ -15,8 +15,8 @@ description: 依存関係(node/pnpm バージョンおよび npm パッケージ
 2. **カテゴリ分類と方針提示(承認必須)**: 過去の実績パターンを踏まえ、以下のようにカテゴリ分けして各カテゴリの対象パッケージ・現在バージョン・提案バージョンをユーザーに提示する。特に major バージョンアップは breaking changes の有無を確認し、他カテゴリと分離して提示する。着手前に承認を得る
    - node バージョン(`.node-version` / `package.json` の `engines.node`)
    - pnpm バージョン(`package.json` の `packageManager` **と** `.github/actions/setup-node-version/action.yml` の `corepack prepare pnpm@<version> --activate` — この2箇所を同期する必要がある)
-   - eslint 関連(`eslint`, `eslint-config-sc-*`, `eslint-plugin-*`, `typescript-eslint`, `@eslint/eslintrc`)
-   - Next.js / React / Cloudflare 関連(`next`, `react`, `react-dom`, `preact`, `@cloudflare/next-on-pages`, `@cloudflare/workers-types`, `wrangler`, `vercel`)
+   - eslint 関連(`eslint`, `eslint-config-sc-*`, `eslint-plugin-*`, `typescript-eslint`)
+   - Next.js / React / Vercel 関連(`next`, `react`, `react-dom`, `preact`, `vercel`)
    - Panda CSS 関連(`@pandacss/dev`)
    - Storybook 関連(`@storybook/*`, `@chromatic-com/storybook`)
    - TypeScript / 型定義関連(`typescript`, `@tsconfig/*`, `@types/*`)
@@ -26,7 +26,7 @@ description: 依存関係(node/pnpm バージョンおよび npm パッケージ
 3. **カテゴリ単位での更新実行(agent が非対話で完結させる)**: 承認されたカテゴリを1つずつ、対象パッケージ名を指定して `pnpm upgrade -L -r <package1> <package2> ...` を実行する(`-L`/`--latest` で semver range を無視して最新へ、対話 UI である `-i` は使わない)
    - node バージョンは `.node-version` と `package.json` の `engines.node` を手動で編集する(npm パッケージではないため `pnpm upgrade` の対象外)
    - pnpm バージョンは `package.json` の `packageManager` と `.github/actions/setup-node-version/action.yml` の両方を手動で編集する
-4. **カテゴリ単位での検証**: 更新のたびに `pnpm check-code`(lint 一式・spell-check・type-check・test-jest)を実行する。Next.js/Cloudflare/wrangler 関連を更新した場合は `pnpm build` も実行し、ビルドが通ることを確認する
+4. **カテゴリ単位での検証**: 更新のたびに `pnpm check-code`(lint 一式・spell-check・type-check・test-jest)を実行する。Next.js/Vercel 関連を更新した場合は `pnpm build` も実行し、ビルドが通ることを確認する
 5. **カテゴリ単位でのコミット**: `.claude/rules/commit-rules.md` に従い、staged diff とコミットメッセージを提示し、承認を得てから commit する。過去実績の粒度に合わせ、原則カテゴリごとに1コミットとする
    - node バージョン: `chore: upgrade node version to <version>`
    - pnpm バージョン: `chore: upgrade pnpm version to <version>`

@@ -11,7 +11,6 @@ tools: Read, Grep, Glob, Bash
 - コンポーネント責務が適切に分割されているか(atoms/molecules/organisms/templates の区分に照らして)
 - state / props 設計の妥当性、不要な state や prop drilling がないか
 - `"use client"` が本当に必要な境界にのみ付いているか(状態・副作用・ブラウザ API・イベントハンドラを持たない component まで不要に client 化していないか)
-- Cloudflare edge runtime で動作可能か(Node.js 専用 API への依存がないか)
 - zustand を使う場合、provider + store の分離構成(`src/shared/storeProviders/{name}/`)が守られているか
 - 型安全性(any の混入、型の緩さ、`Props` / `{ComponentName}Props` 命名規則の遵守)
 - ルーティングをハードコードせず `pathpida`(`@lib/$path` の `pagesPath`)を使っているか(外部サイトへのリンクは対象外)

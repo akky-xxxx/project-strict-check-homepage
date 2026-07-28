@@ -2,8 +2,6 @@ import { getMetadata } from "@shared/utils/getMetadata"
 
 import { EslintPluginSCJsRulesIndividualImport } from "../../../../../components/templates/EslintPluginSCJsRulesIndividualImport"
 
-export const runtime = "edge"
-
 export const metadata = getMetadata({
   description: "Import them individual.",
   keywords: ["eslint", "eslint-plugin", "javascript"],

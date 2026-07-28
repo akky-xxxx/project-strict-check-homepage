@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## プロジェクト概要
 
-[strict-check](https://github.com/akky-xxxx/strict-check)(`eslint-config-sc-*` / `eslint-plugin-sc-js` パッケージ群)の公式ドキュメントサイト。Next.js 14(App Router)で構築し、`@cloudflare/next-on-pages` 経由で Cloudflare Pages にデプロイする。
+[strict-check](https://github.com/akky-xxxx/strict-check)(`eslint-config-sc-*` / `eslint-plugin-sc-js` パッケージ群)の公式ドキュメントサイト。Next.js(App Router)で構築し、Vercel にネイティブデプロイする。
 
 ## コマンド
 
@@ -40,10 +40,10 @@ pnpm exec jest -t "テスト名の一部"
 
 ```bash
 pnpm build           # pathpida 生成 + next build
-pnpm preview         # next-on-pages ビルド + wrangler pages dev(ローカルの Cloudflare プレビュー)
-pnpm run deploy       # next-on-pages ビルド + wrangler pages deploy(main ブランチは本番、それ以外はプレビュー環境へ)
-pnpm log              # プレビュー環境のログを tail(wrangler)
+pnpm preview         # build 後に next start(ローカルでの本番相当プレビュー)
 ```
+
+デプロイは npm script ではなく Vercel の Git 連携により行う(main ブランチへの push は本番、それ以外は プレビュー環境へ自動デプロイ)。
 
 ## アーキテクチャ
 
@@ -55,7 +55,7 @@ pnpm log              # プレビュー環境のログを tail(wrangler)
 - **型付きルート**: `pathpida` が `src/app` のルートツリーから `src/lib/$path.ts` を生成する(gitignore 対象、`build:pathpida` / `dev:path --watch` で再生成)。ルート文字列をハードコードせずこれを使う。
 - **バリデーション**: `valibot` スキーマは `src/shared/schemas/*Schema` に置き、cookie 値(`nextCookiesSchemas`)やパッケージマネージャー/パッケージ名の state などを検証する。
 - **パスエイリアス**(`tsconfig.json`): `@lib/*` → `src/lib/*`、`@panda/*` → `styled-system/*`、`@shared/*` → `src/shared/*`。`src/components` や `src/app` 用のエイリアスは無く、そこでは相対インポートを使う。
-- **デプロイ先**: `@cloudflare/next-on-pages` 経由の Cloudflare Pages。`wrangler.toml` の config name は `strict-check-series`。`next.config.mjs` はビルド時の ESLint/TS チェックを無効化している(`ignoreDuringBuilds` / `ignoreBuildErrors`)。実質的なゲートは `next build` ではなく `check-code` である。
+- **デプロイ先**: Vercel(アダプター無しのネイティブデプロイ)。`engines.node`(`package.json`)で Node.js 24.x LTS を指定する(Vercel の Builds/Functions が対応する最新 LTS 系)。`next.config.mjs` はビルド時の ESLint/TS チェックを無効化している(`ignoreDuringBuilds` / `ignoreBuildErrors`)。実質的なゲートは `next build` ではなく `check-code` である。
 
 ## テスト
 

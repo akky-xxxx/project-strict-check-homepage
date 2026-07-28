@@ -6,7 +6,7 @@
       "@panda/*": ["./styled-system/*"],
       "@shared/*": ["./src/shared/*"]
     },
-    "types": ["@cloudflare/workers-types", "@types/jest"]
+    "types": ["@types/jest"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [".next", "/node_modules"]

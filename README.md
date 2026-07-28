@@ -11,8 +11,8 @@ This is the public document site for [strict-check](https://github.com/akky-xxxx
 | pnpm test-storybook | Run code test of storybook<br />Required storybook booting |
 
 ### Operation
-| script              | description                                                                                                                        |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| pnpm log            | Watch the log at preview environment                                                                                               |
-| pnpm run preview    | Run as preview mode                                                                                                                |
-| pnpm run deploy     | Deploy the code<br />Deploy to product environment when main branch<br />Deploy to preview environment when other than main branch |
+| script              | description                                                    |
+|---------------------|-----------------------------------------------------------------|
+| pnpm run preview    | Build and run as production mode locally                        |
+
+Deployed on Vercel via Git integration (no deploy script required). Pushes to `main` deploy to production, other branches deploy to preview environments.

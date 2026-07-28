@@ -11,7 +11,6 @@ tools: Read, Grep, Glob, Bash
 - コンポーネント構成(atoms / molecules / organisms / templates のどのカテゴリに属するか、責務分割)
 - state / props の設計、hooks への切り出し方針
 - Server Component / Client Component の境界設計(`"use client"` をどの component に付けるか、状態・副作用を持つ部分を末端に閉じ込められないか)
-- Cloudflare edge runtime(`export const runtime = "edge"`, `@cloudflare/next-on-pages`)を踏まえた実現可能性(Node 専用 API に依存する設計になっていないか)
 - zustand を使う場合の provider + store 分離設計(`src/shared/storeProviders/{name}/`)
 - 型設計(type alias 名: `Props` または `{ComponentName}Props`、generics、union/discriminated union の要否)
 - valibot スキーマの要否・設計(外部入力を扱う場合)
@@ -22,7 +21,7 @@ tools: Read, Grep, Glob, Bash
 
 - `.claude/rules/common.md`(yagni, dry, early return, 型安全, testable, alphabetical order)
 - `.claude/rules/common-structure.md`(ディレクトリ構成、ネームケース、1ファイル1エクスポート)
-- `.claude/rules/react/structures.md`(component category, props の型命名, Server/Client Component の境界, edge runtime 制約, zustand の provider+store 構成)
+- `.claude/rules/react/structures.md`(component category, props の型命名, Server/Client Component の境界, zustand の provider+store 構成)
 
 ## 呼び出し側への注意(オーケストレーター向け)
 

@@ -1,7 +1,5 @@
-import { FlatCompat } from "@eslint/eslintrc"
 import eslintConfigSCAll from "eslint-config-sc-all"
 import eslintPluginJsdoc from "eslint-plugin-jsdoc"
-import pluginNextOnPages from "eslint-plugin-next-on-pages"
 import eslintPluginSonarjs from "eslint-plugin-sonarjs"
 
 import { ESLINT } from "./config/eslint/ESLINT/index.mjs"
@@ -13,14 +11,11 @@ import { SONARJS } from "./config/eslint/SONARJS/index.mjs"
 import { STORYBOOK } from "./config/eslint/STORYBOOK/index.mjs"
 import { TYPESCRIPT_ESLINT } from "./config/eslint/TYPESCRIPT_ESLINT/index.mjs"
 
-const compat = new FlatCompat()
-
 /** @type {import("typescript-eslint").Config} */
 const config = [
   IGNORES,
 
   eslintPluginJsdoc.configs["flat/recommended-typescript"],
-  compat.config(pluginNextOnPages.configs.recommended),
   eslintPluginSonarjs.configs.recommended,
   eslintConfigSCAll.getConfigs("typescript", ["next", "jest"]),
 

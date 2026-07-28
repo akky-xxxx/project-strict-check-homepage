@@ -60,9 +60,3 @@
 - デフォルトは Server Component。状態(`useState`/`zustand` の hook)・副作用(`useEffect`)・ブラウザ専用 API・イベントハンドラを持つ component にのみ、そのファイルの先頭に `"use client"` を付ける
 - `"use client"` は境界となる component にだけ付け、その配下の子 component まで機能的に必要なければ引きずられて追加しない(現状 `src/components` 配下で13ファイルが該当。多くは `atoms`/`molecules`/`organisms` の末端、または zustand の `storeProviders`)
 - server/client のどちらにすべきか迷う場合は、「サーバー側で完結できる(状態・イベント・ブラウザ API 不要)なら server のまま」を原則にする
-
-## Cloudflare edge runtime 制約
-
-- 各ルート(`src/app/**/page.tsx`, `layout.tsx`)には `export const runtime = "edge"` が付き、`@cloudflare/next-on-pages` 経由で Cloudflare Pages Functions(edge runtime)として動く
-- Node.js 専用 API(`fs`, `child_process` 等)には依存できない。`wrangler.toml` の `compatibility_flags = ["nodejs_compat"]` で一部の Node API はポリフィルされるが、前提にせず極力使わない
-- 新規に依存パッケージを追加する場合、edge runtime / Cloudflare Workers 環境で動作するか(Node 専用実装でないか)を設計段階で確認する
