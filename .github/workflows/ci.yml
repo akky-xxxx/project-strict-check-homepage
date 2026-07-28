@@ -12,7 +12,6 @@ on:
     paths-ignore:
       - .gitignore
       - .npmrc
-      - .wrangler
       - README.md
       - commitlint.config.js
 
