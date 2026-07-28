@@ -15,16 +15,17 @@ const {
   },
 } = HEADINGS_INFO
 const PACKAGE_NAME = "eslint-config-sc-ts"
+const PEER_DEPENDENCIES = "@eslint/eslintrc @eslint/js eslint-config-sc-js eslint-import-resolver-typescript typescript-eslint"
 
 export const Installation: FC = () => (
   <Fragment>
     <Heading3 id={INSTALLATION.hash}>{INSTALLATION.name}</Heading3>
 
     <PackageManagerTabContents
-      bun={`$ bun add -D ${PACKAGE_NAME}`}
-      npm={`$ npm i -D ${PACKAGE_NAME}`}
-      pnpm={`$ pnpm add -D ${PACKAGE_NAME}`}
-      yarn={`$ yarn add -D ${PACKAGE_NAME}`}
+      bun={`$ bun add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      npm={`$ npm i -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      pnpm={`$ pnpm add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      yarn={`$ yarn add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
     />
   </Fragment>
 )

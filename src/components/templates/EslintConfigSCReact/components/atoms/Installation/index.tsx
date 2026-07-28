@@ -15,16 +15,17 @@ const {
   },
 } = HEADINGS_INFO
 const PACKAGE_NAME = "eslint-config-sc-react"
+const PEER_DEPENDENCIES = "eslint-config-sc-js eslint-config-sc-ts eslint-plugin-jsx-a11y"
 
 export const Installation: FC = () => (
   <Fragment>
     <Heading3 id={INSTALLATION.hash}>{INSTALLATION.name}</Heading3>
 
     <PackageManagerTabContents
-      bun={`$ bun add -D ${PACKAGE_NAME}`}
-      npm={`$ npm i -D ${PACKAGE_NAME}`}
-      pnpm={`$ pnpm add -D ${PACKAGE_NAME}`}
-      yarn={`$ yarn add -D ${PACKAGE_NAME}`}
+      bun={`$ bun add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      npm={`$ npm i -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      pnpm={`$ pnpm add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
+      yarn={`$ yarn add -D ${PACKAGE_NAME} ${PEER_DEPENDENCIES}`}
     />
   </Fragment>
 )

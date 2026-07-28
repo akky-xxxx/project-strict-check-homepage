@@ -4,12 +4,8 @@ export const LINK_ITEMS = [
     label: "ESLint",
   },
   {
-    href: "https://eslint.style/",
-    label: "ESLint Stylistic",
-  },
-  {
-    href: "https://www.npmjs.com/package/eslint-config-airbnb",
-    label: "eslint-config-airbnb",
+    href: "https://www.npmjs.com/package/eslint-plugin-import",
+    label: "eslint-plugin-import",
   },
   {
     href: "https://www.npmjs.com/package/eslint-plugin-unicorn",
