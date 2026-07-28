@@ -8,9 +8,10 @@
     "yarn": "pnpmを使用してください"
   },
   "scripts": {
-    "build": "run-s build:pathpida build:next",
+    "build": "run-s build:panda build:pathpida build:next",
     "build-storybook": "storybook build",
     "build:next": "next build",
+    "build:panda": "panda codegen",
     "build:pathpida": "pathpida --ignorePath .gitignore",
     "check-code": "npm-run-all -p lint spell-check type-check -s test-jest",
     "dev": "run-p dev:*",
@@ -29,7 +30,7 @@
     "prepare": "run-s \"prepare:*\"",
     "prepare-bk:playwright": "pnpm exec playwright install",
     "prepare:huksy": "husky",
-    "prepare:panda": "panda codegen",
+    "prepare:panda": "pnpm build:panda",
     "prepare:pathpida": "pnpm build:pathpida",
     "preview": "run-s build start",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,ts,tsx}\" \"./*.{js,mjs}\"",
