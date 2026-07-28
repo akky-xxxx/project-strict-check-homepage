@@ -11,7 +11,7 @@ import { getTheme } from "./modules/getTheme"
 import { Footer } from "../components/atoms/Footer"
 import { MainContentProviders } from "../components/organisms/MainContentProviders"
 
-import type { FCWithChildren } from "@shared/types/FCWithChildren"
+import type { AsyncFCWithChildren } from "@shared/types/AsyncFCWithChildren"
 
 import "./globals.css"
 
@@ -21,9 +21,9 @@ export const metadata = getMetadata({
   description: "SC series is the packages for static analysis that keep maintainability on operation and development for the frontend developer.",
 })
 
-const RootLayout: FCWithChildren = (props) => {
+const RootLayout: AsyncFCWithChildren = async (props) => {
   const { children } = props
-  const cookieObject = cookies()
+  const cookieObject = await cookies()
   const theme = getTheme(cookieObject.get(COOKIE_KEY_THEME))
   const packageManager = getPackageManager(cookieObject.get(COOKIE_KEY_PACKAGE_MANAGER))
 

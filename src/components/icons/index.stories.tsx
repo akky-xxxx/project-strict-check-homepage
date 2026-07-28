@@ -3,7 +3,7 @@ import { STORY_PARAMETERS } from "@shared/constants/STORY_PARAMETERS"
 
 import { SearchIcon } from "./SearchIcon"
 
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 
 const root = css({
   display: "flex",

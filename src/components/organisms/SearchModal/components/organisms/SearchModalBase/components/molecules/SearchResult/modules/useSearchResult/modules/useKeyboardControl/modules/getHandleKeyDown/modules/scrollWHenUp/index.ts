@@ -1,9 +1,9 @@
-import type { MutableRefObject } from "react"
+import type { RefObject } from "react"
 
 type Input = {
   maxIndex: number
   previousIndex: number
-  ul: MutableRefObject<HTMLUListElement | null>["current"]
+  ul: RefObject<HTMLUListElement | null>["current"]
 }
 
 const ZERO = 0 // 正負判定用

@@ -13,7 +13,7 @@ const TEST_CASES_BY_THEME = [
 describe("changeTheme", () => {
   describe("test cases for the change html attribute", () => {
     let querySelectorSpy: jest.SpyInstance<Element | null>
-    let setAttributeSpy: jest.SpyInstance<Element | [string, string]>
+    let setAttributeSpy: jest.SpyInstance<void, [string, string]>
     let mockElement: HTMLElementTagNameMap["div"]
 
     beforeEach(() => {

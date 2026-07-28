@@ -1,8 +1,8 @@
-import type { MutableRefObject } from "react"
+import type { RefObject } from "react"
 
 type Input = {
   nextIndex: number
-  ul: MutableRefObject<HTMLUListElement | null>["current"]
+  ul: RefObject<HTMLUListElement | null>["current"]
 }
 
 const FIRST_ITEM = 0

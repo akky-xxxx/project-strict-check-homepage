@@ -1,5 +1,6 @@
 import eslintConfigSCAll from "eslint-config-sc-all"
 import eslintPluginSCJs from "eslint-plugin-sc-js"
+import globals from "globals"
 
 import { IGNORES } from "./config/eslint/IGNORES/index.mjs"
 
@@ -8,9 +9,12 @@ const config = [
   {
     files: [
       "panda.config.ts",
-      "**/*.{,m}js",
-      "config/**/*.{,m}js",
+      "**/*.{,c,m}js",
+      "config/**/*.{,c,m}js",
     ],
+    languageOptions: {
+      globals: globals.node,
+    },
   },
   {
     plugins: {
@@ -45,6 +49,9 @@ const config = [
     files: ["{eslint,next,panda}.config.*"],
     rules: {
       "import/no-default-export": 0,
+      "import/no-deprecated": 0,
+      "import/no-named-as-default": 0,
+      "import/no-named-as-default-member": 0,
     },
   },
 ].flat()

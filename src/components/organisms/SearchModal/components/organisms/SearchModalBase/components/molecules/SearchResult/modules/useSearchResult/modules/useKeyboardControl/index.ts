@@ -2,14 +2,14 @@ import { useEffect } from "react"
 
 import { getHandleKeyDown } from "./modules/getHandleKeyDown"
 
-import type { Dispatch, MutableRefObject, SetStateAction } from "react"
+import type { Dispatch, RefObject, SetStateAction } from "react"
 
 type Input = {
   handleCloseModal: () => void
   resultLength: number
   selectedIndex: number
   setSelectedIndex: Dispatch<SetStateAction<number>>
-  ulRef: MutableRefObject<HTMLUListElement | null>
+  ulRef: RefObject<HTMLUListElement | null>
 }
 
 export const useKeyboardControl = (input: Input) => {

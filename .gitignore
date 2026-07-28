@@ -13,7 +13,6 @@ coverage
 node_modules
 yarn-error.log*
 next-env.d.ts
-.wrangler
 
 # next.js
 /.next/
@@ -25,10 +24,6 @@ next-env.d.ts
 
 # local env files
 .env*.local
-
-# wrangler files
-../.next/.wrangler
-.dev.vars
 
 ## Panda
 styled-system

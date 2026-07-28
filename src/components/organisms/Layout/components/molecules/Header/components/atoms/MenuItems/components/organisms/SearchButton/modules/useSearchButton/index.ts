@@ -41,8 +41,6 @@ export const useSearchButton = () => {
       document.removeEventListener("keydown", handleKeyDown)
       document.removeEventListener("keyup", handleKeyUp)
     }
-    // 指定不要なため
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return { handleOpenModal }
