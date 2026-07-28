@@ -10,7 +10,7 @@ import eslintConfigSCJs from "eslint-config-sc-js"
 
 export default [
   eslintConfigSCJs.configs.initialRecord,
-  eslintConfigSCJs.configs.stylisticRecord,
+  eslintConfigSCJs.configs.importRecommendedRecord,
   eslintConfigSCJs.configs.eslintRecommendedRecord,
   eslintConfigSCJs.configs.unicornRecommendedRecords,
 
@@ -20,8 +20,5 @@ export default [
 
   // This is the custom config of eslint-config-sc-js
   eslintConfigSCJs.configs.customRecord,
-
-  // This is the reset config for @stylistic
-  eslintConfigSCJs.configs.resetRecordForStylistic,
 ].flat()`,
 }
